@@ -1,7 +1,7 @@
 Python
 ===============================
 
-![Monty Python](web/image_888.jpeg)
+![Monty Python]([web/image_888.jpeg](https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.economictimes.com%2Fprime%2Ftechnology-and-startups%2Fbooting-up-developer-economy-how-tech-startups-are-helping-coders-build-and-test-software-faster%2Fprimearticleshow%2F84146083.cms&psig=AOvVaw31daDnPXMJ_jEmGig9hB_H&ust=1710746824503000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPCPu9ji-oQDFQAAAAAdAAAAABAm))
 
 
 Contents
