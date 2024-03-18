@@ -14,6 +14,12 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **4. Numbers:** **&nbsp;&nbsp;&nbsp;**  **[`Numbers`](#numbers)**__.__
 
+**&nbsp;&nbsp;&nbsp;** **5. Strings:** **&nbsp;&nbsp;&nbsp;**  **[`Strings`](#strings)**__.__
+
+**&nbsp;&nbsp;&nbsp;** **6. Booleans:** **&nbsp;&nbsp;&nbsp;**  **[`Booleans`](#booleans)**__.__
+
+**&nbsp;&nbsp;&nbsp;** **7. Operators:** **&nbsp;&nbsp;&nbsp;**  **[`Operators`](#operators)**__.__
+
 
 
 
@@ -209,54 +215,610 @@ z = str(3.0)  # z will be '3.0'
 ```
 
 
-Tuple
+Strings
 -----
-**Tuple is an immutable and hashable list.**
 ```python
-<tuple> = ()                               # Empty tuple.
-<tuple> = (<el>,)                          # Or: <el>,
-<tuple> = (<el_1>, <el_2> [, ...])         # Or: <el_1>, <el_2> [, ...]
+a = "Hello"
+print(a)
+>> "Hello"
 ```
 
-### Named Tuple
-**Tuple's subclass with named elements.**
+```python
+a = "Hello, World!"
+print(a[1])
+>> "e"
+```
 
 ```python
->>> from collections import namedtuple
->>> Point = namedtuple('Point', 'x y')
->>> p = Point(1, y=2)
-Point(x=1, y=2)
->>> p[0]
-1
->>> p.x
-1
->>> getattr(p, 'y')
-2
+b = "Hello, World!"
+print(b[2:5])
+>> "llo"
+```
+
+```python
+a = "Hello, World!"
+print(len(a))
+>> 13
+```
+
+```python
+txt = "The best things in life are free!"
+print("free" in txt)
+>> True
+```
+
+```python
+a = "Hello, World!"
+print(a.upper())
+>> "HELLO, WORLD!"
+```
+
+```python
+a = "Hello, World!"
+print(a.lower())
+>> "hello, world!"
+```
+
+```python
+a = " Hello, World! "
+print(a.strip()) # returns "Hello, World!"
+>> "Hello, World!"
+```
+
+```python
+a = "Hello, World!"
+print(a.replace("H", "J"))
+>> "Jello, World!"
+```
+
+```python
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', ' World!']
+>> "['Hello', ' World!']"
+```
+
+```python
+a = "Hello"
+b = "World"
+c = a + b
+print(c)
+>> "HelloWorld"
+```
+
+```python
+a = "Hello"
+b = "World"
+c = a + " " + b
+print(c)
+>> "Hello World"
+```
+
+```python
+age = 36
+txt = "My name is John, I am " + age
+print(txt)
+>> "My name is John, I am 36"
+```
+
+```python
+age = 36
+txt = "My name is John, and I am {}"
+print(txt.format(age))
+>> "My name is John, I am 36"
+```
+
+```python
+print('G','F', sep='', end='')
+print('G')
+>> "GFG"
+```
+
+```python
+print('09','12','2016', sep='-', end='\n')
+>> "09-12-2016"
+```
+
+```python
+print('Red','Green','Blue', sep=',', end='@')
+print('geeksforgeeks')
+>> "Red,Green,Blue@geeksforgeeks"
+```
+
+```python
+print("Geeks : %2d, Portal : %5.2f" % (1, 05.333)) 
+>> "Geeks :  1, Portal : 5.33"
+ ```
+
+```python
+print("Total students : %3d, Boys : %2d" % (240, 120))   # print integer value
+>> "Total students : 240, Boys : 120"
+ ```
+
+```python
+print("%7.3o" % (25))   # print octal value
+>> "    031"
+ ```
+
+```python
+print("%10.3E" % (356.08977))   # print exponential value
+>> "3.561E+02"
+```
+
+```python
+tab = {'geeks': 4127, 'for': 4098, 'geek': 8637678}
+print('Geeks: {0[geeks]:d}; For: {0[for]:d}; '
+    'Geeks: {0[geek]:d}'.format(tab))
+>> "Geeks: 4127; For: 4098; Geeks: 8637678"
+```
+
+**`"    \'    "` Single Quote**
+
+**`"    \\    "` Backslash**
+
+**`"    \n    "` New Line**
+
+**`"    \r    "` Carriage Return**
+
+**`"    \t    "` Tab**
+
+**`"    \b    "` Backspace**
+
+**`"    \f    "` Form Feed**
+
+**`"    \ooo    "` Octal value**
+
+**`"    \xhh    "` Hex value**
+
+### All string methods :
+**.capitalize() (Converts the first character to upper case)**
+```python
+txt = "hello, and welcome to my world."
+x = txt.capitalize()
+print (x)
+>> "Hello, and welcome to my world."
+```
+
+**.casefold() (Converts string into lower case)**
+```python
+txt = "Hello, And Welcome To My World!"
+x = txt.casefold()
+print(x)
+>> "hello, and welcome to my world!"
+```
+
+**.center() (Returns a centered string)**
+```python
+txt = "banana"
+x = txt.center(20)
+print(x)
+>> "       banana       "
+```
+
+**.count() (Returns the number of times a specified value occurs in a string)**
+```python
+txt = "I love apples, apple are my favorite fruit"
+x = txt.count("apple")
+print(x)
+>> 2
+```
+
+**.encode() (Returns an encoded version of the string)**
+```python
+txt = "My name is Ståle"
+x = txt.encode()
+print(x)
+>> b'My name is St\xc3\xa5le'
+```
+
+**.endswith() (Returns true if the string ends with the specified value)**
+```python
+txt = "Hello, welcome to my world."
+x = txt.endswith(".")
+print(x)
+>> True
+```
+
+**.expandtabs() (Sets the tab size of the string)**
+```python
+txt = "H\te\tl\tl\to"
+x =  txt.expandtabs(2)
+print(x)
+>> "H e l l o"
+```
+
+**.find() (Searches the string for a specified value and returns the position of where it was found)**
+```python
+txt = "Hello, welcome to my world."
+x = txt.find("welcome")
+print(x)
+>> 7
+```
+
+**.format() (Formats specified values in a string)**
+```python
+txt = "For only {price:.2f} dollars!"
+print(txt.format(price = 49))
+>> "For only 49.00 dollars!"
+```
+
+**.index() (Searches the string for a specified value and returns the position of where it was found)**
+```python
+txt = "Hello, welcome to my world."
+x = txt.index("welcome")
+print(x)
+>> 7
+```
+
+**.isalnum() (Returns True if all characters in the string are alphanumeric)**
+```python
+txt = "Company12"
+x = txt.isalnum()
+print(x)
+>> True
+```
+
+**.isalpha() (Returns True if all characters in the string are in the alphabet)**
+```python
+txt = "CompanyX"
+x = txt.isalpha()
+print(x)
+>> True
+```
+
+**.isascii() (Returns True if all characters in the string are ascii characters)**
+```python
+txt = "Company123"
+x = txt.isascii()
+print(x)
+>> True
+```
+
+**.isdecimal() (Returns True if all characters in the string are decimals)**
+```python
+txt = "1234"
+x = txt.isdecimal()
+print(x)
+>> True
+```
+
+**.isdigit() (Returns True if all characters in the string are digits)**
+```python
+txt = "50800"
+x = txt.isdigit()
+print(x)
+>> True
+```
+
+**.isidentifier() (Returns True if the string is an identifier)**
+```python
+txt = "Demo"
+x = txt.isidentifier()
+print(x)
+>> True
+```
+
+**.islower() (Returns True if all characters in the string are lower case)**
+```python
+txt = "hello world!"
+x = txt.islower()
+print(x)
+>> True
+```
+
+**.isnumeric() (Returns True if all characters in the string are numeric)**
+```python
+txt = "565543"
+x = txt.isnumeric()
+print(x)
+>> True
+```
+
+**.isprintable() (Returns True if all characters in the string are printable)**
+```python
+txt = "Hello! Are you #1?"
+x = txt.isprintable()
+print(x)
+>> True
+```
+
+**.isspace() (Returns True if all characters in the string are whitespaces)**
+```python
+txt = "   "
+x = txt.isspace()
+print(x)
+>> True
+```
+
+**.istitle() (Returns True if the string follows the rules of a title)**
+```python
+txt = "Hello, And Welcome To My World!"
+x = txt.istitle()
+print(x)
+>> True
+```
+
+**.isupper() (Returns True if all characters in the string are upper case)**
+```python
+txt = "THIS IS NOW!"
+x = txt.isupper()
+print(x)
+>> True
+```
+
+**.join() (Joins the elements of an iterable to the end of the string)**
+```python
+myTuple = ("John", "Peter", "Vicky")
+x = "#".join(myTuple)
+print(x)
+>> "John#Peter#Vicky"
+```
+
+**.ljust() (Returns a left justified version of the string)**
+```python
+txt = "banana"
+x = txt.ljust(20)
+print(x, "is my favorite fruit.")
+>> "banana               is my favorite fruit."
+```
+
+**.lower() (Converts a string into lower case)**
+```python
+txt = "Hello my FRIENDS"
+x = txt.lower()
+print(x)
+>> "hello my friends"
+```
+
+**.lstrip() (Returns a left trim version of the string)**
+```python
+txt = "     banana     "
+x = txt.lstrip()
+print("of all fruits", x, "is my favorite")
+>> "of all fruits banana      is my favorite"
+```
+
+**.maketrans() (Returns a translation table to be used in translations)**
+```python
+txt = "Hello Sam!"
+mytable = str.maketrans("S", "P")
+print(txt.translate(mytable))
+>> "Hello Pam!"
+```
+
+**.partition() (Returns a tuple where the string is parted into three parts)**
+```python
+txt = "I could eat bananas all day"
+x = txt.partition("bananas")
+print(x)
+>> ('I could eat ', 'bananas', ' all day')
+```
+
+**.replace() (Returns a string where a specified value is replaced with a specified value)**
+```python
+txt = "I like bananas"
+x = txt.replace("bananas", "apples")
+print(x)
+>> "I like apples"
+```
+
+**.rfind() (Searches the string for a specified value and returns the last position of where it was found)**
+```python
+txt = "Mi casa, su casa."
+x = txt.rfind("casa")
+print(x)
+>> 12
+```
+
+**.rindex() (Searches the string for a specified value and returns the last position of where it was found)**
+```python
+txt = "Mi casa, su casa."
+x = txt.rindex("casa")
+print(x)
+>> 12
+```
+
+**.rjust() (Returns a right justified version of the string)**
+```python
+txt = "banana"
+x = txt.rjust(20)
+print(x, "is my favorite fruit.")
+>> "              banana is my favorite fruit."
+```
+
+**.rpartition() (Returns a tuple where the string is parted into three parts)**
+```python
+txt = "I could eat bananas all day, bananas are my favorite fruit"
+x = txt.rpartition("bananas")
+print(x)
+>> ('I could eat bananas all day, ', 'bananas', ' are my favorite fruit')
+```
+
+**.rsplit() (Splits the string at the specified separator, and returns a list)**
+```python
+txt = "apple, banana, cherry"
+x = txt.rsplit(", ")
+print(x)
+>> ['apple', 'banana', 'cherry']
+```
+
+**.rstrip() (Returns a right trim version of the string)**
+```python
+txt = "     banana     "
+x = txt.rstrip()
+print("of all fruits", x, "is my favorite")
+>> "of all fruits      banana is my favorite"
+```
+
+**.split() (Splits the string at the specified separator, and returns a list)**
+```python
+txt = "welcome to the jungle"
+x = txt.split()
+print(x)
+>> ['welcome', 'to', 'the', 'jungle']
+```
+
+**.splitlines() (Splits the string at line breaks and returns a list)**
+```python
+txt = "Thank you for the music\nWelcome to the jungle"
+x = txt.splitlines()
+print(x)
+>> ['Thank you for the music', 'Welcome to the jungle']
+```
+
+**.startswith()             (Returns true if the string starts with the specified value)**
+```python
+txt = "Hello, welcome to my world."
+x = txt.startswith("Hello")
+print(x)
+>> True
+```
+
+**.strip() (Returns a trimmed version of the string)**
+```python
+txt = "     banana     "
+x = txt.strip()
+print("of all fruits", x, "is my favorite")
+>> "of all fruits banana is my favorite"
+```
+
+**.swapcase() (Swaps cases, lower case becomes upper case and vice versa)**
+```python
+txt = "Hello My Name Is PETER"
+x = txt.swapcase()
+print(x)
+>> "hELLO mY nAME iS peter"
+```
+
+**.title() (Converts the first character of each word to upper case)**
+```python
+txt = "Welcome to my world"
+x = txt.title()
+print(x)
+>> "Welcome To My World"
+```
+
+**.translate() (Returns a translated string)**
+```python
+mydict = {83:  80}
+txt = "Hello Sam!"
+print(txt.translate(mydict))
+>> "Hello Pam!"
+```
+
+**.upper() (Converts a string into upper case)**
+```python
+txt = "Hello my friends"
+x = txt.upper()
+print(x)
+>> "HELLO MY FRIENDS"
+```
+
+**.zfill() (Fills the string with a specified number of 0 values at the beginning0**
+```python
+txt = "50"
+x = txt.zfill(10)
+print(x)
+>> 0000000050
 ```
 
 
-Range
+Booleans
 -----
-**Immutable and hashable sequence of integers.**
 ```python
-<range> = range(stop)                      # range(to_exclusive)
-<range> = range(start, stop)               # range(from_inclusive, to_exclusive)
-<range> = range(start, stop, ±step)        # range(from_inclusive, to_exclusive, ±step_size)
+print(10 > 9)
+print(10 == 9)
+print(10 < 9)
+>> True
+>> False
+>> False
 ```
 
 ```python
->>> [i for i in range(3)]
-[0, 1, 2]
+print(bool("Hello"))
+print(bool(15))
+>> True
+>> True
 ```
 
 
-Enumerate
+Operators
 ---------
-```python
-for i, el in enumerate(<collection> [, i_start]):
-    ...
-```
 
+**`2 + 2 = 4`**
+
+**`2 - 2 = 0`**
+
+**`2 * 3 = 6`**
+
+**`4 / 2 = 2`**
+
+**`4 % 2 = 0`**
+
+**`2 ** 3 = 8`**
+
+**`8 // 4 = 2`**
+
+**`2 == 2` 2 is equal to 2**
+
+**`2 != 3` 2 is not equal to 3**
+
+**`4 > 2` 4 is greater than 2**
+
+**`2 < 4` 2 smaller than 4**
+
+**`4 >= 4` 4 bigger equals 4**
+
+**`4 <= 4` 4 bigger equals 4**
+
+**`and` Returns True if both statements are true `x < 5 and x < 10`**
+
+**`or` Returns True if one of the statements is true `x < 5 or x < 4`**
+
+**`not` Reverse the result, returns False if the result is true `not(x < 5 and x < 10)`**
+
+**`in` Returns True if a sequence with the specified value is present in the object `x in y`**
+
+**`not in` Returns True if a sequence with the specified value is not present in the object `x not in y`**
+
+**`&` AND	Sets each bit to 1 if both bits are 1 `x & y`**
+
+**`|` OR	Sets each bit to 1 if one of two bits is 1 `x | y`**
+
+**`^` XOR	Sets each bit to 1 if only one of two bits is 1 `x ^ y`**
+
+**`~` NOT	Inverts all the bits `~x`**
+
+**`<<` Zero fill left shift Shift left by pushing zeros in from the right and let the leftmost bits fall off `x << 2`**
+
+**`>>` Signed right shift Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off `x >> 2`**
+
+
+
+**`x = 5` Or `x = 5`**
+
+**`x += 3` Or `x = x + 3`**
+
+**`x -= 3` Or `x = x - 3`**
+
+**`x *= 3` Or `x = x * 3`**
+
+**`x /= 3` Or `x = x / 3`**
+
+**`x %= 3` Or `x = x % 3`**
+
+**`x //= 3` Or `x = x // 3`**
+
+**`x **= 3` Or `x = x ** 3`**
+
+**`x &= 3` Or `x = x & 3`**
+
+**`x |= 3` Or `x = x | 3`**
+
+**`x ^= 3` Or `x = x ^ 3`**
+
+**`x >>= 3` Or `x = x >> 3`**
+
+**`x <<= 3` Or `x = x << 3`**
 
 Iterator
 --------
