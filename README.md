@@ -6,135 +6,206 @@ Python
 
 Contents
 --------
-**&nbsp;&nbsp;&nbsp;** **1. Collections:** **&nbsp;** **[`List`](#list)**__,__ **[`Dictionary`](#dictionary)**__,__ **[`Set`](#set)**__,__ **[`Tuple`](#tuple)**__,__ **[`Range`](#range)**__,__ **[`Enumerate`](#enumerate)**__,__ **[`Iterator`](#iterator)**__,__ **[`Generator`](#generator)**__.__  
-**&nbsp;&nbsp;&nbsp;** **2. Types:** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **[`Type`](#type)**__,__ **[`String`](#string)**__,__ **[`Regular_Exp`](#regex)**__,__ **[`Format`](#format)**__,__ **[`Numbers`](#numbers-1)**__,__ **[`Combinatorics`](#combinatorics)**__,__ **[`Datetime`](#datetime)**__.__  
-**&nbsp;&nbsp;&nbsp;** **3. Syntax:** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **[`Args`](#arguments)**__,__ **[`Inline`](#inline)**__,__ **[`Import`](#imports)**__,__ **[`Decorator`](#decorator)**__,__ **[`Class`](#class)**__,__ **[`Duck_Types`](#duck-types)**__,__ **[`Enum`](#enum)**__,__ **[`Exception`](#exceptions)**__.__  
-**&nbsp;&nbsp;&nbsp;** **4. System:** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **[`Exit`](#exit)**__,__ **[`Print`](#print)**__,__ **[`Input`](#input)**__,__ **[`Command_Line_Arguments`](#command-line-arguments)**__,__ **[`Open`](#open)**__,__ **[`Path`](#paths)**__,__ **[`OS_Commands`](#os-commands)**__.__  
-**&nbsp;&nbsp;&nbsp;** **5. Data:** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **[`JSON`](#json)**__,__ **[`Pickle`](#pickle)**__,__ **[`CSV`](#csv)**__,__ **[`SQLite`](#sqlite)**__,__ **[`Bytes`](#bytes)**__,__ **[`Struct`](#struct)**__,__ **[`Array`](#array)**__,__ **[`Memory_View`](#memory-view)**__,__ **[`Deque`](#deque)**__.__  
-**&nbsp;&nbsp;&nbsp;** **6. Advanced:** **&nbsp;&nbsp;&nbsp;**  **[`Threading`](#threading)**__,__ **[`Operator`](#operator)**__,__ **[`Match_Stmt`](#match-statement)**__,__ **[`Logging`](#logging)**__,__ **[`Introspection`](#introspection)**__,__ **[`Coroutines`](#coroutines)**__.__  
-**&nbsp;&nbsp;&nbsp;** **7. Libraries:** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **[`Progress_Bar`](#progress-bar)**__,__ **[`Plots`](#plot)**__,__ **[`Tables`](#table)**__,__ **[`Curses`](#curses)**__,__ **[`GUIs`](#pysimplegui)**__,__ **[`Scraping`](#scraping)**__,__ **[`Web`](#web)**__,__ **[`Profiling`](#profiling)**__.__  
-**&nbsp;&nbsp;&nbsp;** **8. Multimedia:** **&nbsp;&nbsp;**  **[`NumPy`](#numpy)**__,__ **[`Image`](#image)**__,__ **[`Animation`](#animation)**__,__ **[`Audio`](#audio)**__,__ **[`Synthesizer`](#synthesizer)**__,__ **[`Pygame`](#pygame)**__,__ **[`Pandas`](#pandas)**__,__ **[`Plotly`](#plotly)**__.__
+**&nbsp;&nbsp;&nbsp;** **1. Home:** **&nbsp;&nbsp;&nbsp;**  **[`Home`](#home)**__.__
+
+**&nbsp;&nbsp;&nbsp;** **2. Variables:** **&nbsp;&nbsp;&nbsp;**  **[`Variables`](#variables)**__.__ 
+
+**&nbsp;&nbsp;&nbsp;** **3. Data Types:** **&nbsp;&nbsp;&nbsp;**  **[`DataTypes`](#datatypes)**__.__ 
+
+**&nbsp;&nbsp;&nbsp;** **4. Numbers:** **&nbsp;&nbsp;&nbsp;**  **[`Numbers`](#numbers)**__.__
 
 
-Main
+
+
+Home
 ----
 ```python
-if __name__ == '__main__':      # Runs main() if file wasn't imported.
-    main()
+print("Hello, World!")
+>> "Hello, World!"
+
+# hello world
 ```
 
 
-List
+Variables
 ----
 ```python
-<list> = <list>[<slice>]        # Or: <list>[from_inclusive : to_exclusive : ±step]
+x = 5
+y = "John"
+print(x)
+print(y)
+>> 5
+>> "John"
 ```
 
 ```python
-<list>.append(<el>)             # Or: <list> += [<el>]
-<list>.extend(<collection>)     # Or: <list> += <collection>
+x = 4       # x is of type int
+x = "Sally" # x is now of type str
+print(x)
+>> "Sally"
+
 ```
 
 ```python
-<list>.sort()                   # Sorts in ascending order.
-<list>.reverse()                # Reverses the list in-place.
-<list> = sorted(<collection>)   # Returns a new sorted list.
-<iter> = reversed(<list>)       # Returns reversed iterator.
+x = str(3)    # x will be '3'
+y = int(3)    # y will be 3
+z = float(3)  # z will be 3.0
 ```
 
 ```python
-sum_of_elements  = sum(<collection>)
-elementwise_sum  = [sum(pair) for pair in zip(list_a, list_b)]
-sorted_by_second = sorted(<collection>, key=lambda el: el[1])
-sorted_by_both   = sorted(<collection>, key=lambda el: (el[1], el[0]))
-flatter_list     = list(itertools.chain.from_iterable(<list>))
-product_of_elems = functools.reduce(lambda out, el: out * el, <collection>)
-list_of_chars    = list(<str>)
+x = 5
+y = "John"
+print(type(x))
+print(type(y))
+>> <class 'int'>
+>> <class 'str'>
 ```
-* **For details about sorted(), min() and max() see [sortable](#sortable).**
-* **Module [operator](#operator) provides functions itemgetter() and mul() that offer the same functionality as [lambda](#lambda) expressions above.**
 
 ```python
-<list>.insert(<int>, <el>)      # Inserts item at index and moves the rest to the right.
-<el>  = <list>.pop([<int>])     # Removes and returns item at index or from the end.
-<int> = <list>.count(<el>)      # Returns number of occurrences. Also works on strings.
-<int> = <list>.index(<el>)      # Returns index of the first occurrence or raises ValueError.
-<list>.remove(<el>)             # Removes first occurrence of the item or raises ValueError.
-<list>.clear()                  # Removes all items. Also works on dictionary and set.
+x, y, z = "Orange", "Banana", "Cherry"
+print(x)
+print(y)
+print(z)
+>> "Orange"
+>> "Banana"
+>> "Cherry"
+```
+
+```python
+x = y = z = "Orange"
+print(x)
+print(y)
+print(z)
+>> "Orange"
+>> "Orange"
+>> "Orange"
+```
+
+```python
+fruits = ["apple", "banana", "cherry"]
+x, y, z = fruits
+print(x)
+print(y)
+print(z)
+>> ["apple", "banana", "cherry"]
+>> ["apple", "banana", "cherry"]
+>> ["apple", "banana", "cherry"]
+```
+
+```python
+x = "Python is awesome"
+print(x)
+>> "Python is awesome"
+```
+
+```python
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)
+>> "Python" , "is" , "awesome"
+```
+
+```python
+x = "Python "
+y = "is "
+z = "awesome"
+print(x + y + z)
+>> "Python is awesome"
+```
+
+```python
+x = 5
+y = 10
+print(x + y)
+>> 15
 ```
 
 
-Dictionary
+DataTypes
 ----------
+* **Text Type :	str**
+* **Numeric Types :	int, float, complex**
+* **Sequence Types :	list, tuple, range**
+* **Mapping Type :	dict**
+* **Set Types :	set, frozenset**
+* **Boolean Type :	bool**
+* **Binary Types :	bytes, bytearray, memoryview**
+* **None Type :	NoneType**
+
 ```python
-<view> = <dict>.keys()                          # Coll. of keys that reflects changes.
-<view> = <dict>.values()                        # Coll. of values that reflects changes.
-<view> = <dict>.items()                         # Coll. of key-value tuples that reflects chgs.
+x = "Hello World"	                              # str	
+x = 20	                                          # int	
+x = 20.5	                                      # float	
+x = 1j	                                          # complex	
+x = ["apple", "banana", "cherry"]	              # list	
+x = ("apple", "banana", "cherry")	              # tuple	
+x = range(6)	                                  # range	
+x = {"name" : "John", "age" : 36}  	              # dict	
+x = {"apple", "banana", "cherry"}	              # set	
+x = frozenset({"apple", "banana", "cherry"})	  # frozenset	
+x = True	                                      # bool	
+x = b"Hello"	                                  # bytes	
+x = bytearray(5)	                              # bytearray	
+x = memoryview(bytes(5))	                      # memoryview	
+x = None	                                      # NoneType
 ```
 
 ```python
-value  = <dict>.get(key, default=None)          # Returns default if key is missing.
-value  = <dict>.setdefault(key, default=None)   # Returns and writes default if key is missing.
-<dict> = collections.defaultdict(<type>)        # Returns a dict with default value `<type>()`.
-<dict> = collections.defaultdict(lambda: 1)     # Returns a dict with default value 1.
-```
-
-```python
-<dict> = dict(<collection>)                     # Creates a dict from coll. of key-value pairs.
-<dict> = dict(zip(keys, values))                # Creates a dict from two collections.
-<dict> = dict.fromkeys(keys [, value])          # Creates a dict from collection of keys.
-```
-
-```python
-<dict>.update(<dict>)                           # Adds items. Replaces ones with matching keys.
-value = <dict>.pop(key)                         # Removes item or raises KeyError if missing.
-{k for k, v in <dict>.items() if v == value}    # Returns set of keys that point to the value.
-{k: v for k, v in <dict>.items() if k in keys}  # Filters the dictionary by keys.
-```
-
-### Counter
-```python
->>> from collections import Counter
->>> colors = ['blue', 'blue', 'blue', 'red', 'red']
->>> counter = Counter(colors)
->>> counter['yellow'] += 1
-Counter({'blue': 3, 'red': 2, 'yellow': 1})
->>> counter.most_common()[0]
-('blue', 3)
+x = str("Hello World")	                        # str	
+x = int(20)	                                    # int	
+x = float(20.5)	                                # float	
+x = complex(1j)	                                # complex	
+x = list(("apple", "banana", "cherry"))	        # list	
+x = tuple(("apple", "banana", "cherry"))	    # tuple	
+x = range(6)	                                # range	
+x = dict(name="John", age=36)	                # dict	
+x = set(("apple", "banana", "cherry"))	        # set	
+x = frozenset(("apple", "banana", "cherry"))	# frozenset	
+x = bool(5)	                                    # bool	
+x = bytes(5)	                                # bytes	
+x = bytearray(5)	                            # bytearray	
+x = memoryview(bytes(5))	                    # memoryview
 ```
 
 
-Set
+Numbers
 ---
 ```python
-<set> = set()                                   # `{}` returns a dictionary.
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
 ```
 
 ```python
-<set>.add(<el>)                                 # Or: <set> |= {<el>}
-<set>.update(<collection> [, ...])              # Or: <set> |= <set>
+x = 1
+y = 35656222554887711
+z = -3255522
 ```
 
 ```python
-<set>  = <set>.union(<coll.>)                   # Or: <set> | <set>
-<set>  = <set>.intersection(<coll.>)            # Or: <set> & <set>
-<set>  = <set>.difference(<coll.>)              # Or: <set> - <set>
-<set>  = <set>.symmetric_difference(<coll.>)    # Or: <set> ^ <set>
-<bool> = <set>.issubset(<coll.>)                # Or: <set> <= <set>
-<bool> = <set>.issuperset(<coll.>)              # Or: <set> >= <set>
+x = 1.10
+y = 1.0
+z = -35.59
 ```
 
 ```python
-<el> = <set>.pop()                              # Raises KeyError if empty.
-<set>.remove(<el>)                              # Raises KeyError if missing.
-<set>.discard(<el>)                             # Doesn't raise an error.
+x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
 ```
 
-### Frozen Set
-* **Is immutable and hashable.**
-* **That means it can be used as a key in a dictionary or as an element in a set.**
 ```python
-<frozenset> = frozenset(<collection>)
+x = float(1)     # x will be 1.0
+y = float(2.8)   # y will be 2.8
+z = float("3")   # z will be 3.0
+w = float("4.2") # w will be 4.2
+```
+
+```python
+x = str("s1") # x will be 's1'
+y = str(2)    # y will be '2'
+z = str(3.0)  # z will be '3.0'
 ```
 
 
