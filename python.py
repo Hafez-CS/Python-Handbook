@@ -1,3 +1,4 @@
+                                                                       100 part of teach
 0) Home
 1) Variables
 1) Data Types
@@ -5,8 +6,21 @@
 1) Strings
 1) Booleans
 1) Operators
+1) Lists
+1) Tuples
+1) Sets
+1) Dictionaries
+1) if ... else
+1) while Loops
 
 ***************************************************************************************************************************************************************************
+
+# https://www.w3schools.com/python/default.asp                     for read more
+
+# https://www.geeksforgeeks.org/python-programming-language/       for read more
+
+***************************************************************************************************************************************************************************
+
 0) Home
 
 print("Hello, World!")
@@ -717,5 +731,1021 @@ print(bool(15))
 # ^=	x ^= 3	           x = x ^ 3	
 # >>=	x >>= 3	           x = x >> 3	
 # <<=	x <<= 3	           x = x << 3
+
+***************************************************************************************************************************************************************************
+
+1) Lists
+
+
+mylist = ["apple", "banana", "cherry"]
+
+
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
+>> ['apple', 'banana', 'cherry']
+
+
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+>> 3
+
+
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])
+>> "banana"
+
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])
+>> ['cherry', 'orange', 'kiwi']
+
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1] = "blackcurrant"
+print(thislist)
+>> ['apple', 'blackcurrant', 'cherry']
+
+
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+print(thislist)
+>> ['apple', 'blackcurrant', 'watermelon', 'cherry']
+
+
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+>> ['apple', 'banana', 'watermelon', 'cherry']
+
+
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+>> ['apple', 'banana', 'cherry', 'orange']
+
+
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+>> ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+>> ['apple', 'cherry']
+
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+>> ['apple', 'cherry']
+
+
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+>> ['apple', 'banana']
+
+
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+>> ['banana', 'cherry']
+
+
+thislist = ["apple", "banana", "cherry"]
+del thislist
+
+
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+>> []
+
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+>> ['banana', 'kiwi', 'mango', 'orange', 'pineapple']
+
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+>> ['pineapple', 'orange', 'mango', 'kiwi', 'banana']
+
+
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist)
+>> ['banana', 'cherry', 'Kiwi', 'Orange']
+
+
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+>> ['apple', 'banana', 'cherry']
+
+
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+>> ['apple', 'banana', 'cherry']
+
+
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3)
+>> ['a', 'b', 'c', 1, 2, 3]
+
+########################################
+
+# All List methods
+
+
+#####################################################################################################
+# .append()	    Adds an element at the end of the list
+fruits = ['apple', 'banana', 'cherry']
+fruits.append("orange")
+print(fruits)
+>> ['apple', 'banana', 'cherry', 'orange']
+
+#####################################################################################################
+# .clear()	    Removes all the elements from the list
+fruits = ['apple', 'banana', 'cherry', 'orange']
+fruits.clear()
+print(fruits)
+>> []
+
+#####################################################################################################
+# .copy()	    Returns a copy of the list
+fruits = ['apple', 'banana', 'cherry', 'orange']
+x = fruits.copy()
+print(x)
+>> ['apple', 'banana', 'cherry', 'orange']
+
+#####################################################################################################
+# .count()	    Returns the number of elements with the specified value
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.count("cherry")
+print(x)
+>> 1
+
+#####################################################################################################
+# .extend()	    Add the elements of a list (or any iterable), to the end of the current list
+fruits = ['apple', 'banana', 'cherry']
+cars = ['Ford', 'BMW', 'Volvo']
+fruits.extend(cars)
+print(fruits)
+>> ['apple', 'banana', 'cherry', 'Ford', 'BMW', 'Volvo']
+
+#####################################################################################################
+# index()	    Returns the index of the first element with the specified value
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.index("cherry")
+print(x)
+>> 2
+
+#####################################################################################################
+# insert()	    Adds an element at the specified position
+fruits = ['apple', 'banana', 'cherry']
+fruits.insert(1, "orange")
+print(fruits)
+>> ['apple', 'orange', 'banana', 'cherry']
+
+#####################################################################################################
+# pop()	        Removes the element at the specified position
+fruits = ['apple', 'banana', 'cherry']
+fruits.pop(1)
+print(fruits)
+>> ['apple', 'cherry']
+
+#####################################################################################################
+# remove()	    Removes the item with the specified value
+fruits = ['apple', 'banana', 'cherry']
+fruits.remove("banana")
+print(fruits)
+>> ['apple', 'cherry']
+
+#####################################################################################################
+# reverse()	    Reverses the order of the list
+fruits = ['apple', 'banana', 'cherry']
+fruits.reverse()
+print(fruits)
+>> ['cherry', 'banana', 'apple']
+
+#####################################################################################################
+# sort()	    Sorts the list
+cars = ['Ford', 'BMW', 'Volvo']
+cars.sort()
+print(cars)
+>> ['BMW', 'Ford', 'Volvo']
+
+***************************************************************************************************************************************************************************
+
+1) Tuples
+
+
+# count()	Returns the number of times a specified value occurs in a tuple
+# index()	Searches the tuple for a specified value and returns the position of where it was found
+
+mytuple = ("apple", "banana", "cherry")
+
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+>> ('apple', 'banana', 'cherry')
+
+
+thistuple = ("apple", "banana", "cherry")
+print(len(thistuple))
+>> 3
+
+
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[1])
+>> "banana"
+
+
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+print(thistuple)
+>> ('banana', 'cherry')
+
+
+thistuple = ("apple", "banana", "cherry")
+del thistuple
+print(thistuple)
+>> Error
+
+
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+tuple3 = tuple1 + tuple2
+print(tuple3)
+>> ('a', 'b', 'c', 1, 2, 3)
+
+***************************************************************************************************************************************************************************
+
+1) Sets
+
+
+myset = {"apple", "banana", "cherry"}
+
+
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+>> {'cherry', 'banana', 'apple'}
+
+
+thisset = {"apple", "banana", "cherry"}
+print(len(thisset))
+>> 3
+
+
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+print(thisset)
+>> {'cherry', 'apple', 'banana', 'orange'}
+
+
+thisset = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
+thisset.update(tropical)
+print(thisset)
+>> {'papaya', 'mango', 'pineapple', 'apple', 'banana', 'cherry'}
+
+
+thisset = {"apple", "banana", "cherry"}
+thisset.remove("banana")
+print(thisset)
+>> {'cherry', 'apple'}
+
+
+thisset = {"apple", "banana", "cherry"}
+thisset.discard("banana")
+print(thisset)
+>> {'cherry', 'apple'}
+
+
+thisset = {"apple", "banana", "cherry"}
+x = thisset.pop()
+print(x)
+>> "cherry"
+print(thisset)
+>> {'apple', 'banana'}
+
+
+thisset = {"apple", "banana", "cherry"}
+thisset.clear()
+print(thisset)
+>> ()
+
+
+thisset = {"apple", "banana", "cherry"}
+del thisset
+print(thisset)
+>> Error
+
+
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+set3 = set1.union(set2)
+print(set3)
+>> {1, 'c', 2, 3, 'a', 'b'}
+
+
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+set1.update(set2)
+print(set1)
+>> {1, 'c', 2, 3, 'a', 'b'}
+
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.intersection_update(y)
+print(x)
+>> {'apple'}
+
+
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.intersection(y)
+print(z)
+>> {'apple'}
+
+########################################
+
+# All Sets methods
+
+
+#####################################################################################################
+# add()	                            Adds an element to the set
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+print(thisset)
+>> {'cherry', 'orange', 'apple', 'banana'}
+
+#####################################################################################################
+# clear()	                        Removes all the elements from the set
+fruits = {"apple", "banana", "cherry"}
+fruits.clear()
+print(fruits)
+>> set()
+
+#####################################################################################################
+# copy()	                        Returns a copy of the set
+fruits = {"apple", "banana", "cherry"}
+x = fruits.copy()
+print(x)
+>> {'apple', 'cherry', 'banana'}
+
+#####################################################################################################
+# difference()	                    Returns a set containing the difference between two or more sets
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.difference(y)
+print(z)
+>> {'cherry', 'banana'}
+
+#####################################################################################################
+# difference_update()               Removes the items in this set that are also included in another, specified set
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.difference_update(y)
+print(x)
+>> {'cherry', 'banana'}
+
+#####################################################################################################
+# discard()	                        Remove the specified item
+thisset = {"apple", "banana", "cherry"}
+thisset.discard("banana")
+print(thisset)
+>> {'apple', 'cherry'}
+
+#####################################################################################################
+# intersection()	                Returns a set, that is the intersection of two other sets
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.intersection(y)
+print(z)
+>> {'apple'}
+
+#####################################################################################################
+# intersection_update()	            Removes the items in this set that are not present in other, specified set(s)
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.intersection_update(y) 
+print(x)
+>> {'apple'}
+
+#####################################################################################################
+# isdisjoint()	                    Returns whether two sets have a intersection or not
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "facebook"}
+z = x.isdisjoint(y) 
+print(z)
+>> True
+
+#####################################################################################################
+# issubset()	                    Returns whether another set contains this set or not
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b", "a"}
+z = x.issubset(y)
+print(z)
+>> True
+
+#####################################################################################################
+# issuperset()	                    Returns whether this set contains another set or not
+x = {"f", "e", "d", "c", "b", "a"}
+y = {"a", "b", "c"}
+z = x.issuperset(y) 
+print(z)
+>> True
+
+#####################################################################################################
+# pop()	                            Removes an element from the set
+fruits = {"apple", "banana", "cherry"}
+fruits.pop() 
+print(fruits)
+>> {'banana', 'cherry'}
+
+#####################################################################################################
+# remove()	                        Removes the specified element
+fruits = {"apple", "banana", "cherry"}
+fruits.remove("banana") 
+print(fruits)
+>> {'cherry', 'apple'}
+
+#####################################################################################################
+# symmetric_difference()	        Returns a set with the symmetric differences of two sets
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.symmetric_difference(y)
+print(z)
+>> {'cherry', 'microsoft', 'banana', 'google'}
+
+#####################################################################################################
+# symmetric_difference_update()	    inserts the symmetric differences from this set and another
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.symmetric_difference_update(y)
+print(x)
+>> {'google', 'microsoft', 'banana', 'cherry'}
+
+#####################################################################################################
+# union()	                        Return a set containing the union of sets
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.union(y)
+print(z)
+>> {'apple', 'microsoft', 'cherry', 'banana', 'google'}
+
+#####################################################################################################
+# update()	                        Update the set with the union of this set and others
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.update(y) 
+print(x)
+>> {'cherry', 'microsoft', 'banana', 'apple', 'google'}
+
+***************************************************************************************************************************************************************************
+
+1) Dictionaries
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+>> "Ford"
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(len(thisdict))
+>> 3
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+
+
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+>> {'name': 'John', 'age': 36, 'country': 'Norway'}
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict.get("model")
+>> "Mustang"
+x = thisdict["model"]
+>> "Mustang"
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict.keys())
+>> dict_keys(['brand', 'model', 'year'])
+
+
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+
+
+thisdict = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+print(thisdict.values())
+>> dict_values(['Ford', 'Mustang', 1964])
+
+
+
+thisdict = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+print(thisdict.items())
+>> dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["year"] = 2018
+
+# or
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+print(thisdict)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+
+# or
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"color": "red"})
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+>> {'brand': 'Ford', 'year': 1964}
+
+# or
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+>> {'brand': 'Ford', 'model': 'Mustang'}
+
+# or
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"]
+print(thisdict)
+>> {'brand': 'Ford', 'year': 1964}
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict)
+>> {}
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.values():
+  print(x)
+>> "Ford"
+   "Mustang"
+   1964
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.keys():
+  print(x)
+>> "brand"
+   "model"
+   "year"
+
+
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
+
+
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+
+########################################
+
+# All Dictionaries methods
+
+
+#####################################################################################################
+# .clear()	         Removes all the elements from the dictionary
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.clear()
+print(car)
+>> {}
+
+#####################################################################################################
+# copy()	         Returns a copy of the dictionary
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.copy()
+print(x)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+
+#####################################################################################################
+# fromkeys()	     Returns a dictionary with the specified keys and value
+x = ('key1', 'key2', 'key3')
+y = 0
+thisdict = dict.fromkeys(x, y)
+print(thisdict)
+>> {'key1': 0, 'key2': 0, 'key3': 0}
+
+#####################################################################################################
+# get()	             Returns the value of the specified key
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.get("model")
+print(x)
+>> "Mustang"
+
+#####################################################################################################
+# items()	         Returns a list containing a tuple for each key value pair
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.items()
+print(x)
+>> dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+
+#####################################################################################################
+# keys()	         Returns a list containing the dictionary's keys
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.keys()
+print(x)
+>> dict_keys(['brand', 'model', 'year'])
+
+#####################################################################################################
+# pop()	             Removes the element with the specified key
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.pop("model")
+print(car)
+>> {'brand': 'Ford', 'year': 1964}
+
+#####################################################################################################
+# popitem()	         Removes the last inserted key-value pair
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.popitem()
+print(car)
+>> {'brand': 'Ford', 'model': 'Mustang'}
+
+#####################################################################################################
+# setdefault()	     Returns the value of the specified key. If the key does not exist: insert the key, with the specified value
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.setdefault("model", "Bronco")
+print(x)
+>> "Mustang"
+
+#####################################################################################################
+# update()	         Updates the dictionary with the specified key-value pairs
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.update({"color": "White"})
+print(car)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'White'}
+
+#####################################################################################################
+# values()	         Returns a list of all the values in the dictionary
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.values()
+print(x)
+>> dict_values(['Ford', 'Mustang', 1964])
+
+***************************************************************************************************************************************************************************
+
+1) if ... else
+
+
+# Equals :                      a == b
+# Not Equals :                  a != b
+# Less than :                   a < b
+# Less than or equal to :       a <= b
+# Greater than :                a > b
+# Greater than or equal to :    a >= b
+
+
+a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
+>> "b is greater than a"
+
+
+
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+>> "a and b are equal"
+
+
+
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+>> "a is greater than b"
+
+
+
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")
+>> "b is not greater than a"
+
+
+
+a = 200
+b = 100
+if a > b: print("a is greater than b")
+>> "a is greater than b"
+
+
+
+a = 2
+b = 330
+print("A") if a > b else print("B")
+>> "B"
+
+
+
+a = 330
+b = 330
+print("A") if a > b else print("=") if a == b else print("B")
+>> "="
+
+
+
+a = 200
+b = 33
+c = 500
+if a > b and c > a:
+  print("Both conditions are True")
+>> "Both conditions are True"
+
+
+
+a = 200
+b = 33
+c = 500
+if a > b or a > c:
+  print("At least one of the conditions is True")
+>> "At least one of the conditions is True"
+
+
+
+a = 33
+b = 200
+if not a > b:
+  print("a is NOT greater than b")
+>> "a is NOT greater than b"
+
+
+
+x = 41
+
+if x > 10:
+  print("Above ten,")
+  if x > 20:
+    print("and also above 20!")
+  else:
+    print("but not above 20.")
+>> "Above ten,"
+   "and also above 20!"
+
+***************************************************************************************************************************************************************************
+
+1) while Loops
+
+
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+>> 1
+   2
+   3
+   4
+   5
+
+
+
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+>> 1
+   2
+   3
+
+
+
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+>> 1
+   2
+   4
+   5
+   6
+
+
+
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+>> 1
+   2
+   3
+   4
+   5
+   "i is no longer less than 6"
 
 ***************************************************************************************************************************************************************************
