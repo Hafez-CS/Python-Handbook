@@ -28,6 +28,10 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **10. Sets :** **&nbsp;**  **[`Sets`](#sets)**
 
+**&nbsp;&nbsp;&nbsp;** **11. Dictionaries :** **&nbsp;**  **[`Dictionaries`](#dictionaries)**
+
+**&nbsp;&nbsp;&nbsp;** **11. if ... else :** **&nbsp;**  **[`if ... else`](#if...else)**
+
 
 Home
 ----
@@ -1372,54 +1376,379 @@ print(x)
 >> {'cherry', 'microsoft', 'banana', 'apple', 'google'}
 ```
 
-String
+Dictionaries
 ------
-**Immutable sequence of characters.**
-
 ```python
-<str>  = <str>.strip()                       # Strips all whitespace characters from both ends.
-<str>  = <str>.strip('<chars>')              # Strips passed characters. Also lstrip/rstrip().
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
 ```
 
 ```python
-<list> = <str>.split()                       # Splits on one or more whitespace characters.
-<list> = <str>.split(sep=None, maxsplit=-1)  # Splits on 'sep' str at most 'maxsplit' times.
-<list> = <str>.splitlines(keepends=False)    # On [\n\r\f\v\x1c-\x1e\x85\u2028\u2029] and \r\n.
-<str>  = <str>.join(<coll_of_strings>)       # Joins elements using string as a separator.
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
 ```
 
 ```python
-<bool> = <sub_str> in <str>                  # Checks if string contains the substring.
-<bool> = <str>.startswith(<sub_str>)         # Pass tuple of strings for multiple options.
-<int>  = <str>.find(<sub_str>)               # Returns start index of the first match or -1.
-<int>  = <str>.index(<sub_str>)              # Same, but raises ValueError if missing.
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+>> "Ford"
 ```
 
 ```python
-<str>  = <str>.lower()                       # Changes the case. Also upper/capitalize/title().
-<str>  = <str>.replace(old, new [, count])   # Replaces 'old' with 'new' at most 'count' times.
-<str>  = <str>.translate(<table>)            # Use `str.maketrans(<dict>)` to generate table.
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(len(thisdict))
+>> 3
 ```
 
 ```python
-<str>  = chr(<int>)                          # Converts int to Unicode character.
-<int>  = ord(<str>)                          # Converts Unicode character to int.
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
 ```
-* **Use `'unicodedata.normalize("NFC", <str>)'` on strings like `'Motörhead'` before comparing them to other strings, because `'ö'` can be stored as one or two characters.**
-* **`'NFC'` converts such characters to a single character, while `'NFD'` converts them to two.**
 
-### Property Methods
 ```python
-<bool> = <str>.isdecimal()                   # Checks for [0-9]. Also [०-९] and [٠-٩].
-<bool> = <str>.isdigit()                     # Checks for [²³¹…] and isdecimal().
-<bool> = <str>.isnumeric()                   # Checks for [¼½¾], [零〇一…] and isdigit().
-<bool> = <str>.isalnum()                     # Checks for [a-zA-Z…] and isnumeric().
-<bool> = <str>.isprintable()                 # Checks for [ !#$%…] and isalnum().
-<bool> = <str>.isspace()                     # Checks for [ \t\n\r\f\v\x1c-\x1f\x85\xa0…].
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+>> {'name': 'John', 'age': 36, 'country': 'Norway'}
+```
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = thisdict.get("model")
+>> "Mustang"
+x = thisdict["model"]
+>> "Mustang"
+```
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict.keys())
+>> dict_keys(['brand', 'model', 'year'])
+```
+
+```python
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+```
+
+```python
+thisdict = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+print(thisdict.values())
+>> dict_values(['Ford', 'Mustang', 1964])
+```
+
+```python
+thisdict = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+print(thisdict.items())
+>> dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+```
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["year"] = 2018
+
+# Or
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+```
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+print(thisdict)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}
+
+# or
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"color": "red"})
+```
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.pop("model")
+print(thisdict)
+>> {'brand': 'Ford', 'year': 1964}
+
+# or
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.popitem()
+print(thisdict)
+>> {'brand': 'Ford', 'model': 'Mustang'}
+
+# or
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+del thisdict["model"]
+print(thisdict)
+>> {'brand': 'Ford', 'year': 1964}
+```
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.clear()
+print(thisdict)
+>> {}
+```
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.values():
+  print(x)
+>> "Ford"
+   "Mustang"
+   1964
+```
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+for x in thisdict.keys():
+  print(x)
+>> "brand"
+   "model"
+   "year"
+```
+
+```python
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+mydict = thisdict.copy()
+print(mydict)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+```
+
+```python
+myfamily = {
+  "child1" : {
+    "name" : "Emil",
+    "year" : 2004
+  },
+  "child2" : {
+    "name" : "Tobias",
+    "year" : 2007
+  },
+  "child3" : {
+    "name" : "Linus",
+    "year" : 2011
+  }
+}
+```
+
+### All Dictionaries methods :
+**.clear() (Removes all the elements from the dictionary)**
+```python
+car =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.clear()
+print(car)
+>> {}
+```
+
+**.copy() (Returns a copy of the dictionary)**
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.copy()
+print(x)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+```
+
+**.fromkeys() (Returns a dictionary with the specified keys and value)**
+```python
+x = ('key1', 'key2', 'key3')
+y = 0
+thisdict = dict.fromkeys(x, y)
+print(thisdict)
+>> {'key1': 0, 'key2': 0, 'key3': 0}
+```
+
+**.get() (Returns the value of the specified key)**
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.get("model")
+print(x)
+>> "Mustang"
+```
+
+**.items() (Returns a list containing a tuple for each key value pair)**
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.items()
+print(x)
+>> dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+```
+
+**.keys() (Returns a list containing the dictionary's keys)**
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.keys()
+print(x)
+>> dict_keys(['brand', 'model', 'year'])
+```
+
+**.pop() (Removes the element with the specified key)**
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.pop("model")
+print(car)
+>> {'brand': 'Ford', 'year': 1964}
+```
+
+**.popitem() (Removes the last inserted key-value pair)**
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.popitem()
+print(car)
+>> {'brand': 'Ford', 'model': 'Mustang'}
+```
+
+**.setdefault() (Returns the value of the specified key. If the key does not exist: insert the key, with the specified value)**
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.setdefault("model", "Bronco")
+print(x)
+>> "Mustang"
+```
+
+**.update() (Updates the dictionary with the specified key-value pairs)**
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+car.update({"color": "White"})
+print(car)
+>> {'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'White'}
+```
+
+**.values() (Returns a list of all the values in the dictionary)**
+```python
+car = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+x = car.values()
+print(x)
+>> dict_values(['Ford', 'Mustang', 1964])
 ```
 
 
-Regex
+if ... else
 -----
 **Functions for regular expression matching.**
 
