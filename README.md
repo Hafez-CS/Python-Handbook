@@ -22,7 +22,9 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **8. Lists :** **&nbsp;**  **[`Lists`](#lists)**
 
+**&nbsp;&nbsp;&nbsp;** **9. Tuples :** **&nbsp;**  **[`Tuples`](#tuples)**
 
+**&nbsp;&nbsp;&nbsp;** **10. Sets :** **&nbsp;**  **[`Sets`](#sets)**
 
 
 Home
@@ -990,85 +992,383 @@ print(x)
 >> ['apple', 'banana', 'cherry', 'orange']
 ```
 
+**.count() (Returns the number of elements with the specified value)**
+```python
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.count("cherry")
+print(x)
+>> 1
+```
+
+**.extend() (Add the elements of a list (or any iterable), to the end of the current list)**
+```python
+fruits = ['apple', 'banana', 'cherry']
+cars = ['Ford', 'BMW', 'Volvo']
+fruits.extend(cars)
+print(fruits)
+>> ['apple', 'banana', 'cherry', 'Ford', 'BMW', 'Volvo']
+```
+
+**.index() (Returns the index of the first element with the specified value)**
+```python
+fruits = ['apple', 'banana', 'cherry']
+x = fruits.index("cherry")
+print(x)
+>> 2
+```
+
+**.insert() (Adds an element at the specified position)**
+```python
+fruits = ['apple', 'banana', 'cherry']
+fruits.insert(1, "orange")
+print(fruits)
+>> ['apple', 'orange', 'banana', 'cherry']
+```
+
+**.pop() (Removes the element at the specified position)**
+```python
+fruits = ['apple', 'banana', 'cherry']
+fruits.pop(1)
+print(fruits)
+>> ['apple', 'cherry']
+```
+
+**.remove() (Removes the item with the specified value)**
+```python
+fruits = ['apple', 'banana', 'cherry']
+fruits.remove("banana")
+print(fruits)
+>> ['apple', 'cherry']
+```
+
+**.reverse() (Reverses the order of the list)**
+```python
+fruits = ['apple', 'banana', 'cherry']
+fruits.reverse()
+print(fruits)
+>> ['cherry', 'banana', 'apple']
+```
+
+**.sort() (Sorts the list)**
+```python
+cars = ['Ford', 'BMW', 'Volvo']
+cars.sort()
+print(cars)
+>> ['BMW', 'Ford', 'Volvo']
+```
 
 
-Generator
+
+Tuples
 ---------
-* **Any function that contains a yield statement returns a generator.**
-* **Generators and iterators are interchangeable.**
+* **`count()`	Returns the number of times a specified value occurs in a tuple.**
+* **`index()`	Searches the tuple for a specified value and returns the position of where it was found.**
 
 ```python
-def count(start, step):
-    while True:
-        yield start
-        start += step
+mytuple = ("apple", "banana", "cherry")
 ```
 
 ```python
->>> counter = count(10, 2)
->>> next(counter), next(counter), next(counter)
-(10, 12, 14)
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+>> ('apple', 'banana', 'cherry')
+```
+
+```python
+thistuple = ("apple", "banana", "cherry")
+print(len(thistuple))
+>> 3
+```
+
+```python
+thistuple = ("apple", "banana", "cherry")
+print(thistuple[1])
+>> "banana"
+```
+
+```python
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+print(thistuple)
+>> ('banana', 'cherry')
+```
+
+```python
+thistuple = ("apple", "banana", "cherry")
+del thistuple
+print(thistuple)
+>> Error
+```
+
+```python
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+tuple3 = tuple1 + tuple2
+print(tuple3)
+>> ('a', 'b', 'c', 1, 2, 3)
 ```
 
 
-Type
+Sets
 ----
-* **Everything is an object.**
-* **Every object has a type.**
-* **Type and class are synonymous.**
-
 ```python
-<type> = type(<el>)                          # Or: <el>.__class__
-<bool> = isinstance(<el>, <type>)            # Or: issubclass(type(<el>), <type>)
+myset = {"apple", "banana", "cherry"}
 ```
 
 ```python
->>> type('a'), 'a'.__class__, str
-(<class 'str'>, <class 'str'>, <class 'str'>)
-```
-
-#### Some types do not have built-in names, so they must be imported:
-```python
-from types import FunctionType, MethodType, LambdaType, GeneratorType, ModuleType
-```
-
-### Abstract Base Classes
-**Each abstract base class specifies a set of virtual subclasses. These classes are then recognized by isinstance() and issubclass() as subclasses of the ABC, although they are really not. ABC can also manually decide whether or not a specific class is its virtual subclass, usually based on which methods the class has implemented. For instance, Iterable ABC looks for method iter(), while Collection ABC looks for iter(), contains() and len().**
-
-```python
->>> from collections.abc import Iterable, Collection, Sequence
->>> isinstance([1, 2, 3], Iterable)
-True
-```
-
-```text
-+------------------+------------+------------+------------+
-|                  |  Iterable  | Collection |  Sequence  |
-+------------------+------------+------------+------------+
-| list, range, str |    yes     |    yes     |    yes     |
-| dict, set        |    yes     |    yes     |            |
-| iter             |    yes     |            |            |
-+------------------+------------+------------+------------+
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+>> {'cherry', 'banana', 'apple'}
 ```
 
 ```python
->>> from numbers import Number, Complex, Real, Rational, Integral
->>> isinstance(123, Number)
-True
+thisset = {"apple", "banana", "cherry"}
+print(len(thisset))
+>> 3
 ```
 
-```text
-+--------------------+----------+----------+----------+----------+----------+
-|                    |  Number  |  Complex |   Real   | Rational | Integral |
-+--------------------+----------+----------+----------+----------+----------+
-| int                |   yes    |   yes    |   yes    |   yes    |   yes    |
-| fractions.Fraction |   yes    |   yes    |   yes    |   yes    |          |
-| float              |   yes    |   yes    |   yes    |          |          |
-| complex            |   yes    |   yes    |          |          |          |
-| decimal.Decimal    |   yes    |          |          |          |          |
-+--------------------+----------+----------+----------+----------+----------+
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+print(thisset)
+>> {'cherry', 'apple', 'banana', 'orange'}
 ```
 
+```python
+thisset = {"apple", "banana", "cherry"}
+tropical = {"pineapple", "mango", "papaya"}
+thisset.update(tropical)
+print(thisset)
+>> {'papaya', 'mango', 'pineapple', 'apple', 'banana', 'cherry'}
+```
+
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.remove("banana")
+print(thisset)
+>> {'cherry', 'apple'}
+```
+
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.discard("banana")
+print(thisset)
+>> {'cherry', 'apple'}
+```
+
+```python
+thisset = {"apple", "banana", "cherry"}
+x = thisset.pop()
+print(x)
+>> "cherry"
+print(thisset)
+>> {'apple', 'banana'}
+```
+
+```python
+thisset = {"apple", "banana", "cherry"}
+x = thisset.pop()
+print(x)
+>> "cherry"
+print(thisset)
+>> {'apple', 'banana'}
+```
+
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.clear()
+print(thisset)
+>> ()
+```
+
+```python
+thisset = {"apple", "banana", "cherry"}
+del thisset
+print(thisset)
+>> Error
+```
+
+```python
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+set3 = set1.union(set2)
+print(set3)
+>> {1, 'c', 2, 3, 'a', 'b'}
+```
+
+```python
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+set1.update(set2)
+print(set1)
+>> {1, 'c', 2, 3, 'a', 'b'}
+```
+
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.intersection_update(y)
+print(x)
+>> {'apple'}
+```
+
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.intersection(y)
+print(z)
+>> {'apple'}
+```
+
+### All Sets methods :
+**.add() (Adds an element to the set)**
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+print(thisset)
+>> {'cherry', 'orange', 'apple', 'banana'}
+```
+
+**.clear() (Removes all the elements from the set)**
+```python
+fruits = {"apple", "banana", "cherry"}
+fruits.clear()
+print(fruits)
+>> set()
+```
+
+**.copy() (Returns a copy of the set)**
+```python
+fruits = {"apple", "banana", "cherry"}
+x = fruits.copy()
+print(x)
+>> {'apple', 'cherry', 'banana'}
+```
+
+**.difference() (Returns a set containing the difference between two or more sets)**
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.difference(y)
+print(z)
+>> {'cherry', 'banana'}
+```
+
+**.difference_update() (Removes the items in this set that are also included in another, specified set)**
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.difference_update(y)
+print(x)
+>> {'cherry', 'banana'}
+```
+
+**.discard()(Remove the specified item)**
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.discard("banana")
+print(thisset)
+>> {'apple', 'cherry'}
+```
+
+**.intersection() (Returns a set, that is the intersection of two other sets)**
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.intersection(y)
+print(z)
+>> {'apple'}
+```
+
+**.intersection_update() (Removes the items in this set that are not present in other, specified set(s))**
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.intersection_update(y) 
+print(x)
+>> {'apple'}
+```
+
+**.isdisjoint() (Returns whether two sets have a intersection or not)**
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "facebook"}
+z = x.isdisjoint(y) 
+print(z)
+>> True
+```
+
+**.issubset() (Returns whether another set contains this set or not)**
+```python
+x = {"a", "b", "c"}
+y = {"f", "e", "d", "c", "b", "a"}
+z = x.issubset(y)
+print(z)
+>> True
+```
+
+**.issuperset() (Returns whether this set contains another set or not)**
+```python
+x = {"f", "e", "d", "c", "b", "a"}
+y = {"a", "b", "c"}
+z = x.issuperset(y) 
+print(z)
+>> True
+```
+
+**.pop() (Removes an element from the set)**
+```python
+fruits = {"apple", "banana", "cherry"}
+fruits.pop() 
+print(fruits)
+>> {'banana', 'cherry'}
+```
+
+**.remove() (Removes the specified element)**
+```python
+fruits = {"apple", "banana", "cherry"}
+fruits.remove("banana") 
+print(fruits)
+>> {'cherry', 'apple'}
+```
+
+**.symmetric_difference() (Returns a set with the symmetric differences of two sets)**
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.symmetric_difference(y)
+print(z)
+>> {'cherry', 'microsoft', 'banana', 'google'}
+```
+
+**.symmetric_difference_update() (inserts the symmetric differences from this set and another)**
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.symmetric_difference_update(y)
+print(x)
+>> {'google', 'microsoft', 'banana', 'cherry'}
+```
+
+**.union() (Return a set containing the union of sets)**
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+z = x.union(y)
+print(z)
+>> {'apple', 'microsoft', 'cherry', 'banana', 'google'}
+```
+
+**.update() (Update the set with the union of this set and others)**
+```python
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+x.update(y) 
+print(x)
+>> {'cherry', 'microsoft', 'banana', 'apple', 'google'}
+```
 
 String
 ------
