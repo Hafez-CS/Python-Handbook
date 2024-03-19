@@ -30,7 +30,7 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **11. Dictionaries :** **&nbsp;**  **[`Dictionaries`](#dictionaries)**
 
-**&nbsp;&nbsp;&nbsp;** **11. if ... else :** **&nbsp;**  **[`if ... else`](#if...else)**
+**&nbsp;&nbsp;&nbsp;** **12. if-else :** **&nbsp;**  **[`if-else`](#if-else)**
 
 
 Home
@@ -1748,9 +1748,15 @@ print(x)
 ```
 
 
-if ... else
+if-else
 -----
-**Functions for regular expression matching.**
+* **Equals : `a == b`**
+* * **Not Equals : `a == b`**
+* **Less than : `a == b`**
+* **Less than or equal to : `a == b`**
+* **Greater than : `a == b`**
+* **Greater than or equal to : `a == b`**
+
 
 ```python
 import re
