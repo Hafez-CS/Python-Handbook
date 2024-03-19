@@ -6,19 +6,21 @@ Python
 
 Contents
 --------
-**&nbsp;&nbsp;&nbsp;** **1. Home:** **&nbsp;&nbsp;&nbsp;**  **[`Home`](#home)**__.__
+**&nbsp;&nbsp;&nbsp;** **1. Home :** **&nbsp;**  **[`Home`](#home)**
 
-**&nbsp;&nbsp;&nbsp;** **2. Variables:** **&nbsp;&nbsp;&nbsp;**  **[`Variables`](#variables)**__.__ 
+**&nbsp;&nbsp;&nbsp;** **2. Variables :** **&nbsp;**  **[`Variables`](#variables)**
 
-**&nbsp;&nbsp;&nbsp;** **3. Data Types:** **&nbsp;&nbsp;&nbsp;**  **[`DataTypes`](#datatypes)**__.__ 
+**&nbsp;&nbsp;&nbsp;** **3. Data Types :** **&nbsp;**  **[`DataTypes`](#datatypes)**
 
-**&nbsp;&nbsp;&nbsp;** **4. Numbers:** **&nbsp;&nbsp;&nbsp;**  **[`Numbers`](#numbers)**__.__
+**&nbsp;&nbsp;&nbsp;** **4. Numbers :** **&nbsp;**  **[`Numbers`](#numbers)**
 
-**&nbsp;&nbsp;&nbsp;** **5. Strings:** **&nbsp;&nbsp;&nbsp;**  **[`Strings`](#strings)**__.__
+**&nbsp;&nbsp;&nbsp;** **5. Strings :** **&nbsp;**  **[`Strings`](#strings)**
 
-**&nbsp;&nbsp;&nbsp;** **6. Booleans:** **&nbsp;&nbsp;&nbsp;**  **[`Booleans`](#booleans)**__.__
+**&nbsp;&nbsp;&nbsp;** **6. Booleans :** **&nbsp;**  **[`Booleans`](#booleans)**
 
-**&nbsp;&nbsp;&nbsp;** **7. Operators:** **&nbsp;&nbsp;&nbsp;**  **[`Operators`](#operators)**__.__
+**&nbsp;&nbsp;&nbsp;** **7. Operators :** **&nbsp;**  **[`Operators`](#operators)**
+
+**&nbsp;&nbsp;&nbsp;** **8. Lists :** **&nbsp;**  **[`Lists`](#lists)**
 
 
 
@@ -820,35 +822,174 @@ Operators
 
 **`x <<= 3` Or `x = x << 3`**
 
-Iterator
+
+Lists
 --------
 ```python
-<iter> = iter(<collection>)                # `iter(<iter>)` returns unmodified iterator.
-<iter> = iter(<function>, to_exclusive)    # A sequence of return values until 'to_exclusive'.
-<el>   = next(<iter> [, default])          # Raises StopIteration or returns 'default' on end.
-<list> = list(<iter>)                      # Returns a list of iterator's remaining elements.
-```
-
-### Itertools
-```python
-import itertools as it
+mylist = ["apple", "banana", "cherry"]
 ```
 
 ```python
-<iter> = it.count(start=0, step=1)         # Returns updated value endlessly. Accepts floats.
-<iter> = it.repeat(<el> [, times])         # Returns element endlessly or 'times' times.
-<iter> = it.cycle(<collection>)            # Repeats the sequence endlessly.
+thislist = ["apple", "banana", "cherry"]
+print(thislist)
+>> ['apple', 'banana', 'cherry']
 ```
 
 ```python
-<iter> = it.chain(<coll>, <coll> [, ...])  # Empties collections in order (figuratively).
-<iter> = it.chain.from_iterable(<coll>)    # Empties collections inside a collection in order.
+thislist = ["apple", "banana", "cherry"]
+print(len(thislist))
+>> 3
 ```
 
 ```python
-<iter> = it.islice(<coll>, to_exclusive)   # Only returns first 'to_exclusive' elements.
-<iter> = it.islice(<coll>, from_inc, …)    # `to_exclusive, +step_size`. Indices can be None.
+thislist = ["apple", "banana", "cherry"]
+print(thislist[1])
+>> "banana"
 ```
+
+```python
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:5])
+>> ['cherry', 'orange', 'kiwi']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist[1:2] = ["blackcurrant", "watermelon"]
+print(thislist)
+>> ['apple', 'blackcurrant', 'watermelon', 'cherry']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.insert(2, "watermelon")
+print(thislist)
+>> ['apple', 'banana', 'watermelon', 'cherry']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.append("orange")
+print(thislist)
+>> ['apple', 'banana', 'cherry', 'orange']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)
+print(thislist)
+>> ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+>> ['apple', 'cherry']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+>> ['apple', 'cherry']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+>> ['apple', 'banana']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist[0]
+print(thislist)
+>> ['banana', 'cherry']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+>> []
+```
+
+```python
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort()
+print(thislist)
+>> ['banana', 'kiwi', 'mango', 'orange', 'pineapple']
+```
+
+```python
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+thislist.sort(reverse = True)
+print(thislist)
+>> ['pineapple', 'orange', 'mango', 'kiwi', 'banana']
+```
+
+```python
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+thislist.sort(key = str.lower)
+print(thislist)
+>> ['banana', 'cherry', 'Kiwi', 'Orange']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+mylist = thislist.copy()
+print(mylist)
+>> ['apple', 'banana', 'cherry']
+```
+
+```python
+thislist = ["apple", "banana", "cherry"]
+mylist = list(thislist)
+print(mylist)
+>> ['apple', 'banana', 'cherry']
+```
+
+```python
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+list3 = list1 + list2
+print(list3)
+>> ['a', 'b', 'c', 1, 2, 3]
+```
+
+### All List methods :
+**.append() (Adds an element at the end of the list)**
+```python
+fruits = ['apple', 'banana', 'cherry']
+fruits.append("orange")
+print(fruits)
+>> ['apple', 'banana', 'cherry', 'orange']
+```
+
+**.clear() (Removes all the elements from the list)**
+```python
+fruits = ['apple', 'banana', 'cherry', 'orange']
+fruits.clear()
+print(fruits)
+>> []
+```
+
+**.copy() (Returns a copy of the list)**
+```python
+fruits = ['apple', 'banana', 'cherry', 'orange']
+x = fruits.copy()
+print(x)
+>> ['apple', 'banana', 'cherry', 'orange']
+```
+
 
 
 Generator
