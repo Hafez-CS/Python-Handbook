@@ -1,9 +1,12 @@
-Python
+Python Handbook
 ===============================
 ![Monty Python](https://cdn.dribbble.com/users/330915/screenshots/3587000/10_coding_dribbble.gif)
 
 Introduction
 --------
+**Welcome to python handbook!
+This handbook is a complete collection of Python tips and topics in a "learning by example" approach and I hope it is useful.**
+
 ### What is Python?
 **Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.**
 **It is used for:
@@ -26,8 +29,17 @@ Python has syntax that allows developers to write programs with fewer lines than
 Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick.
 Python can be treated in a procedural way, an object-oriented way or a functional way.**
 
-### python handbook
-**learn**
+### good to know
+**Python : https://www.python.org/**
+
+**The Python Standard Library : https://docs.python.org/3/library/index.html**
+
+**Learn more about python : https://www.w3schools.com/python/default.asp**
+
+**Learn more about python : https://www.geeksforgeeks.org/python-programming-language/**
+
+**VS Code : https://code.visualstudio.com/**
+
 
 
 Contents
@@ -56,7 +68,7 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **12. if-else :** **&nbsp;**  **[`if-else`](#if-else)**
 
-**&nbsp;&nbsp;&nbsp;** **12. While Loops :** **&nbsp;**  **[`WhileLoops`](#whileloops)**
+**&nbsp;&nbsp;&nbsp;** **13. While Loops :** **&nbsp;**  **[`WhileLoops`](#whileloops)**
 
 
 Home
