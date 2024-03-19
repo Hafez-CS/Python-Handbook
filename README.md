@@ -32,6 +32,8 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **12. if-else :** **&nbsp;**  **[`if-else`](#if-else)**
 
+**&nbsp;&nbsp;&nbsp;** **12. While Loops :** **&nbsp;**  **[`WhileLoops`](#whileloops)**
+
 
 Home
 ----
@@ -1751,144 +1753,166 @@ print(x)
 if-else
 -----
 * **Equals : `a == b`**
-* * **Not Equals : `a == b`**
-* **Less than : `a == b`**
-* **Less than or equal to : `a == b`**
-* **Greater than : `a == b`**
-* **Greater than or equal to : `a == b`**
-
+* **Not Equals : `a != b`**
+* **Less than : `a < b`**
+* **Less than or equal to : `a <= b`**
+* **Greater than : `a > b`**
+* **Greater than or equal to : `a >= b`**
 
 ```python
-import re
-<str>   = re.sub(r'<regex>', new, text, count=0)  # Substitutes all occurrences with 'new'.
-<list>  = re.findall(r'<regex>', text)            # Returns all occurrences as strings.
-<list>  = re.split(r'<regex>', text, maxsplit=0)  # Add brackets around regex to keep matches.
-<Match> = re.search(r'<regex>', text)             # First occurrence of the pattern or None.
-<Match> = re.match(r'<regex>', text)              # Searches only at the beginning of the text.
-<iter>  = re.finditer(r'<regex>', text)           # Returns all occurrences as Match objects.
+a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
+>> "b is greater than a"
 ```
 
-* **Raw string literals do not interpret escape sequences, thus enabling us to use regex-specific escape sequences that cause SyntaxWarning in normal string literals (since 3.12).**
-* **Argument 'new' of re.sub() can be a function that accepts a Match object and returns a str.**
-* **Argument `'flags=re.IGNORECASE'` can be used with all functions.**
-* **Argument `'flags=re.MULTILINE'` makes `'^'` and `'$'` match the start/end of each line.**
-* **Argument `'flags=re.DOTALL'` makes `'.'` also accept the `'\n'`.**
-* **`'re.compile(<regex>)'` returns a Pattern object with methods sub(), findall(), …**
-
-### Match Object
 ```python
-<str>   = <Match>.group()                         # Returns the whole match. Also group(0).
-<str>   = <Match>.group(1)                        # Returns part inside the first brackets.
-<tuple> = <Match>.groups()                        # Returns all bracketed parts.
-<int>   = <Match>.start()                         # Returns start index of the match.
-<int>   = <Match>.end()                           # Returns exclusive end index of the match.
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+>> "a and b are equal"
 ```
 
-### Special Sequences
 ```python
-'\d' == '[0-9]'                                   # Also [०-९…]. Matches a decimal character.
-'\w' == '[a-zA-Z0-9_]'                            # Also [ª²³…]. Matches an alphanumeric or _.
-'\s' == '[ \t\n\r\f\v]'                           # Also [\x1c-\x1f…]. Matches a whitespace.
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+>> "a is greater than b"
 ```
 
-* **By default, decimal characters, alphanumerics and whitespaces from all alphabets are matched unless `'flags=re.ASCII'` argument is used.**
-* **It restricts special sequence matches to `'[\x00-\x7f]'` (the first 128 characters) and also prevents `'\s'` from accepting `'[\x1c-\x1f]'` (the so-called separator characters).**
-* **Use a capital letter for negation (all non-ASCII characters will be matched when used in combination with ASCII flag).**
+```python
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+else:
+  print("b is not greater than a")
+>> "b is not greater than a"
+```
+
+```python
+a = 200
+b = 100
+if a > b: print("a is greater than b")
+>> "a is greater than b"
+```
+
+```python
+a = 2
+b = 330
+print("A") if a > b else print("B")
+>> "B"
+```
+
+```python
+a = 330
+b = 330
+print("A") if a > b else print("=") if a == b else print("B")
+>> "="
+```
+
+```python
+a = 200
+b = 33
+c = 500
+if a > b and c > a:
+  print("Both conditions are True")
+>> "Both conditions are True"
+```
+
+```python
+a = 200
+b = 33
+c = 500
+if a > b or a > c:
+  print("At least one of the conditions is True")
+>> "At least one of the conditions is True"
+```
+
+```python
+a = 33
+b = 200
+if not a > b:
+  print("a is NOT greater than b")
+>> "a is NOT greater than b"
+```
+
+```python
+x = 41
+
+if x > 10:
+  print("Above ten,")
+  if x > 20:
+    print("and also above 20!")
+  else:
+    print("but not above 20.")
+>> "Above ten,"
+   "and also above 20!"
+```
 
 
-Format
+WhileLoops
 ------
-```perl
-<str> = f'{<el_1>}, {<el_2>}'            # Curly brackets can also contain expressions.
-<str> = '{}, {}'.format(<el_1>, <el_2>)  # Or: '{0}, {a}'.format(<el_1>, a=<el_2>)
-<str> = '%s, %s' % (<el_1>, <el_2>)      # Redundant and inferior C-style formatting.
-```
-
-### Example
 ```python
->>> Person = collections.namedtuple('Person', 'name height')
->>> person = Person('Jean-Luc', 187)
->>> f'{person.name} is {person.height / 100} meters tall.'
-'Jean-Luc is 1.87 meters tall.'
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+>> 1
+   2
+   3
+   4
+   5
 ```
 
-### General Options
 ```python
-{<el>:<10}                               # '<el>      '
-{<el>:^10}                               # '   <el>   '
-{<el>:>10}                               # '      <el>'
-{<el>:.<10}                              # '<el>......'
-{<el>:0}                                 # '<el>'
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+>> 1
+   2
+   3
 ```
-* **Objects are rendered using `'format(<el>, <options>)'`.**
-* **Options can be generated dynamically: `f'{<el>:{<str/int>}[…]}'`.**
-* **Adding `'='` to the expression prepends it to the output: `f'{1+1=}'` returns `'1+1=2'`.**
-* **Adding `'!r'` to the expression converts object to string by calling its [repr()](#class) method.**
 
-### Strings
 ```python
-{'abcde':10}                             # 'abcde     '
-{'abcde':10.3}                           # 'abc       '
-{'abcde':.3}                             # 'abc'
-{'abcde'!r:10}                           # "'abcde'   "
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+>> 1
+   2
+   4
+   5
+   6
 ```
 
-### Numbers
 ```python
-{123456:10}                              # '    123456'
-{123456:10,}                             # '   123,456'
-{123456:10_}                             # '   123_456'
-{123456:+10}                             # '   +123456'
-{123456:=+10}                            # '+   123456'
-{123456: }                               # ' 123456'
-{-123456: }                              # '-123456'
-```
-
-### Floats
-```python
-{1.23456:10.3}                           # '      1.23'
-{1.23456:10.3f}                          # '     1.235'
-{1.23456:10.3e}                          # ' 1.235e+00'
-{1.23456:10.3%}                          # '  123.456%'
-```
-
-#### Comparison of presentation types:
-```text
-+--------------+----------------+----------------+----------------+----------------+
-|              |    {<float>}   |   {<float>:f}  |   {<float>:e}  |   {<float>:%}  |
-+--------------+----------------+----------------+----------------+----------------+
-|  0.000056789 |   '5.6789e-05' |    '0.000057'  | '5.678900e-05' |    '0.005679%' |
-|  0.00056789  |   '0.00056789' |    '0.000568'  | '5.678900e-04' |    '0.056789%' |
-|  0.0056789   |   '0.0056789'  |    '0.005679'  | '5.678900e-03' |    '0.567890%' |
-|  0.056789    |   '0.056789'   |    '0.056789'  | '5.678900e-02' |    '5.678900%' |
-|  0.56789     |   '0.56789'    |    '0.567890'  | '5.678900e-01' |   '56.789000%' |
-|  5.6789      |   '5.6789'     |    '5.678900'  | '5.678900e+00' |  '567.890000%' |
-| 56.789       |  '56.789'      |   '56.789000'  | '5.678900e+01' | '5678.900000%' |
-+--------------+----------------+----------------+----------------+----------------+
-```
-
-```text
-+--------------+----------------+----------------+----------------+----------------+
-|              |  {<float>:.2}  |  {<float>:.2f} |  {<float>:.2e} |  {<float>:.2%} |
-+--------------+----------------+----------------+----------------+----------------+
-|  0.000056789 |    '5.7e-05'   |      '0.00'    |   '5.68e-05'   |      '0.01%'   |
-|  0.00056789  |    '0.00057'   |      '0.00'    |   '5.68e-04'   |      '0.06%'   |
-|  0.0056789   |    '0.0057'    |      '0.01'    |   '5.68e-03'   |      '0.57%'   |
-|  0.056789    |    '0.057'     |      '0.06'    |   '5.68e-02'   |      '5.68%'   |
-|  0.56789     |    '0.57'      |      '0.57'    |   '5.68e-01'   |     '56.79%'   |
-|  5.6789      |    '5.7'       |      '5.68'    |   '5.68e+00'   |    '567.89%'   |
-| 56.789       |    '5.7e+01'   |     '56.79'    |   '5.68e+01'   |   '5678.90%'   |
-+--------------+----------------+----------------+----------------+----------------+
-```
-* **`'{<float>:g}'` is `'{<float>:.6}'` with stripped zeros, exponent starting at `'1e+06'`.**
-* **When both rounding up and rounding down are possible, the one that returns result with even last digit is chosen. That makes `'{6.5:.0f}'` a `'6'` and `'{7.5:.0f}'` an `'8'`.**
-* **This rule only effects numbers that can be represented exactly by a float (`.5`, `.25`, …).**
-
-### Ints
-```python
-{90:c}                                   # 'Z'
-{90:b}                                   # '1011010'
-{90:X}                                   # '5A'
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+else:
+  print("i is no longer less than 6")
+>> 1
+   2
+   3
+   4
+   5
+   "i is no longer less than 6"
 ```
 
 
