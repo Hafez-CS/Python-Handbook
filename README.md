@@ -46,9 +46,9 @@ Contents
 --------
 **&nbsp;&nbsp;&nbsp;** **1. Home :** **&nbsp;**  **[`Home`](#home)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **21. JSON :** **&nbsp;**  **[`JSON`](#json)**
 
-**&nbsp;&nbsp;&nbsp;** **2. Variables :** **&nbsp;**  **[`Variables`](#variables)**
+**&nbsp;&nbsp;&nbsp;** **2. Variables :** **&nbsp;**  **[`Variables`](#variables)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **22. RegEx :** **&nbsp;**  **[`RegEx`](#regex)**
 
-**&nbsp;&nbsp;&nbsp;** **3. Data Types :** **&nbsp;**  **[`DataTypes`](#datatypes)**
+**&nbsp;&nbsp;&nbsp;** **3. Data Types :** **&nbsp;**  **[`DataTypes`](#datatypes)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **23. Try-Except :** **&nbsp;**  **[`Try-Except`](#try-except)**
 
 **&nbsp;&nbsp;&nbsp;** **4. Numbers :** **&nbsp;**  **[`Numbers`](#numbers)**
 
@@ -83,7 +83,6 @@ Contents
 **&nbsp;&nbsp;&nbsp;** **19. Datetime :** **&nbsp;**  **[`Datetime`](#datetime)**
 
 **&nbsp;&nbsp;&nbsp;** **20. Math :** **&nbsp;**  **[`Math`](#math)**
-
 
 
 
@@ -2790,3 +2789,108 @@ x = {
 print(json.dumps(x))
 >> {"name": "John", "age": 30, "married": true, "divorced": false, "children": ["Ann", "Billy"], "pets": null, "cars": [{"model": "BMW 230", "mpg": 27.5}, {"model": "Ford Edge", "mpg": 24.1}]}
 ```
+
+
+RegEx
+------
+```python
+import re
+txt = "The rain in Spain"
+x = re.findall("ai", txt)
+print(x)
+>> ['ai', 'ai']
+```
+
+**`findall`	Returns a list containing all matches.**
+
+**`search`	Returns a Match object if there is a match anywhere in the string.**
+
+**`split`	Returns a list where the string has been split at each match.**
+
+**`sub`	Replaces one or many matches with a string.**
+
+**`[]`	A set of characters.**
+
+**`\`	Signals a special sequence (can also be used to escape special characters).**
+
+**`.`	Any character (except newline character).**
+
+**`^`	Starts with.**
+
+**`$`	Ends with.**
+
+**`*`	Zero or more occurrences.**
+
+**`+`	One or more occurrences.**
+
+**`?`	Zero or one occurrences.**
+
+**`{}`	Exactly the specified number of occurrences.**
+
+**`|`	Either or.**
+
+**`()`	Capture and group.**
+
+
+Try-Except
+------
+* **`try`	block lets you test a block of code for errors.**
+* **`except`	block lets you handle the error.**
+* **`else`	block lets you execute code when there is no error.**
+* **`finally`	block lets you execute code, regardless of the result of the try- and except blocks.**
+
+```python
+try:
+  print(x)
+except:
+  print("An exception occurred")
+>> "An exception occurred"
+```
+
+```python
+try:
+  print(x)
+except NameError:
+  print("Variable x is not defined")
+except:
+  print("Something else went wrong")
+>> "Variable x is not defined"
+```
+
+```python
+try:
+  print("Hello")
+except:
+  print("Something went wrong")
+else:
+  print("Nothing went wrong")
+>> "Hello"
+>> "Nothing went wrong"
+```
+
+```python
+try:
+  print(x)
+except:
+  print("Something went wrong")
+finally:
+  print("The 'try except' is finished")
+>> "Something went wrong"
+>> "The 'try except' is finished"
+```
+
+```python
+try:
+  f = open("demofile.txt")
+  try:
+    f.write("Lorum Ipsum")
+  except:
+    print("Something went wrong when writing to the file")
+  finally:
+    f.close()
+except:
+  print("Something went wrong when opening the file")
+>> "Something went wrong when opening the file"
+```
+
+
