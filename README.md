@@ -48,11 +48,11 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **2. Variables :** **&nbsp;**  **[`Variables`](#variables)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **22. RegEx :** **&nbsp;**  **[`RegEx`](#regex)**
 
-**&nbsp;&nbsp;&nbsp;** **3. Data Types :** **&nbsp;**  **[`DataTypes`](#datatypes)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **23. Try-Except :** **&nbsp;**  **[`Try-Except`](#try-except)**
+**&nbsp;&nbsp;&nbsp;** **3. Data Types :** **&nbsp;**  **[`Data-Types`](#data-types)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **23. Try-Except :** **&nbsp;**  **[`Try-Except`](#try-except)**
 
-**&nbsp;&nbsp;&nbsp;** **4. Numbers :** **&nbsp;**  **[`Numbers`](#numbers)**
+**&nbsp;&nbsp;&nbsp;** **4. Numbers :** **&nbsp;**  **[`Numbers`](#numbers)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **24. Input :** **&nbsp;**  **[`Input`](#input)**
 
-**&nbsp;&nbsp;&nbsp;** **5. Strings :** **&nbsp;**  **[`Strings`](#strings)**
+**&nbsp;&nbsp;&nbsp;** **5. Strings :** **&nbsp;**  **[`Strings`](#strings)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **25. String Formatting :** **&nbsp;**  **[`String-Formatting`](#string-formatting)**
 
 **&nbsp;&nbsp;&nbsp;** **6. Booleans :** **&nbsp;**  **[`Booleans`](#booleans)**
 
@@ -78,7 +78,7 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **17. iterators :** **&nbsp;**  **[`iterators`](#iterators)**
 
-**&nbsp;&nbsp;&nbsp;** **18. make-my-library :** **&nbsp;**  **[`make-my-library`](#make-my-library)**
+**&nbsp;&nbsp;&nbsp;** **18. make my library :** **&nbsp;**  **[`make-my-library`](#make-my-library)**
 
 **&nbsp;&nbsp;&nbsp;** **19. Datetime :** **&nbsp;**  **[`Datetime`](#datetime)**
 
@@ -191,7 +191,7 @@ print(x + y)
 ```
 
 
-DataTypes
+Data-Types
 ----------
 * **Text Type :	str**
 * **Numeric Types :	int, float, complex**
@@ -2894,3 +2894,48 @@ except:
 ```
 
 
+Input
+------
+```python
+username = input("Enter username:")
+print("Username is: " + username)
+>> "Username is: iran"
+```
+
+```python
+num1 = int(input())
+num2 = int(input())
+print(num1 + num2)
+```
+
+```python
+num1 = float(input())
+num2 = float(input())
+print(num1 + num2)
+```
+
+```python
+# taking two inputs at a time
+x, y = input("Enter two values: ").split()
+print("Number of boys: ", x)
+print("Number of girls: ", y)
+```
+
+
+String Formatting
+------
+```python
+price = 49
+txt = "The price is {} dollars"
+print(txt.format(price))
+>> "The price is 49 dollars"
+```
+
+```python
+quantity = 3
+itemno = 567
+price = 49
+myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+print(myorder.format(quantity, itemno, price))
+>> "I want 3 pieces of item number 567 for 49.00 dollars."
+```
