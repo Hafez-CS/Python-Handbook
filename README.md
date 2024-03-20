@@ -44,7 +44,7 @@ Python can be treated in a procedural way, an object-oriented way or a functiona
 
 Contents
 --------
-**&nbsp;&nbsp;&nbsp;** **1. Home :** **&nbsp;**  **[`Home`](#home)**
+**&nbsp;&nbsp;&nbsp;** **1. Home :** **&nbsp;**  **[`Home`](#home)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **21. JSON :** **&nbsp;**  **[`JSON`](#json)**
 
 **&nbsp;&nbsp;&nbsp;** **2. Variables :** **&nbsp;**  **[`Variables`](#variables)**
 
@@ -2720,4 +2720,73 @@ print(math.isclose(1.233, 1.233000001))
 >> True
 >> False
 >> True
+```
+
+
+JSON
+------
+```python
+import json
+# some JSON:
+x =  '{ "name":"John", "age":30, "city":"New York"}'
+# parse x:
+y = json.loads(x)
+# the result is a Python dictionary:
+print(y["age"])
+>> 30
+```
+
+```python
+import json
+# a Python object (dict):
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+# convert into JSON:
+y = json.dumps(x)
+# the result is a JSON string:
+print(y)
+>> {"name": "John", "age": 30, "city": "New York"}
+```
+
+```python
+import json
+print(json.dumps({"name": "John", "age": 30}))
+print(json.dumps(["apple", "bananas"]))
+print(json.dumps(("apple", "bananas")))
+print(json.dumps("hello"))
+print(json.dumps(42))
+print(json.dumps(31.76))
+print(json.dumps(True))
+print(json.dumps(False))
+print(json.dumps(None))
+>> {"name": "John", "age": 30}
+>> ["apple", "bananas"]
+>> ["apple", "bananas"]
+>> "hello"
+>> 42
+>> 31.76
+>> True
+>> False
+>> Null
+```
+
+```python
+import json
+x = {
+  "name": "John",
+  "age": 30,
+  "married": True,
+  "divorced": False,
+  "children": ("Ann","Billy"),
+  "pets": None,
+  "cars": [
+    {"model": "BMW 230", "mpg": 27.5},
+    {"model": "Ford Edge", "mpg": 24.1}
+  ]
+}
+print(json.dumps(x))
+>> {"name": "John", "age": 30, "married": true, "divorced": false, "children": ["Ann", "Billy"], "pets": null, "cars": [{"model": "BMW 230", "mpg": 27.5}, {"model": "Ford Edge", "mpg": 24.1}]}
 ```
