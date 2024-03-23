@@ -54,7 +54,7 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **5. Strings :** **&nbsp;**  **[`Strings`](#strings)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **25. String Formatting :** **&nbsp;**  **[`String-Formatting`](#string-formatting)**
 
-**&nbsp;&nbsp;&nbsp;** **6. Booleans :** **&nbsp;**  **[`Booleans`](#booleans)**
+**&nbsp;&nbsp;&nbsp;** **6. Booleans :** **&nbsp;**  **[`Booleans`](#booleans)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **26. File Handling :** **&nbsp;**  **[`File-Handling`](#file-handling)**
 
 **&nbsp;&nbsp;&nbsp;** **7. Operators :** **&nbsp;**  **[`Operators`](#operators)**
 
@@ -2938,4 +2938,136 @@ price = 49
 myorder = "I want {} pieces of item number {} for {:.2f} dollars."
 print(myorder.format(quantity, itemno, price))
 >> "I want 3 pieces of item number 567 for 49.00 dollars."
+```
+
+
+File-Handling
+------
+**`close()`	Closes the file.**
+
+**`detach()`	Returns the separated raw stream from the buffer.**
+
+**`fileno()`	Returns a number that represents the stream, from the operating system's perspective.**
+
+**`flush()`	Flushes the internal buffer.**
+
+**`isatty()`	Returns whether the file stream is interactive or not.**
+
+**`read()`	Returns the file content.**
+
+**`readable()`	Returns whether the file stream can be read or not.**
+
+**`readline()`	Returns one line from the file.**
+
+**`readlines()`	Returns a list of lines from the file.**
+
+**`seek()`	Change the file position.**
+
+**`seekable()`	Returns whether the file allows us to change the file position.**
+
+**`tell()`	Returns the current file position.**
+
+**`truncate()`	Resizes the file to a specified size.**
+
+**`writable()`	Returns whether the file can be written to or not.**
+
+**`write()`	Writes the specified string to the file.**
+
+**`writelines()`	Writes a list of strings to the file.**
+
+* **`"r"`	Read - Default value. Opens a file for reading, error if the file does not exist.**
+* **`"a"`	Append - Opens a file for appending, creates the file if it does not exist.**
+* **`"w"`	Write - Opens a file for writing, creates the file if it does not exist.**
+* **`"x"`	Create - Creates the specified file, returns an error if the file exists.**
+* **`"t"`	Text - Default value. Text mode.**
+* **`"b"`	Binary - Binary mode (e.g. images).**
+  
+```python
+f = open("demofile.txt")
+```
+
+```python
+f = open("demofile.txt", "rt")
+```
+
+```python
+f = open("demofile.txt", "r")
+print(f.read())
+```
+
+```python
+f = open("D:\\myfiles\welcome.txt", "r")
+print(f.read())
+```
+
+```python
+f = open("demofile.txt", "r")
+print(f.read(5))  # Return the 5 first characters of the file
+```
+
+```python
+f = open("demofile.txt", "r")
+print(f.readline())
+```
+
+```python
+f = open("demofile.txt", "r")
+print(f.readline())
+f.close()
+```
+
+### Write to an Existing File :
+**`"a"`	Append - will append to the end of the file.**
+
+**`"w"`	Write - will overwrite any existing content.**
+```python
+f = open("demofile2.txt", "a")
+f.write("Now the file has more content!")
+f.close()
+#open and read the file after the appending:
+f = open("demofile2.txt", "r")
+print(f.read())
+>> "Now the file has more content!"
+
+
+f = open("demofile3.txt", "w")
+f.write("Woops! I have deleted the content!")
+f.close()
+#open and read the file after the overwriting:
+f = open("demofile3.txt", "r")
+print(f.read())
+>> "Woops! I have deleted the content!"
+```
+
+### Create a New File :
+**`"x"`	Create - will create a file, returns an error if the file exist.**
+
+**`"a"`	Append - will create a file if the specified file does not exist.**
+
+**`"w"`	Write - will create a file if the specified file does not exist.**
+```python
+f = open("myfile.txt", "x")
+
+f = open("myfile.txt", "w")
+```
+
+### Delete a File :
+```python
+import os
+os.remove("demofile.txt")
+```
+
+### Check if File exist :
+```python
+import os
+if os.path.exists("demofile.txt"):
+  os.remove("demofile.txt")
+else:
+  print("The file does not exist")
+```
+
+### Delete Folder :
+```python
+import os
+os.rmdir("myfolder")
 ```
