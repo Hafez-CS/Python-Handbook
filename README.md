@@ -56,21 +56,21 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **6. Booleans :** **&nbsp;**  **[`Booleans`](#booleans)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **26. File Handling :** **&nbsp;**  **[`File-Handling`](#file-handling)**
 
-**&nbsp;&nbsp;&nbsp;** **7. Operators :** **&nbsp;**  **[`Operators`](#operators)**
+**&nbsp;&nbsp;&nbsp;** **7. Operators :** **&nbsp;**  **[`Operators`](#operators)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **27. Built In Functions :** **&nbsp;**  **[`Built-In-Functions`](#built-in-functions)**
 
-**&nbsp;&nbsp;&nbsp;** **8. Lists :** **&nbsp;**  **[`Lists`](#lists)**
+**&nbsp;&nbsp;&nbsp;** **8. Lists :** **&nbsp;**  **[`Lists`](#lists)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **28. Python Error :** **&nbsp;**  **[`Python-Error`](#python-error)**
 
-**&nbsp;&nbsp;&nbsp;** **9. Tuples :** **&nbsp;**  **[`Tuples`](#tuples)**
+**&nbsp;&nbsp;&nbsp;** **9. Tuples :** **&nbsp;**  **[`Tuples`](#tuples)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **29. Random :** **&nbsp;**  **[`Random`](#random)**
 
-**&nbsp;&nbsp;&nbsp;** **10. Sets :** **&nbsp;**  **[`Sets`](#sets)**
+**&nbsp;&nbsp;&nbsp;** **10. Sets :** **&nbsp;**  **[`Sets`](#sets)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **30. Enum :** **&nbsp;**  **[`Enum`](#enum)**
 
-**&nbsp;&nbsp;&nbsp;** **11. Dictionaries :** **&nbsp;**  **[`Dictionaries`](#dictionaries)**
+**&nbsp;&nbsp;&nbsp;** **11. Dictionaries :** **&nbsp;**  **[`Dictionaries`](#dictionaries)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **31. System :** **&nbsp;**  **[`System`](#system)**
 
-**&nbsp;&nbsp;&nbsp;** **12. if-else :** **&nbsp;**  **[`if-else`](#if-else)**
+**&nbsp;&nbsp;&nbsp;** **12. if-else :** **&nbsp;**  **[`if-else`](#if-else)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **32. Path :** **&nbsp;**  **[`Path`](#path)**
 
-**&nbsp;&nbsp;&nbsp;** **13. While Loops :** **&nbsp;**  **[`While-Loops`](#while-loops)**
+**&nbsp;&nbsp;&nbsp;** **13. While Loops :** **&nbsp;**  **[`While-Loops`](#while-loops)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **33. Pickle :** **&nbsp;**  **[`Pickle`](#pickle)**
 
-**&nbsp;&nbsp;&nbsp;** **14. for Loops :** **&nbsp;**  **[`for-Loops`](#for-loops)**
+**&nbsp;&nbsp;&nbsp;** **14. for Loops :** **&nbsp;**  **[`for-Loops`](#for-loops)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **34. Collections :** **&nbsp;**  **[`Collections`](#collections)**
 
 **&nbsp;&nbsp;&nbsp;** **15. Functions :** **&nbsp;**  **[`Functions`](#functions)**
 
@@ -3070,4 +3070,1057 @@ else:
 ```python
 import os
 os.rmdir("myfolder")
+```
+
+
+Built-In-Functions
+------
+### abs() (Returns the absolute value of a number) :
+```python
+x = abs(-7.25)
+print(x)
+>> 7.25
+```
+
+### all() (Returns True if all items in an iterable object are true) :
+```python
+mylist = [True, True, True]
+x = all(mylist)
+print(x)
+>> True
+```
+
+### any() (Returns True if any item in an iterable object is true) :
+```python
+mylist = [False, True, False]
+x = any(mylist)
+print(x)
+>> True
+```
+
+### ascii() (Returns a readable version of an object. Replaces none-ascii characters with escape character) :
+```python
+x = ascii("My name is Ståle")
+print(x)
+>> 'My name is St\xe5le'
+```
+
+### bin() (Returns the binary version of a number) :
+```python
+x = bin(36)
+print(x)
+>> 0b100100
+```
+
+### bool() (Returns the boolean value of the specified object) :
+```python
+x = bool(1)
+print(x)
+>> True
+```
+
+### bytearray() (Returns an array of bytes) :
+```python
+x = bytearray(4)
+print(x)
+>> bytearray(b'\x00\x00\x00\x00')
+```
+
+### bytes() (Returns a bytes object) :
+```python
+x = bytes(4)
+print(x)
+>> b'\x00\x00\x00\x00'
+```
+
+### callable() (Returns True if the specified object is callable, otherwise False) :
+```python
+x = 5
+print(callable(x))
+>> False
+```
+
+### chr() (Returns a character from the specified Unicode code.) :
+```python
+x = chr(97)
+print(x)
+>> 'a'
+```
+
+### complex() (Returns a complex number) :
+```python
+x = complex(3, 5)
+print(x)
+>> (3+5j)
+```
+
+### dir() (Returns a list of the specified object's properties and methods) :
+```python
+class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+print(dir(Person))
+>> ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'age', 'country', 'name']
+```
+
+### divmod() (Returns the quotient and the remainder when argument1 is divided by argument2) :
+```python
+x = divmod(5, 2)
+print(x)
+>> (2, 1)
+```
+
+### enumerate() (Takes a collection (e.g. a tuple) and returns it as an enumerate object) :
+```python
+x = ('apple', 'banana', 'cherry')
+y = enumerate(x)
+print(y)
+>> <enumerate object at 0x14f74341f400>
+```
+
+### eval() (Evaluates and executes an expression) :
+```python
+x = 'print(55)'
+eval(x)
+print(x)
+>> 55
+```
+
+### exec() (Executes the specified code (or object)) :
+```python
+x = 'name = "John"\nprint(name)'
+exec(x)
+>> "John"
+```
+
+### filter() (Use a filter function to exclude items in an iterable object) :
+```python
+ages = [5, 12, 17, 18, 24, 32]
+
+def myFunc(x):
+  if x < 18:
+    return False
+  else:
+    return True
+
+adults = filter(myFunc, ages)
+
+for x in adults:
+  print(x)
+>> 18
+   24
+   32
+```
+
+### float() (Returns a floating point number) :
+```python
+x = float(3)
+print(x)
+>> 3.0
+```
+
+### format() (Formats a specified value) :
+**`'<'` Left aligns the result (within the available space)**
+
+**`'>'` Right aligns the result (within the available space)**
+
+**`'^'` Center aligns the result (within the available space)**
+
+**`'='` Places the sign to the left most position**
+
+**`'+'` Use a plus sign to indicate if the result is positive or negative**
+
+**`'-'` Use a minus sign for negative values only**
+
+**`' '` Use a leading space for positive numbers**
+
+**`','` Use a comma as a thousand separator**
+
+**`'_'` Use a underscore as a thousand separator**
+
+**`'b'` Binary format**
+
+**`'c'` Converts the value into the corresponding unicode character**
+
+**`'d'` Decimal format**
+
+**`'e'` Scientific format, with a lower case e**
+
+**`'E'` Scientific format, with an upper case E**
+
+**`'f'` Fix point number format**
+
+**`'F'` Fix point number format, upper case**
+
+**`'g'` General format**
+
+**`'G'` General format (using a upper case E for scientific notations)**
+
+**`'o'` Octal format**
+
+**`'x'` Hex format, lower case**
+
+**`'X'` Hex format, upper case**
+
+**`'n'` Number format**
+
+**`'%'` Percentage format**
+```python
+x = format(0.5, '%')
+print(x)
+>> 50.000000%
+```
+
+### frozenset() (Returns a frozenset object) :
+```python
+mylist = ['apple', 'banana', 'cherry']
+x = frozenset(mylist)
+print(x)
+>> frozenset({'banana', 'cherry', 'apple'})
+```
+
+### hex() (Converts a number into a hexadecimal value) :
+```python
+x = hex(255)
+print(x)
+>> 0xff
+```
+
+### id() (Returns the id of an object) :
+```python
+x = ('apple', 'banana', 'cherry')
+y = id(x)
+print(y)
+>> 23082267064192
+```
+
+### isinstance() (Returns True if a specified object is an instance of a specified object) :
+```python
+x = isinstance(5, int)
+print(x)
+>> True
+```
+
+### iter() (Returns an iterator object) :
+```python
+x = iter(["apple", "banana", "cherry"])
+print(next(x))
+print(next(x))
+print(next(x))
+>> "apple"
+>> "banana"
+>> "cherry"
+```
+
+### map() (Returns the specified iterator with the specified function applied to each item) :
+```python
+def myfunc(n):
+  return len(n)
+x = map(myfunc, ('apple', 'banana', 'cherry'))
+print(x)
+>> <map object at 0x1481154c4130>
+```
+
+### max() (Returns the largest item in an iterable) :
+```python
+x = max(5, 10)
+print(x)
+>> 10
+```
+
+### memoryview() (Returns a memory view object) :
+```python
+x = memoryview(b"Hello")
+
+print(x)
+>> <memory at 0x1495289cfa00>
+
+#return the Unicode of the first character
+print(x[0])
+>> 72
+
+#return the Unicode of the second character
+print(x[1])
+>> 101
+```
+
+### min() (Returns the smallest item in an iterable) :
+```python
+x = min(5, 10)
+print(x)
+>> 5
+```
+
+### next() (Returns the next item in an iterable) :
+```python
+mylist = iter(["apple", "banana", "cherry"])
+x = next(mylist)
+print(x)
+>> "apple"
+x = next(mylist)
+print(x)
+>> "banana"
+x = next(mylist)
+print(x)
+>> "cherry"
+```
+
+### object() (Returns a new object) :
+```python
+x = object()
+print(x)
+>> <object object at 0x15447e7c4d70>
+```
+
+### oct() (Converts a number into an octal) :
+```python
+x = oct(12)
+print(x)
+>> 0o14
+```
+
+### ord() (Convert an integer representing the Unicode of the specified character) :
+```python
+x = ord("h")
+print(x)
+>> 104
+```
+
+### range() (Returns a sequence of numbers, starting from 0 and increments by 1 (by default)) :
+```python
+x = range(6)
+for n in x:
+  print(n)
+>> 0
+   1
+   2
+   3
+   4
+   5
+
+
+x = range(3, 20, 2)
+for n in x:
+  print(n)
+>> 3
+   5
+   7
+   9
+   11
+   13
+   15
+   17
+   19
+```
+
+### reversed() (Returns a reversed iterator) :
+```python
+alph = ["a", "b", "c", "d"]
+ralph = reversed(alph)
+for x in ralph:
+  print(x)
+>> 'd'
+   'c'
+   'b'
+   'a'
+```
+
+### round() (Rounds a numbers) :
+```python
+x = round(5.76543, 2)
+print(x)
+>> 5.77
+```
+
+### slice() (Returns a slice object) :
+```python
+a = ("a", "b", "c", "d", "e", "f", "g", "h")
+x = slice(2)
+print(a[x])
+>> ('a', 'b')
+```
+
+### sorted() (Returns a sorted list) :
+```python
+a = ("b", "g", "a", "d", "f", "c", "h", "e")
+x = sorted(a)
+print(x)
+>> ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+```
+
+### str() (Returns a string object) :
+```python
+x = str(3.5)
+print(x)
+>> "3.5"
+```
+
+### sum() (Sums the items of an iterator) :
+```python
+a = (1, 2, 3, 4, 5)
+x = sum(a)
+>> 15
+```
+
+### type() (Returns the type of an object) :
+```python
+a = ('apple', 'banana', 'cherry')
+b = "Hello World"
+c = 33
+
+x = type(a)
+y = type(b)
+z = type(c)
+
+print(x,y,z)
+>> <class 'tuple'> 
+>> <class 'str'> 
+>> <class 'int'>
+```
+
+
+Python-Error
+------
+**`ArithmeticError`               # Raised when an error occurs in numeric calculations**
+
+**`AssertionError`                # Raised when an assert statement fails**
+
+**`AttributeError`                # Raised when attribute reference or assignment fails**
+
+**`Exception`                     # Base class for all exceptions**
+
+**`EOFError`                      # Raised when the input() method hits an "end of file" condition (EOF)**
+
+**`FloatingPointError`            # Raised when a floating point calculation fails**
+
+**`GeneratorExit`                # Raised when a generator is closed (with the close() method)**
+
+**`ImportError`                   # Raised when an imported module does not exist**
+
+**`IndentationError`              # Raised when indentation is not correct**
+
+**`IndexError`                    # Raised when an index of a sequence does not exist**
+
+**`KeyError`                      # Raised when a key does not exist in a dictionary**
+
+**`KeyboardInterrupt`             # Raised when the user presses Ctrl+c, Ctrl+z or Delete**
+
+**`LookupError`                   # Raised when errors raised cant be found**
+
+**`MemoryError`                  # Raised when a program runs out of memory**
+
+**`NameError`                     # Raised when a variable does not exist**
+
+**`NotImplementedError`           # Raised when an abstract method requires an inherited class to override the method**
+
+**`OSError`                       # Raised when a system related operation causes an error**
+
+**`OverflowError`                 # Raised when the result of a numeric calculation is too large**
+
+**`ReferenceError`                # Raised when a weak reference object does not exist**
+
+**`RuntimeError`                  # Raised when an error occurs that do not belong to any specific exceptions**
+
+**`StopIteration`                 # Raised when the next() method of an iterator has no further values**
+
+**`SyntaxError`                   # Raised when a syntax error occurs**
+
+**`TabError`                      # Raised when indentation consists of tabs or spaces**
+
+**`SystemError`                   # Raised when a system error occurs**
+
+**`SystemExit`                    # Raised when the sys.exit() function is called**
+
+**`TypeError`                     # Raised when two different types are combined**
+
+**`UnboundLocalError`             # Raised when a local variable is referenced before assignment**
+
+**`UnicodeError`                  # Raised when a unicode problem occurs**
+
+**`UnicodeEncodeError`            # Raised when a unicode encoding problem occurs**
+
+**`UnicodeDecodeError`            # Raised when a unicode decoding problem occurs**
+
+**`UnicodeTranslateError`         # Raised when a unicode translation problem occurs**
+
+**`ValueError`                    # Raised when there is a wrong value in a specified data type**
+
+**`ZeroDivisionError`             # Raised when the second operator in a division is zero**
+
+
+Random
+------
+### randrange() (Returns a random number between the given range) :
+```python
+import random
+print(random.randrange(3, 9))
+>> 4
+```
+
+### randint() (Returns a random number between the given range) :
+```python
+import random
+print(random.randint(3, 9))
+>> 9
+```
+
+### choice() (Returns a random element from the given sequence) :
+```python
+import random
+mylist = ["apple", "banana", "cherry"]
+print(random.choice(mylist))
+>> "cherry"
+```
+
+### shuffle() (Takes a sequence and returns the sequence in a random order) :
+```python
+import random
+mylist = ["apple", "banana", "cherry"]
+random.shuffle(mylist)
+print(mylist)
+>> ['cherry', 'apple', 'banana']
+```
+
+### sample() (Returns a given sample of a sequence) :
+```python
+import random
+mylist = ["apple", "banana", "cherry"]
+print(random.sample(mylist, k=2))
+>> ['cherry', 'banana']
+```
+
+### uniform() (Returns a random float number between two given parameters) :
+```python
+import random
+print(random.uniform(20, 60))
+>> 47.016106134431425
+```
+
+
+Enum
+------
+**for first this is a normal calss with normal ability :**
+```python
+class Season(Enum):
+    SPRING = 1
+    SUMMER = 2
+    AUTUMN = 3
+    WINTER = 4
+print(Season.SPRING)
+print(Season.SPRING.name)
+print(Season.SPRING.value)
+print(type(Season.SPRING))
+print(repr(Season.SPRING))
+print(list(Season))
+>> Season.SPRING
+>> SPRING
+>> 1
+>> <enum 'Season'>
+>> <Season.SPRING: 1>
+>> [<Season.SPRING: 1>, <Season.SUMMER: 2>, <Season.AUTUMN: 3>, <Season.WINTER: 4>]
+```
+
+**Or**
+
+```python
+class Season(Enum):
+    SPRING = 1
+    SUMMER = 2
+    AUTUMN = 3
+    WINTER = 4
+print("The enum member associated with value 2 is : ", Season(2).name)
+print("The enum member associated with name AUTUMN is : ", Season['AUTUMN'].value)
+>> "The enum member associated with value 2 is :  SUMMER"
+>> "The enum member associated with name AUTUMN is :  3"
+```
+
+**now we use enum :**
+
+```python
+import enum
+class Animal(enum.Enum):
+    dog = 1
+    cat = 2
+    lion = 3
+di = {}
+di[Animal.dog] = 'bark'
+di[Animal.lion] = 'roar'
+if di == {Animal.dog: 'bark', Animal.lion: 'roar'}:
+    print("Enum is hashed")
+else:
+    print("Enum is not hashed")
+>> "Enum is hashed"
+```
+
+```python
+import enum
+class Animal(enum.Enum):
+    dog = 1
+    cat = 2
+    lion = 3
+if Animal.dog is Animal.cat:
+    print("Dog and cat are same animals")
+else:
+    print("Dog and cat are different animals")
+if Animal.lion != Animal.cat:
+    print("Lions and cat are different")
+else:
+    print("Lions and cat are same")
+>> "Dog and cat are different animals"
+>> "Lions and cat are different"
+```
+
+
+System
+----
+```python
+import sys
+print(sys.version)
+>> 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)]
+
+import sys 
+age = 17
+if age < 18: 
+    sys.exit("Age less than 18")     
+else: 
+    print("Age is not less than 18") 
+```
+
+
+System
+----
+**OS has many Module , and we don't need all of them , so visit this site for all OS Module**
+
+https://www.w3schools.com/python/module_os.asp
+
+
+Path
+------
+### python path :
+```python
+from pathlib import Path
+print(Path.cwd())
+>> "C:\Users\Name\AppData\Local\Programs\Python\Python311"
+```
+
+### user path 
+```python
+# user path :
+from pathlib import Path
+print(Path.home())
+>> "C:\Users\Name"
+```
+
+### special path : 
+```python
+from pathlib import Path
+print(Path("C:\\Users\\Name\\Desktop\\Pic"))
+>> WindowsPath('C:\\Users\\Name\\Desktop\\Pic')
+```
+
+### Picking Out Components of a Path : 
+```python
+from pathlib import Path
+path = Path("C:\\Users\\Name\\realpython\\test.md")
+print(path)
+>> WindowsPath('C:/Users/Name/realpython/test.md')
+
+print(path.name)
+>> 'test.md'
+
+print(path.stem)
+>> 'test'
+
+print(path.suffix)
+>> '.md'
+
+print(path.anchor)
+>> 'C:\\'
+
+print(path.parent)
+>> WindowsPath('C:/Users/Name/realpython")
+
+print(path.parent.parent)
+>> WindowsPath('C:/Users/Name')
+```
+
+### Reading and Writing Files : 
+```python
+from pathlib import Path
+path = Path("C:\\Users\\NAJAFI\\Desktop\\Pic.txt")
+with path.open(mode="r", encoding="utf-8") as md_file:
+    content = md_file.read()
+    print(content)
+>> "hello"
+```
+* **`.read_text()` opens the path in text mode and returns the contents as a string.**
+* **`.read_bytes()` opens the path in binary mode and returns the contents as a byte string.**
+* **`.write_text()` opens the path and writes string data to it.**
+* **`.write_bytes()` opens the path in binary mode and writes data to it.**
+
+
+### Renaming Files : 
+```python
+from pathlib import Path
+txt_path = Path("/home/gahjelle/realpython/hello.txt")
+Print(txt_path)
+>> PosixPath("/home/gahjelle/realpython/hello.txt")
+
+md_path = txt_path.with_suffix(".md")
+>> PosixPath('/home/gahjelle/realpython/hello.md')
+txt_path.replace(md_path)
+```
+
+### Copying Files : 
+```python
+from pathlib import Path
+source = Path("shopping_list.md")
+destination = source.with_stem("shopping_list_02")
+destination.write_bytes(source.read_bytes()) # .read_bytes() to read the content of source and then write this content to destination using .write_bytes().
+```
+
+### Moving Files : 
+```python
+from pathlib import Path
+source = Path("hello.py")
+destination = Path("goodbye.py")
+if not destination.exists():
+    source.replace(destination)
+```
+
+### Create Files : 
+```python
+from pathlib import Path
+filename = Path("C:\\Users\\NAJAFI\\Desktop\\h.txt")
+filename.exists()
+>> False
+filename.touch()
+filename.exists()
+>> True
+```
+
+Pickle
+------
+```python
+import pickle
+Omkar = {'key' : 'Omkar', 'name' : 'Omkar Pathak', 
+'age' : 21, 'pay' : 40000}
+
+Jagdish = {'key' : 'Jagdish', 'name' : 'Jagdish Pathak',
+'age' : 50, 'pay' : 50000}
+ 
+db = {}
+db['Omkar'] = Omkar
+db['Jagdish'] = Jagdish
+
+b = pickle.dumps(db)   
+
+myEntry = pickle.loads(b)
+print(myEntry)
+>> {'Omkar': {'key': 'Omkar', 'name': 'Omkar Pathak', 'age': 21, 'pay': 40000}, 'Jagdish': {'key': 'Jagdish', 'name': 'Jagdish Pathak', 'age': 50, 'pay': 50000}}
+```
+
+Collections
+------
+```python
+from collections import Counter  
+# With sequence of items   
+print(Counter(['B','B','A','B','C','A','B', 
+               'B','A','C'])) 
+>> Counter({'B': 5, 'A': 3, 'C': 2})
+
+# with dictionary  
+print(Counter({'A':3, 'B':5, 'C':2})) 
+>> Counter({'B': 5, 'A': 3, 'C': 2})
+
+# with keyword arguments  
+print(Counter(A=3, B=5, C=2))
+>> Counter({'B': 5, 'A': 3, 'C': 2})
+```
+
+```python
+from collections import OrderedDict  
+    
+print("This is a Dict:\n")  
+d = {}  
+d['a'] = 1
+d['b'] = 2
+d['c'] = 3
+d['d'] = 4
+
+>> "This is a Dict:"
+    
+for key, value in d.items():  
+    print(key, value)  
+
+>> a 1
+   b 2
+   c 3
+   d 4
+    
+print("\nThis is an Ordered Dict:\n")  
+>> "This is an Ordered Dict:"
+od = OrderedDict()  
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+od['d'] = 4
+    
+for key, value in od.items():  
+    print(key, value)
+
+>> a 1
+   b 2
+   c 3
+   d 4
+```
+
+```python
+from collections import OrderedDict  
+
+od = OrderedDict()  
+od['a'] = 1
+od['b'] = 2
+od['c'] = 3
+od['d'] = 4
+    
+print('Before Deleting') 
+for key, value in od.items():  
+    print(key, value)  
+
+>> "Before Deleting"
+>> a 1
+   b 2
+   c 3
+   d 4
+      
+# deleting element 
+od.pop('a') 
+  
+# Re-inserting the same 
+od['a'] = 1
+  
+print('\nAfter re-inserting') 
+for key, value in od.items():  
+    print(key, value)
+
+>> "After re-inserting"
+>>  b 2
+    c 3
+    d 4
+    a 1
+```
+
+```python
+from collections import defaultdict  
+     
+# Defining the dict  
+d = defaultdict(int)  
+     
+L = [1, 2, 3, 4, 2, 4, 1, 2]  
+     
+# Iterate through the list  
+# for keeping the count  
+for i in L:  
+    # The default value is 0  
+    # so there is no need to   
+    # enter the key first  
+    d[i] += 1
+         
+print(d)
+>> defaultdict(<class 'int'>, {1: 2, 2: 3, 3: 1, 4: 2})
+```
+
+```python
+from collections import defaultdict  
+    
+# Defining a dict  
+d = defaultdict(list)  
+    
+for i in range(5):  
+    d[i].append(i)  
+        
+print("Dictionary with values as list:")  
+print(d)
+>> "Dictionary with values as list:"
+>> defaultdict(<class ‘list’>, {0: [0], 1: [1], 2: [2], 3: [3], 4: [4]})
+```
+
+```python
+from collections import ChainMap  
+
+d1 = {'a': 1, 'b': 2} 
+d2 = {'c': 3, 'd': 4} 
+d3 = {'e': 5, 'f': 6} 
+  
+# Defining the chainmap  
+c = ChainMap(d1, d2, d3)    
+print(c)
+>> ChainMap({'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5, 'f': 6})
+```
+
+```python
+from collections import ChainMap  
+
+d1 = {'a': 1, 'b': 2} 
+d2 = {'c': 3, 'd': 4} 
+d3 = {'e': 5, 'f': 6} 
+  
+# Defining the chainmap  
+c = ChainMap(d1, d2, d3)  
+     
+# Accessing Values using key name 
+print(c['a']) 
+>> 1
+
+# Accessing values using values() 
+# method 
+print(c.values()) 
+>> ValuesView(ChainMap({'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5, 'f': 6})) 
+
+# Accessing keys using keys() 
+# method 
+print(c.keys())
+>> KeysView(ChainMap({'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5, 'f': 6}))
+```
+
+```python
+import collections  
+    
+# initializing dictionaries  
+dic1 = { 'a' : 1, 'b' : 2 }  
+dic2 = { 'b' : 3, 'c' : 4 }  
+dic3 = { 'f' : 5 }  
+    
+# initializing ChainMap  
+chain = collections.ChainMap(dic1, dic2)  
+    
+# printing chainMap  
+print ("All the ChainMap contents are : ")  
+print (chain)  
+>> "All the ChainMap contents are : "
+>> ChainMap({'a': 1, 'b': 2}, {'b': 3, 'c': 4})
+    
+# using new_child() to add new dictionary  
+chain1 = chain.new_child(dic3)  
+    
+# printing chainMap 
+print ("Displaying new ChainMap : ")  
+print (chain1)
+>> "Displaying new ChainMap :" 
+   ChainMap({'f': 5}, {'a': 1, 'b': 2}, {'b': 3, 'c': 4})
+```
+
+```python
+from collections import namedtuple 
+    
+# Declaring namedtuple()  
+Student = namedtuple('Student',['name','age','DOB'])  
+    
+# Adding values  
+S = Student('Nandini','19','2541997')
+    
+# Access using index  
+print ("The Student age using index is : ",end ="")  
+print (S[1])  
+>> "The Student age using index is :" 19
+    
+# Access using name   
+print ("The Student name using keyname is : ",end ="")  
+print (S.name)
+>> "The Student name using keyname is :" "Nandini"
+```
+
+```python
+from collections import namedtuple 
+    
+# Declaring namedtuple()  
+Student = namedtuple('Student',['name','age','DOB'])  
+    
+# Adding values  
+S = Student('Nandini','19','2541997')  
+    
+# initializing iterable   
+li = ['Manjeet', '19', '411997' ]  
+    
+# initializing dict  
+di = { 'name' : "Nikhil", 'age' : 19 , 'DOB' : '1391997' }  
+    
+# using _make() to return namedtuple()  
+print ("The namedtuple instance using iterable is  : ")  
+print (Student._make(li))  
+>> "The namedtuple instance using iterable is  : "
+   Student(name='Manjeet', age='19', DOB='411997')
+    
+# using _asdict() to return an OrderedDict()  
+print ("The OrderedDict instance using namedtuple is  : ")  
+print (S._asdict())
+>> "The OrderedDict instance using namedtuple is  : "
+   OrderedDict([('name', 'Nandini'), ('age', '19'), ('DOB', '2541997')])
+```
+
+```python
+from collections import deque 
+    
+# Declaring deque 
+queue = deque(['name','age','DOB'])  
+    
+print(queue)
+>> deque(['name', 'age', 'DOB'])
+```
+
+```python
+from collections import deque  
+    
+# initializing deque  
+de = deque([1,2,3])  
+    
+# using append() to insert element at right end   
+# inserts 4 at the end of deque  
+de.append(4)  
+    
+# printing modified deque  
+print ("The deque after appending at right is : ")  
+print (de)  
+>> "The deque after appending at right is :" 
+   deque([1, 2, 3, 4])
+    
+# using appendleft() to insert element at left end   
+# inserts 6 at the beginning of deque  
+de.appendleft(6)  
+    
+# printing modified deque  
+print ("The deque after appending at left is : ")  
+print (de)
+>> "The deque after appending at left is :" 
+   deque([6, 1, 2, 3, 4])
+```
+
+```python
+from collections import deque 
+  
+# initializing deque  
+de = deque([6, 1, 2, 3, 4]) 
+  
+# using pop() to delete element from right end   
+# deletes 4 from the right end of deque  
+de.pop()  
+    
+# printing modified deque  
+print ("The deque after deleting from right is : ")  
+print (de)  
+>> "The deque after deleting from right is : "
+   deque([6, 1, 2, 3])
+    
+# using popleft() to delete element from left end   
+# deletes 6 from the left end of deque  
+de.popleft()  
+    
+# printing modified deque  
+print ("The deque after deleting from left is : ")  
+print (de)
+>> "The deque after deleting from left is : "
+   deque([1, 2, 3])
 ```
