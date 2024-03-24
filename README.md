@@ -72,9 +72,9 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;** **14. for Loops :** **&nbsp;**  **[`for-Loops`](#for-loops)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **34. Collections :** **&nbsp;**  **[`Collections`](#collections)**
 
-**&nbsp;&nbsp;&nbsp;** **15. Functions :** **&nbsp;**  **[`Functions`](#functions)**
+**&nbsp;&nbsp;&nbsp;** **15. Functions :** **&nbsp;**  **[`Functions`](#functions)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **35. Operator :** **&nbsp;**  **[`Operator`](#operator)**
 
-**&nbsp;&nbsp;&nbsp;** **16. lambda :** **&nbsp;**  **[`lambda`](#lambda)**
+**&nbsp;&nbsp;&nbsp;** **16. lambda :** **&nbsp;**  **[`lambda`](#lambda)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **36. Progress Bar :** **&nbsp;**  **[`Progress-Bar`](#progress-bar)**
 
 **&nbsp;&nbsp;&nbsp;** **17. iterators :** **&nbsp;**  **[`iterators`](#iterators)**
 
@@ -98,6 +98,7 @@ print("Hello, World!")
 
 Variables
 ----
+![Monty Python](https://files.realpython.com/media/Variables-in-Python_Watermarked.3868fbf92e1d.jpg)
 ```python
 x = 5
 y = "John"
@@ -4123,4 +4124,150 @@ print ("The deque after deleting from left is : ")
 print (de)
 >> "The deque after deleting from left is : "
    deque([1, 2, 3])
+```
+
+
+Operator
+------
+**`add(a, b)` a + b : This function returns addition of the given arguments.**                                                                                  
+
+**`sub(a, b)` a - b : This function returns difference of the given arguments.**                                                                               
+
+**`mul(a, b)` a * b : This function returns product of the given arguments.**                                                                                         
+
+**`truediv(a,b)` a / b : This function returns division of the given arguments.**                                                                                     
+
+**`floordiv(a,b)` a // b : This function also returns division of the given arguments.**          
+
+**`pow(a,b)` a ** b : This function returns exponentiation of the given arguments.**                                                                                  
+
+**`mod(a,b)` a % b : This function returns modulus of the given arguments.**                                                                                 
+
+**`lt(a, b)` a < b : This function is used to check if a is less than b or not. Returns true if a is less than b, else returns false.**                               
+
+**`le(a, b)` a <= b : This function is used to check if a is less than or equal to b or not.**      
+
+**`eq(a, b)` a == b : This function is used to check if a is equal to b or not. Returns true if a is equal to b, else returns false.**                               
+
+**`gt(a,b)` a > b : This function is used to check if a is greater than b or not. Returns true if a is greater than b, else returns false.**                       
+
+**`ge(a,b)` a >= b : This function is used to check if a is greater than or equal to b or not.** 
+
+**`ne(a,b)` a != b : This function is used to check if a is not equal to b or is equal. Returns true if a is not equal to b, else returns false.**
+
+```python
+import operator 
+# Initializing variables 
+a = 4
+b = 3
+  
+# using add() to add two numbers 
+print ("The addition of numbers is :",end=""); 
+print (operator.add(a, b)) 
+>> "The addition of numbers is:" 7
+  
+# using sub() to subtract two numbers 
+print ("The difference of numbers is :",end=""); 
+print (operator.sub(a, b)) 
+>> "The difference of numbers is :" 1
+  
+# using mul() to multiply two numbers 
+print ("The product of numbers is :",end=""); 
+print (operator.mul(a, b)) 
+>> "The product of numbers is:" 12
+```
+
+```python
+import operator 
+# Initializing variables 
+a = 5
+b = 2
+  
+# using truediv() to divide two numbers 
+print ("The true division of numbers is : ",end=""); 
+print (operator.truediv(a,b)) 
+>> "The true division of numbers is:" 2.5
+  
+# using floordiv() to divide two numbers 
+print ("The floor division of numbers is : ",end=""); 
+print (operator.floordiv(a,b)) 
+>> "The floor division of numbers is:" 2
+  
+# using pow() to exponentiate two numbers 
+print ("The exponentiation of numbers is : ",end=""); 
+print (operator.pow(a,b)) 
+>> "The exponentiation of numbers is:" 25
+  
+# using mod() to take modulus of two numbers 
+print ("The modulus of numbers is : ",end=""); 
+print (operator.mod(a,b)) 
+>> "The modulus of numbers is:" 1
+```
+
+```python
+import operator 
+  
+# Initializing variables 
+a = 3
+b = 3
+  
+# using lt() to check if a is less than b 
+if(operator.lt(a,b)): 
+       print ("3 is less than 3") 
+else : print ("3 is not less than 3") 
+>> "3 is not less than 3"
+  
+# using le() to check if a is less than or equal to b 
+if(operator.le(a,b)): 
+       print ("3 is less than or equal to 3") 
+else : print ("3 is not less than or equal to 3") 
+>> "3 is less than or equal to 3"
+  
+# using eq() to check if a is equal to b 
+if (operator.eq(a,b)): 
+       print ("3 is equal to 3") 
+else : print ("3 is not equal to 3") 
+>> "3 is equal to 3"
+```
+
+```python
+import operator 
+  
+# Initializing variables 
+a = 4
+b = 3
+  
+# using gt() to check if a is greater than b 
+if (operator.gt(a,b)): 
+       print ("4 is greater than 3") 
+else : print ("4 is not greater than 3")
+>> "4 is greater than 3"
+  
+# using ge() to check if a is greater than or equal to b 
+if (operator.ge(a,b)): 
+       print ("4 is greater than or equal to 3") 
+else : print ("4 is not greater than or equal to 3") 
+>> "4 is greater than or equal to 3"
+  
+# using ne() to check if a is not equal to b 
+if (operator.ne(a,b)): 
+       print ("4 is not equal to 3") 
+else : print ("4 is equal to 3") 
+>> "4 is not equal to 3"
+```
+
+
+Progress-Bar
+------
+```python
+# $ pip3 install tqdm
+from tqdm import tqdm
+from time import sleep
+
+total = 0
+for num in tqdm([1, 2, 3, 4]):
+    sleep(0.25)
+    total = total + num
+    
+>> Processing: 100%|████████████████████| 4/4 [00:01<00:00,  3.95s/it]
 ```
