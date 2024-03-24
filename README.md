@@ -194,6 +194,7 @@ print(x + y)
 
 Data-Types
 ----------
+![Monty Python](https://files.realpython.com/media/Basic-Data-Types-in-Python_Watermarked.e3dd34457952.jpg)
 * **Text Type :	str**
 * **Numeric Types :	int, float, complex**
 * **Sequence Types :	list, tuple, range**
@@ -241,6 +242,7 @@ x = memoryview(bytes(5))	                    # memoryview
 
 Numbers
 ---
+![Monty Python](https://files.realpython.com/media/Python-Basics-Chapter-Numbers-in-Python_Watermarked.70cee8925cbf.jpg)
 ```python
 x = 1    # int
 y = 2.8  # float
@@ -281,6 +283,7 @@ z = str(3.0)  # z will be '3.0'
 
 Strings
 -----
+![Monty Python](https://files.realpython.com/media/Strings-and-Character-Data-in-Python_Watermarked.797803948b10.jpg)
 ```python
 a = "Hello"
 print(a)
@@ -788,6 +791,7 @@ print(x)
 
 Booleans
 -----
+![Monty Python](https://files.realpython.com/media/What-is-a-Python-Boolean_Watermarked.ba6413996cb3.jpg)
 ```python
 print(10 > 9)
 print(10 == 9)
@@ -807,7 +811,7 @@ print(bool(15))
 
 Operators
 ---------
-
+![Monty Python](https://files.realpython.com/media/Operators-and-Expressions-in-Python_Watermarked.651045da4031.jpg)
 **`2 + 2 = 4`**
 
 **`2 - 2 = 0`**
@@ -887,6 +891,7 @@ Operators
 
 Lists
 --------
+![Monty Python](https://files.realpython.com/media/Lists-and-Tuples-in-Python_Watermarked.4d655c81a78b.jpg)
 ```python
 mylist = ["apple", "banana", "cherry"]
 ```
@@ -1121,6 +1126,7 @@ print(cars)
 
 Tuples
 ---------
+![Monty Python](https://files.realpython.com/media/Pythons-tuple-Built-in-Data-Type-A-Deep-Dive-with-Examples_Watermarked.e85efb14c955.jpg)
 * **`count()`	Returns the number of times a specified value occurs in a tuple.**
 * **`index()`	Searches the tuple for a specified value and returns the position of where it was found.**
 
@@ -1173,6 +1179,7 @@ print(tuple3)
 
 Sets
 ----
+![Monty Python](https://files.realpython.com/media/Sets-in-Python_Watermarked.cd8d2e9563c3.jpg)
 ```python
 myset = {"apple", "banana", "cherry"}
 ```
@@ -1432,6 +1439,7 @@ print(x)
 
 Dictionaries
 ------
+![Monty Python](https://files.realpython.com/media/Dictionaries-in-Python_Watermarked.3656a2293c00.jpg)
 ```python
 thisdict = {
   "brand": "Ford",
@@ -1804,6 +1812,7 @@ print(x)
 
 if-else
 -----
+![Monty Python](https://files.realpython.com/media/Conditional-Statements-in-Python_Watermarked.b6b7d30ff62b.jpg)
 * **Equals : `a == b`**
 * **Not Equals : `a != b`**
 * **Less than : `a < b`**
@@ -1914,6 +1923,7 @@ if x > 10:
 
 While-Loops
 ------
+![Monty Python](https://files.realpython.com/media/Python-while-Loops-Indefinite-Iteration_Watermarked.2dfa40d8e92c.jpg)
 ```python
 i = 1
 while i < 6:
@@ -1970,6 +1980,7 @@ else:
 
 for-Loops
 -------
+![Monty Python](https://files.realpython.com/media/Python-for-Loops-Definite-Iteration_Watermarked.9c0d36b6de30.jpg)
 ```python
 fruits = ["apple", "banana", "cherry"]
 for x in fruits:
@@ -2089,6 +2100,7 @@ for x in adj:
 
 Functions
 -------------
+![Monty Python](https://files.realpython.com/media/Inner-Functions-What-Are-They-Good-For_Watermarked.995d44a06cdd.jpg)
 ```python
 def my_function():
   print("Hello from a function")
@@ -2226,6 +2238,7 @@ tri_recursion(6)
 
 lambda
 --------
+![Monty Python](https://files.realpython.com/media/How-to-Use-Python-Lambda-Functions_Watermarked.2afa4f5ea5d4.jpg)
 ```python
 x = lambda a : a + 10
 print(x(5))
@@ -2277,6 +2290,7 @@ print(mytripler(11))
 
 iterators
 ---------
+![Monty Python](https://files.realpython.com/media/Iterators-and-Iterables-in-Python-What-Are-They-and-How-to-Use-Them_Watermarked.5df74332ac58.jpg)
 ```python
 mytuple = ("apple", "banana", "cherry")
 myit = iter(mytuple)
@@ -2320,6 +2334,7 @@ for x in mytuple:
 
 Scope
 --------------
+![Monty Python](https://files.realpython.com/media/Scope-in-Python---LEGB-Rule_Watermarked.e5f68e7a3642.jpg)
 ```python
 def myfunc():
   x = 300
@@ -2426,6 +2441,7 @@ print(a)
 
 Datetime
 ------
+![Monty Python](https://files.realpython.com/media/How-to-Use-Python-datetime-With-Examples_Watermarked.2676ca0aacf2.jpg)
 ```python
 import datetime
 x = datetime.datetime.now()
@@ -2515,6 +2531,7 @@ print(x.strftime("%B"))
 
 Math
 ------
+![Monty Python](https://files.realpython.com/media/Pythons-Math-Module-Guide_Watermarked.c882e267cbd0.jpg)
 ```python
 x = min(5, 10, 25)
 y = max(5, 10, 25)
@@ -2725,6 +2742,7 @@ print(math.isclose(1.233, 1.233000001))
 
 JSON
 ------
+![Monty Python](https://files.realpython.com/media/Working-With-JSON-Data-in-Python_Watermarked.66a8fdcb8859.jpg)
 ```python
 import json
 # some JSON:
@@ -2794,6 +2812,7 @@ print(json.dumps(x))
 
 RegEx
 ------
+![Monty Python](https://files.realpython.com/media/Regular-Expressions-Regexes-in-Python-Part-1_Watermarked.0423050c5371.jpg)
 ```python
 import re
 txt = "The rain in Spain"
@@ -2835,6 +2854,7 @@ print(x)
 
 Try-Except
 ------
+![Monty Python](https://files.realpython.com/media/Python_Exceptions_Watermark.47f814fbeced.jpg)
 * **`try`	block lets you test a block of code for errors.**
 * **`except`	block lets you handle the error.**
 * **`else`	block lets you execute code when there is no error.**
@@ -2897,6 +2917,7 @@ except:
 
 Input
 ------
+![Monty Python](https://files.realpython.com/media/Basic-Input-Output-and-String-Formatting-in-Python_Watermarked.65ba5b535841.jpg)
 ```python
 username = input("Enter username:")
 print("Username is: " + username)
@@ -2944,6 +2965,7 @@ print(myorder.format(quantity, itemno, price))
 
 File-Handling
 ------
+![Monty Python](https://files.realpython.com/media/Reading-and-Writing-Files-in-Python_Watermarked.0d394921fd90.jpg)
 **`close()`	Closes the file.**
 
 **`detach()`	Returns the separated raw stream from the buffer.**
@@ -3484,6 +3506,7 @@ print(x,y,z)
 
 Python-Error
 ------
+![Monty Python](https://files.realpython.com/media/Python-3.12-Preview-1-Error-Messages_Watermarked.ca9ce482328d.jpg)
 **`ArithmeticError`               # Raised when an error occurs in numeric calculations**
 
 **`AssertionError`                # Raised when an assert statement fails**
@@ -3602,6 +3625,7 @@ print(random.uniform(20, 60))
 
 Enum
 ------
+![Monty Python](https://files.realpython.com/media/Build-Enumerations-With-Pythons-enum_Watermarked.bbcd46a82f58.jpg)
 **for first this is a normal calss with normal ability :**
 ```python
 class Season(Enum):
@@ -3699,6 +3723,7 @@ https://www.w3schools.com/python/module_os.asp
 
 Path
 ------
+![Monty Python](https://files.realpython.com/media/Python-3s-pathlib-Module-Taming-the-File-System_Watermarked.524352e6d4ce.jpg)
 ### python path :
 ```python
 from pathlib import Path
@@ -3804,6 +3829,7 @@ filename.exists()
 
 Pickle
 ------
+![Monty Python](https://files.realpython.com/media/Object-Serialization-With-the-Python-Pickle-Module_Watermarked.8e4667c2f71f.jpg)
 ```python
 import pickle
 Omkar = {'key' : 'Omkar', 'name' : 'Omkar Pathak', 
@@ -3825,6 +3851,7 @@ print(myEntry)
 
 Collections
 ------
+![Monty Python](https://files.realpython.com/media/Pythons-Collections-Module_Watermarked.31248400c167.jpg)
 ```python
 from collections import Counter  
 # With sequence of items   
@@ -4129,6 +4156,7 @@ print (de)
 
 Operator
 ------
+![Monty Python](https://files.realpython.com/media/Python_s-operator-Module_Watermarked.8ca3c8521230.jpg)
 **`add(a, b)` a + b : This function returns addition of the given arguments.**                                                                                  
 
 **`sub(a, b)` a - b : This function returns difference of the given arguments.**                                                                               
