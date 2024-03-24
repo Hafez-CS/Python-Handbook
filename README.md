@@ -46,37 +46,37 @@ Python can be treated in a procedural way, an object-oriented way or a functiona
 
 Contents
 --------
-**&nbsp;&nbsp;&nbsp;** **1. Home :** **&nbsp;**  **[`Home`](#home)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **21. JSON :** **&nbsp;**  **[`JSON`](#json)**
+**&nbsp;&nbsp;&nbsp;** **1. Home :** **&nbsp;**  **[`Home`](#home)** 
 
-**&nbsp;&nbsp;&nbsp;** **2. Variables :** **&nbsp;**  **[`Variables`](#variables)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **22. RegEx :** **&nbsp;**  **[`RegEx`](#regex)**
+**&nbsp;&nbsp;&nbsp;** **2. Variables :** **&nbsp;**  **[`Variables`](#variables)** 
 
-**&nbsp;&nbsp;&nbsp;** **3. Data Types :** **&nbsp;**  **[`Data-Types`](#data-types)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **23. Try-Except :** **&nbsp;**  **[`Try-Except`](#try-except)**
+**&nbsp;&nbsp;&nbsp;** **3. Data Types :** **&nbsp;**  **[`Data-Types`](#data-types)** 
 
-**&nbsp;&nbsp;&nbsp;** **4. Numbers :** **&nbsp;**  **[`Numbers`](#numbers)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **24. Input :** **&nbsp;**  **[`Input`](#input)**
+**&nbsp;&nbsp;&nbsp;** **4. Numbers :** **&nbsp;**  **[`Numbers`](#numbers)** 
 
-**&nbsp;&nbsp;&nbsp;** **5. Strings :** **&nbsp;**  **[`Strings`](#strings)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **25. String Formatting :** **&nbsp;**  **[`String-Formatting`](#string-formatting)**
+**&nbsp;&nbsp;&nbsp;** **5. Strings :** **&nbsp;**  **[`Strings`](#strings)** 
 
-**&nbsp;&nbsp;&nbsp;** **6. Booleans :** **&nbsp;**  **[`Booleans`](#booleans)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **26. File Handling :** **&nbsp;**  **[`File-Handling`](#file-handling)**
+**&nbsp;&nbsp;&nbsp;** **6. Booleans :** **&nbsp;**  **[`Booleans`](#booleans)** 
 
-**&nbsp;&nbsp;&nbsp;** **7. Operators :** **&nbsp;**  **[`Operators`](#operators)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **27. Built In Functions :** **&nbsp;**  **[`Built-In-Functions`](#built-in-functions)**
+**&nbsp;&nbsp;&nbsp;** **7. Operators :** **&nbsp;**  **[`Operators`](#operators)** 
 
-**&nbsp;&nbsp;&nbsp;** **8. Lists :** **&nbsp;**  **[`Lists`](#lists)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **28. Python Error :** **&nbsp;**  **[`Python-Error`](#python-error)**
+**&nbsp;&nbsp;&nbsp;** **8. Lists :** **&nbsp;**  **[`Lists`](#lists)** 
 
-**&nbsp;&nbsp;&nbsp;** **9. Tuples :** **&nbsp;**  **[`Tuples`](#tuples)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **29. Random :** **&nbsp;**  **[`Random`](#random)**
+**&nbsp;&nbsp;&nbsp;** **9. Tuples :** **&nbsp;**  **[`Tuples`](#tuples)** 
 
-**&nbsp;&nbsp;&nbsp;** **10. Sets :** **&nbsp;**  **[`Sets`](#sets)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **30. Enum :** **&nbsp;**  **[`Enum`](#enum)**
+**&nbsp;&nbsp;&nbsp;** **10. Sets :** **&nbsp;**  **[`Sets`](#sets)** 
 
-**&nbsp;&nbsp;&nbsp;** **11. Dictionaries :** **&nbsp;**  **[`Dictionaries`](#dictionaries)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **31. System :** **&nbsp;**  **[`System`](#system)**
+**&nbsp;&nbsp;&nbsp;** **11. Dictionaries :** **&nbsp;**  **[`Dictionaries`](#dictionaries)** 
 
-**&nbsp;&nbsp;&nbsp;** **12. if-else :** **&nbsp;**  **[`if-else`](#if-else)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **32. Path :** **&nbsp;**  **[`Path`](#path)**
+**&nbsp;&nbsp;&nbsp;** **12. if-else :** **&nbsp;**  **[`if-else`](#if-else)** 
 
-**&nbsp;&nbsp;&nbsp;** **13. While Loops :** **&nbsp;**  **[`While-Loops`](#while-loops)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **33. Pickle :** **&nbsp;**  **[`Pickle`](#pickle)**
+**&nbsp;&nbsp;&nbsp;** **13. While Loops :** **&nbsp;**  **[`While-Loops`](#while-loops)** 
 
-**&nbsp;&nbsp;&nbsp;** **14. for Loops :** **&nbsp;**  **[`for-Loops`](#for-loops)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **34. Collections :** **&nbsp;**  **[`Collections`](#collections)**
+**&nbsp;&nbsp;&nbsp;** **14. for Loops :** **&nbsp;**  **[`for-Loops`](#for-loops)** 
 
-**&nbsp;&nbsp;&nbsp;** **15. Functions :** **&nbsp;**  **[`Functions`](#functions)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **35. Operator :** **&nbsp;**  **[`Operator`](#operator)**
+**&nbsp;&nbsp;&nbsp;** **15. Functions :** **&nbsp;**  **[`Functions`](#functions)** 
 
-**&nbsp;&nbsp;&nbsp;** **16. lambda :** **&nbsp;**  **[`lambda`](#lambda)** **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**  **36. Progress Bar :** **&nbsp;**  **[`Progress-Bar`](#progress-bar)**
+**&nbsp;&nbsp;&nbsp;** **16. lambda :** **&nbsp;**  **[`lambda`](#lambda)** 
 
 **&nbsp;&nbsp;&nbsp;** **17. iterators :** **&nbsp;**  **[`iterators`](#iterators)**
 
@@ -85,6 +85,40 @@ Contents
 **&nbsp;&nbsp;&nbsp;** **19. Datetime :** **&nbsp;**  **[`Datetime`](#datetime)**
 
 **&nbsp;&nbsp;&nbsp;** **20. Math :** **&nbsp;**  **[`Math`](#math)**
+
+**&nbsp;&nbsp;&nbsp;**  **21. JSON :** **&nbsp;**  **[`JSON`](#json)**
+
+**&nbsp;&nbsp;&nbsp;**  **22. RegEx :** **&nbsp;**  **[`RegEx`](#regex)**
+
+**&nbsp;&nbsp;&nbsp;**  **23. Try-Except :** **&nbsp;**  **[`Try-Except`](#try-except)**
+
+**&nbsp;&nbsp;&nbsp;**  **24. Input :** **&nbsp;**  **[`Input`](#input)**
+
+**&nbsp;&nbsp;&nbsp;**  **25. String Formatting :** **&nbsp;**  **[`String-Formatting`](#string-formatting)**
+
+**&nbsp;&nbsp;&nbsp;**  **26. File Handling :** **&nbsp;**  **[`File-Handling`](#file-handling)**
+
+**&nbsp;&nbsp;&nbsp;**  **27. Built In Functions :** **&nbsp;**  **[`Built-In-Functions`](#built-in-functions)**
+
+**&nbsp;&nbsp;&nbsp;**  **28. Python Error :** **&nbsp;**  **[`Python-Error`](#python-error)**
+
+**&nbsp;&nbsp;&nbsp;**  **29. Random :** **&nbsp;**  **[`Random`](#random)**
+
+**&nbsp;&nbsp;&nbsp;**  **30. Enum :** **&nbsp;**  **[`Enum`](#enum)**
+
+**&nbsp;&nbsp;&nbsp;**  **31. System :** **&nbsp;**  **[`System`](#system)**
+
+**&nbsp;&nbsp;&nbsp;**  **32. Path :** **&nbsp;**  **[`Path`](#path)**
+
+**&nbsp;&nbsp;&nbsp;**  **33. Pickle :** **&nbsp;**  **[`Pickle`](#pickle)**
+
+**&nbsp;&nbsp;&nbsp;**  **34. Collections :** **&nbsp;**  **[`Collections`](#collections)**
+
+**&nbsp;&nbsp;&nbsp;**  **35. Operator :** **&nbsp;**  **[`Operator`](#operator)**
+
+**&nbsp;&nbsp;&nbsp;**  **36. Progress Bar :** **&nbsp;**  **[`Progress-Bar`](#progress-bar)**
+
+
 
 
 
