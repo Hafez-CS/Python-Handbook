@@ -4209,17 +4209,17 @@ Operator
 
 **`mod(a,b)` a % b : This function returns modulus of the given arguments.**                                                                                 
 
-**`lt(a, b)` a < b : This function is used to check if a is less than b or not. Returns true if a is less than b, else returns false.**                               
+**`lt(a, b)` a < b : This function is used to check if a is less than b or not.**                               
 
 **`le(a, b)` a <= b : This function is used to check if a is less than or equal to b or not.**      
 
-**`eq(a, b)` a == b : This function is used to check if a is equal to b or not. Returns true if a is equal to b, else returns false.**                               
+**`eq(a, b)` a == b : This function is used to check if a is equal to b or not.**                               
 
-**`gt(a,b)` a > b : This function is used to check if a is greater than b or not. Returns true if a is greater than b, else returns false.**                       
+**`gt(a,b)` a > b : This function is used to check if a is greater than b or not.**                       
 
 **`ge(a,b)` a >= b : This function is used to check if a is greater than or equal to b or not.** 
 
-**`ne(a,b)` a != b : This function is used to check if a is not equal to b or is equal. Returns true if a is not equal to b, else returns false.**
+**`ne(a,b)` a != b : This function is used to check if a is not equal to b or is equal.**
 
 ```python
 import operator 
