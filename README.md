@@ -118,6 +118,8 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;**  **36. Progress Bar :** **&nbsp;**  **[`Progress-Bar`](#progress-bar)**
 
+**&nbsp;&nbsp;&nbsp;**  **37. Matplotlib(chart) :** **&nbsp;**  **[`Matplotlib`](#matplotlib)**
+
 
 
 
@@ -4335,3 +4337,689 @@ for num in tqdm([1, 2, 3, 4]):
     
 >> Processing: 100%|████████████████████| 4/4 [00:01<00:00,  3.95s/it]
 ```
+
+
+Matplotlib
+------
+![Monty Python](https://files.realpython.com/media/Python_Plotting_With_Matplotlib_Watermark.610acdacc476.jpg)
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([0, 6])
+ypoints = np.array([0, 250])
+
+plt.plot(xpoints, ypoints)
+plt.show()
+```
+![Figure_1](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/57e266ef-a403-4b19-aaa7-8d3eb7ac4351)
+
+**The plot() function is used to draw points (markers) in a diagram.**
+**By default, the plot() function draws a line from point to point.**
+**The function takes parameters for specifying points in the diagram.**
+**Parameter 1 is an array containing the points on the x-axis.**
+**Parameter 2 is an array containing the points on the y-axis.**
+**If we need to plot a line from (1, 3) to (8, 10), we have to pass two arrays [1, 8] and [3, 10] to the plot function.**
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([1, 8])
+ypoints = np.array([3, 10])
+
+plt.plot(xpoints, ypoints, 'o')
+plt.show()
+```
+![Figure_2](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/8fe4137d-168e-4ee5-8c3a-24bba808543c)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([1, 2, 6, 8])
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(xpoints, ypoints)
+plt.show()
+```
+![Figure_3](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/c713e39e-7bac-45e0-9c49-e228ed15cbd5)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10, 5, 7])
+
+plt.plot(ypoints)
+plt.show()
+
+# The x-points are [0, 1, 2, 3, 4, 5].
+```
+![Figure_4](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/d08c6c0d-72a1-4af3-be87-b60a15a4ed78)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker = 'o')
+plt.show()
+```
+![Figure_5](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/af0d89dc-3488-42ab-9f95-435f435c6af1)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker = 'o')
+plt.show()
+```
+![Figure_5](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/af0d89dc-3488-42ab-9f95-435f435c6af1)
+
+### You can choose any of these markers :
+**`'o'`	Circle**
+
+**`'*'`	Star**
+
+**`'.'`	Point**	
+
+**`','`	Pixel**	
+
+**`'x'`	X**
+
+**`'X'`	X (filled)**
+
+**`'+'`	Plus**
+
+**`'P'`	Plus (filled)**
+
+**`'s'`	Square**
+
+**`'D'`	Diamond**
+
+**`'d'`	Diamond (thin)**
+
+**`'p'`	Pentagon**
+
+**`'H'`	Hexagon**
+
+**`'h'`	Hexagon**
+
+**`'v'`	Triangle Down**
+
+**`'^'`	Triangle Up**
+
+**`'<'`	Triangle Left**
+
+**`'>'`	Triangle Right**
+
+**`'1'`	Tri Down**
+
+**`'2'`	Tri Up**
+
+**`'3'`	Tri Left**
+
+**`'4'`	Tri Right**
+
+**`'|'`	Vline**
+
+**`'_'`	Hline**
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, 'o:r')
+plt.show()
+```
+![Figure_6](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/2c5b91a8-ff7e-41ce-974c-19e198603035)
+
+
+### Line Reference :
+**`'o'`	Circle**
+
+**`'-'`	Solid line**
+
+**`':'`	Dotted line**
+
+**`'--'`	Dashed line**
+
+**`'-.'`	Dashed/dotted line**
+
+
+### Color Reference :
+**`'o'`	Circle**
+
+**`'r'`	Red**
+
+**`'g'`	Green**	
+
+**`'b'`	Blue**
+
+**`'c'`	Cyan**
+
+**`'m'`	Magenta**	
+
+**`'y'`	Yellow**
+
+**`'k'`	Black**
+
+**`'w'`	White**
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker = 'o', ms = 20) # Marker Size
+plt.show()
+```
+![Figure_7](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/7f9c8a4d-798f-49a0-b04a-2bd393bd3f17)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker = 'o', ms = 20, mec = 'r') # Marker Color
+plt.show()
+```
+![Figure_8](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/ab3f946e-362d-4654-85c4-39d66917eb70)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker = 'o', ms = 20, mfc = 'r') # Marker Color
+plt.show()
+```
+![Figure_9](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/8a7d25c2-9b4e-4a47-afc3-e5c341752a00)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker = 'o', ms = 20, mec = 'r', mfc = 'r') # Marker Color
+plt.show()
+```
+![Figure_10](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/aae66e00-c763-472f-a504-b15138f572fb)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, linestyle = 'dotted')
+plt.show()
+```
+![Figure_11](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/e75927cf-26ba-499a-ae91-2920053b9038)
+
+
+### Line Styles : 
+
+**`'solid'` (default)	'-'**
+
+**`'dotted'` ':'**	
+
+**`'dashed'` '--'**
+
+**`'dashdot'` '-.'**
+
+**`'None'` ''   or   ' '**
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, color = 'r')
+plt.show()
+```
+![Figure_12](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/f59b873e-535f-43ad-8f1f-f97633c10b30)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, linewidth = '20.5')
+plt.show()
+```
+![Figure_13](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/b6a2bbe8-e453-4704-aa89-78185b82ea52)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+y1 = np.array([3, 8, 1, 10])
+y2 = np.array([6, 2, 7, 11])
+
+plt.plot(y1)
+plt.plot(y2)
+
+plt.show()
+```
+![Figure_14](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/d56d4b97-8220-4b7a-8922-16ddc12d261a)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x1 = np.array([0, 1, 2, 3])
+y1 = np.array([3, 8, 1, 10])
+x2 = np.array([0, 1, 2, 3])
+y2 = np.array([6, 2, 7, 11])
+
+plt.plot(x1, y1, x2, y2)
+plt.show()
+```
+![Figure_15](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/11c79be4-637b-45e4-9468-e12ed5b2f805)
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.plot(x, y)
+
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.show()
+```
+![Figure_16](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/df0585fe-257b-40c8-a199-ebf01697ecdc)
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.plot(x, y)
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.show()
+```
+![Figure_17](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/d752fd13-173b-4353-a2bb-3f859532c65b)
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+
+plt.grid()
+
+plt.show()
+```
+![Figure_18](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/c7f44972-aec3-4fb1-852a-2cfdd518eccb)
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+
+plt.grid(axis = 'x')
+
+plt.show()
+```
+![Figure_19](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/56948e65-27f0-4ae1-af13-ea4fb0364353)
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+
+plt.grid(axis = 'y')
+
+plt.show()
+```
+![Figure_20](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/7944a9e9-185c-46eb-afdb-c828c884895e)
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+
+plt.grid(color = 'green', linestyle = '--', linewidth = 0.5)
+
+plt.show()
+```
+![Figure_21](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/977fadd4-dcca-46ab-b614-0bedf0cd7f86)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
+
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(1, 2, 2)
+plt.plot(x,y)
+
+plt.show()
+```
+![Figure_22](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/1c2cf727-9ff3-488c-a1af-f49a2be7ea9b)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 1, 1)
+plt.plot(x,y)
+
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 1, 2)
+plt.plot(x,y)
+
+plt.show()
+```
+![Figure_23](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/372df0aa-4478-41e3-8a1c-28b446691200)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 1)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 2)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 3)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 4)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 3, 5)
+plt.plot(x,y)
+
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 3, 6)
+plt.plot(x,y)
+
+plt.show()
+```
+![Figure_24](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/cbd9dca0-e58c-450d-9f3c-ef935d1d75fd)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+
+plt.scatter(x, y)
+plt.show()
+```
+![Figure_25](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/1ff56130-6906-4586-93cc-168f723fff57)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+#day one, the age and speed of 13 cars:
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+plt.scatter(x, y)
+
+#day two, the age and speed of 15 cars:
+x = np.array([2,2,8,1,15,8,12,9,7,3,11,4,7,14,12])
+y = np.array([100,105,84,105,90,99,90,95,94,100,79,112,91,80,85])
+plt.scatter(x, y)
+
+plt.show()
+```
+![Figure_26](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/1b6c636f-4d16-4239-99c6-55572115f887)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array([0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
+
+plt.scatter(x, y, c=colors, cmap='viridis')
+
+plt.colorbar()
+
+plt.show()
+```
+![Figure_27](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/c222abd2-0fd9-4b6d-bf16-bba7da477f86)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+sizes = np.array([20,50,100,200,500,1000,60,90,10,300,600,800,75])
+
+plt.scatter(x, y, s=sizes)
+
+plt.show()
+```
+![Figure_28](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/62163c92-81c5-4d0e-bf44-335bce0038e4)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x,y)
+plt.show()
+```
+![Figure_29](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/2cd065c0-e2e2-41c2-b069-6370943ac22e)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.barh(x, y)
+plt.show()
+```
+![Figure_30](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/d4265bd8-9662-4aa6-924d-4d77da935715)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, color = "red")
+plt.show()
+```
+![Figure_31](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/bc74c131-c11a-4b43-9899-f37673c8545f)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, width = 0.1)
+plt.show()
+```
+![Figure_32](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/04f6784f-f769-482d-a265-7f2d11380021)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+
+plt.pie(y)
+plt.show() 
+```
+![Figure_33](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/9e13f6b2-da5f-46e4-b6e1-0aea013d813e)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels = mylabels)
+plt.show() 
+```
+![Figure_34](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/a889ef59-7709-433f-8e70-9e0a261a5571)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
+
+plt.pie(y, labels = mylabels, explode = myexplode)
+plt.show()
+```
+![Figure_35](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/95fbcc26-1844-4c23-bdd9-72d95e02c027)
+
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels = mylabels)
+plt.legend()
+plt.show() 
+```
+![Figure_36](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/0c476500-8db1-4336-a378-34696ac177cf)
+
+
+
+
