@@ -5154,3 +5154,426 @@ print(tabulate([["F",24],["M",19]], showindex="always"))
 * **"textile"**
   
 * **"tsv"**
+
+
+**plain tables do not use any pseudo-graphics to draw lines:**
+```python
+table = [["spam",42],["eggs",451],["bacon",0]]
+headers = ["item", "qty"]
+print(tabulate(table, headers, tablefmt="plain"))
+
+>> item      qty
+   spam       42
+   eggs      451
+   bacon       0
+```
+
+
+**simple is the default format (the default may change in future versions). It corresponds to simple_tables in Pandoc Markdown extensions:**
+```python
+print(tabulate(table, headers, tablefmt="simple"))
+
+>> item      qty
+   ------  -----
+   spam       42
+   eggs      451
+   bacon       0
+```
+
+
+**github follows the conventions of GitHub flavored Markdown. It corresponds to the pipe format without alignment colons:**
+```python
+print(tabulate(table, headers, tablefmt="github"))
+
+>> | item   | qty   |
+   |--------|-------|
+   | spam   | 42    |
+   | eggs   | 451   |
+   | bacon  | 0     |
+```
+
+
+**grid is like tables formatted by Emacs' table.el package. It corresponds to grid_tables in Pandoc Markdown extensions:**
+```python
+print(tabulate(table, headers, tablefmt="grid"))
+
+>> +--------+-------+
+   | item   |   qty |
+   +========+=======+
+   | spam   |    42 |
+   +--------+-------+
+   | eggs   |   451 |
+   +--------+-------+
+   | bacon  |     0 |
+   +--------+-------+
+```
+
+
+**simple_grid draws a grid using single-line box-drawing characters:**
+```python
+print(tabulate(table, headers, tablefmt="simple_grid"))
+
+>> ┌────────┬───────┐
+   │ item   │   qty │
+   ├────────┼───────┤
+   │ spam   │    42 │
+   ├────────┼───────┤
+   │ eggs   │   451 │
+   ├────────┼───────┤
+   │ bacon  │     0 │
+   └────────┴───────┘
+```
+
+
+**rounded_grid draws a grid using single-line box-drawing characters with rounded corners:**
+```python
+print(tabulate(table, headers, tablefmt="rounded_grid"))
+
+>> ╭────────┬───────╮
+   │ item   │   qty │
+   ├────────┼───────┤
+   │ spam   │    42 │
+   ├────────┼───────┤
+   │ eggs   │   451 │
+   ├────────┼───────┤
+   │ bacon  │     0 │
+   ╰────────┴───────╯
+```
+
+
+**heavy_grid draws a grid using bold (thick) single-line box-drawing characters:**
+```python
+print(tabulate(table, headers, tablefmt="heavy_grid"))
+
+>> ┏━━━━━━━━┳━━━━━━━┓
+   ┃ item   ┃   qty ┃
+   ┣━━━━━━━━╋━━━━━━━┫
+   ┃ spam   ┃    42 ┃
+   ┣━━━━━━━━╋━━━━━━━┫
+   ┃ eggs   ┃   451 ┃
+   ┣━━━━━━━━╋━━━━━━━┫
+   ┃ bacon  ┃     0 ┃
+   ┗━━━━━━━━┻━━━━━━━┛
+```
+
+
+**mixed_grid draws a grid using a mix of light (thin) and heavy (thick) lines box-drawing characters:**
+```python
+print(tabulate(table, headers, tablefmt="mixed_grid"))
+
+>> ┍━━━━━━━━┯━━━━━━━┑
+   │ item   │   qty │
+   ┝━━━━━━━━┿━━━━━━━┥
+   │ spam   │    42 │
+   ├────────┼───────┤
+   │ eggs   │   451 │
+   ├────────┼───────┤
+   │ bacon  │     0 │
+   ┕━━━━━━━━┷━━━━━━━┙
+```
+
+
+**double_grid draws a grid using double-line box-drawing characters:**
+```python
+print(tabulate(table, headers, tablefmt="double_grid"))
+
+>> ╔════════╦═══════╗
+   ║ item   ║   qty ║
+   ╠════════╬═══════╣
+   ║ spam   ║    42 ║
+   ╠════════╬═══════╣
+   ║ eggs   ║   451 ║
+   ╠════════╬═══════╣
+   ║ bacon  ║     0 ║
+   ╚════════╩═══════╝
+```
+
+
+**fancy_grid draws a grid using a mix of single and double-line box-drawing characters:**
+```python
+print(tabulate(table, headers, tablefmt="fancy_grid"))
+
+>> ╒════════╤═══════╕
+   │ item   │   qty │
+   ╞════════╪═══════╡
+   │ spam   │    42 │
+   ├────────┼───────┤
+   │ eggs   │   451 │
+   ├────────┼───────┤
+   │ bacon  │     0 │
+   ╘════════╧═══════╛
+```
+
+
+**outline is the same as the grid format but doesn't draw lines between rows:**
+```python
+print(tabulate(table, headers, tablefmt="outline"))
+
+>> +--------+-------+
+   | item   |   qty |
+   +========+=======+
+   | spam   |    42 |
+   | eggs   |   451 |
+   | bacon  |     0 |
+   +--------+-------+
+```
+
+
+**simple_outline is the same as the simple_grid format but doesn't draw lines between rows:**
+```python
+print(tabulate(table, headers, tablefmt="simple_outline"))
+
+>> ┌────────┬───────┐
+   │ item   │   qty │
+   ├────────┼───────┤
+   │ spam   │    42 │
+   │ eggs   │   451 │
+   │ bacon  │     0 │
+   └────────┴───────┘
+```
+
+
+**rounded_outline is the same as the rounded_grid format but doesn't draw lines between rows:**
+```python
+print(tabulate(table, headers, tablefmt="rounded_outline"))
+
+>> ╭────────┬───────╮
+   │ item   │   qty │
+   ├────────┼───────┤
+   │ spam   │    42 │
+   │ eggs   │   451 │
+   │ bacon  │     0 │
+   ╰────────┴───────╯
+```
+
+
+**heavy_outline is the same as the heavy_grid format but doesn't draw lines between rows:**
+```python
+print(tabulate(table, headers, tablefmt="heavy_outline"))
+
+>> ┏━━━━━━━━┳━━━━━━━┓
+   ┃ item   ┃   qty ┃
+   ┣━━━━━━━━╋━━━━━━━┫
+   ┃ spam   ┃    42 ┃
+   ┃ eggs   ┃   451 ┃
+   ┃ bacon  ┃     0 ┃
+   ┗━━━━━━━━┻━━━━━━━┛
+```
+
+
+**mixed_outline is the same as the mixed_grid format but doesn't draw lines between rows:**
+```python
+print(tabulate(table, headers, tablefmt="mixed_outline"))
+
+>> ┍━━━━━━━━┯━━━━━━━┑
+   │ item   │   qty │
+   ┝━━━━━━━━┿━━━━━━━┥
+   │ spam   │    42 │
+   │ eggs   │   451 │
+   │ bacon  │     0 │
+   ┕━━━━━━━━┷━━━━━━━┙
+```
+
+
+**double_outline is the same as the double_grid format but doesn't draw lines between rows:**
+```python
+print(tabulate(table, headers, tablefmt="double_outline"))
+
+>> ╔════════╦═══════╗
+   ║ item   ║   qty ║
+   ╠════════╬═══════╣
+   ║ spam   ║    42 ║
+   ║ eggs   ║   451 ║
+   ║ bacon  ║     0 ║
+   ╚════════╩═══════╝
+```
+
+
+**fancy_outline is the same as the fancy_grid format but doesn't draw lines between rows:**
+```python
+print(tabulate(table, headers, tablefmt="fancy_outline"))
+
+>> ╒════════╤═══════╕
+   │ item   │   qty │
+   ╞════════╪═══════╡
+   │ spam   │    42 │
+   │ eggs   │   451 │
+   │ bacon  │     0 │
+   ╘════════╧═══════╛
+```
+
+
+**presto is like tables formatted by Presto cli:**
+```python
+print(tabulate(table, headers, tablefmt="presto"))
+
+>> item   |   qty
+  --------+-------
+   spam   |    42
+   eggs   |   451
+   bacon  |     0
+```
+
+
+**pretty attempts to be close to the format emitted by the PrettyTables library:**
+```python
+print(tabulate(table, headers, tablefmt="pretty"))
+
+>> +-------+-----+
+   | item  | qty |
+   +-------+-----+
+   | spam  | 42  |
+   | eggs  | 451 |
+   | bacon |  0  |
+   +-------+-----+
+```
+
+
+**psql is like tables formatted by Postgres' psql cli:**
+```python
+print(tabulate(table, headers, tablefmt="psql"))
+
+>> +--------+-------+
+   | item   |   qty |
+   |--------+-------|
+   | spam   |    42 |
+   | eggs   |   451 |
+   | bacon  |     0 |
+   +--------+-------+
+```
+
+
+**pipe follows the conventions of PHP Markdown Extra extension. It corresponds to pipe_tables in Pandoc. This format uses colons to indicate column alignment:**
+```python
+print(tabulate(table, headers, tablefmt="pipe"))
+
+>> | item   |   qty |
+   |:-------|------:|
+   | spam   |    42 |
+   | eggs   |   451 |
+   | bacon  |     0 |
+```
+
+
+**asciidoc formats data like a simple table of the AsciiDoctor format:**
+```python
+print(tabulate(table, headers, tablefmt="asciidoc"))
+
+>> [cols="8<,7>",options="header"]
+   |====
+   | item   |   qty
+   | spam   |    42
+   | eggs   |   451
+   | bacon  |     0
+   |====
+```
+
+
+**orgtbl follows the conventions of Emacs org-mode, and is editable also in the minor orgtbl-mode. Hence its name:**
+```python
+print(tabulate(table, headers, tablefmt="orgtbl"))
+
+>> | item   |   qty |
+   |--------+-------|
+   | spam   |    42 |
+   | eggs   |   451 |
+   | bacon  |     0 |
+```
+
+
+**jira follows the conventions of Atlassian Jira markup language:**
+```python
+print(tabulate(table, headers, tablefmt="rst"))
+
+>> ======  =====
+   item      qty
+   ======  =====
+   spam       42
+   eggs      451
+   bacon       0
+   ======  =====
+```
+
+
+**mediawiki format produces a table markup used in Wikipedia and on other MediaWiki-based sites:**
+```python
+print(tabulate(table, headers, tablefmt="mediawiki"))
+
+>> {| class="wikitable" style="text-align: left;"
+   |+ <!-- caption -->
+   |-
+   ! item   !! align="right"|   qty
+   |-
+   | spam   || align="right"|    42
+   |-
+   | eggs   || align="right"|   451
+   |-
+   | bacon  || align="right"|     0
+   |}
+```
+
+
+**moinmoin format produces a table markup used in MoinMoin wikis:**
+```python
+print(tabulate(table, headers, tablefmt="moinmoin"))
+
+>> || ''' item   ''' || ''' quantity   ''' ||
+   ||  spam    ||  41.999      ||
+   ||  eggs    ||  451         ||
+   ||  bacon   ||              ||
+```
+
+
+**youtrack format produces a table markup used in Youtrack tickets:**
+```python
+print(tabulate(table, headers, tablefmt="youtrack"))
+
+>> ||  item    ||  quantity   ||
+   |   spam    |  41.999      |
+   |   eggs    |  451         |
+   |   bacon   |              |
+```
+
+
+**textile format produces a table markup used in Textile format:**
+```python
+print(tabulate(table, headers, tablefmt="textile"))
+
+>> |_.  item   |_.   qty |
+   |<. spam    |>.    42 |
+   |<. eggs    |>.   451 |
+   |<. bacon   |>.     0 |
+```
+
+
+**html produces standard HTML markup as an html.escape'd str with a .repr_html method so that Jupyter Lab and Notebook display the HTML and a .str property so that the raw HTML remains accessible. unsafehtml table format can be used if an unescaped HTML is required:**
+```python
+print(tabulate(table, headers, tablefmt="html"))
+
+>> <table>
+   <tbody>
+   <tr><th>item  </th><th style="text-align: right;">  qty</th></tr>
+   <tr><td>spam  </td><td style="text-align: right;">   42</td></tr>
+   <tr><td>eggs  </td><td style="text-align: right;">  451</td></tr>
+   <tr><td>bacon </td><td style="text-align: right;">    0</td></tr>
+   </tbody>
+   </table>
+```
+
+
+**latex format creates a tabular environment for LaTeX markup, replacing special characters like _ or \ to their LaTeX correspondents:**
+```python
+print(tabulate(table, headers, tablefmt="latex"))
+
+>> \begin{tabular}{lr}
+   \hline
+    item   &   qty \\
+   \hline
+    spam   &    42 \\
+    eggs   &   451 \\
+    bacon  &     0 \\
+   \hline
+   \end{tabular}
+```
+
+
