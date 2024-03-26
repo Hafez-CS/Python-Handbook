@@ -120,6 +120,8 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;**  **37. Matplotlib(chart) :** **&nbsp;**  **[`Matplotlib`](#matplotlib)**
 
+**&nbsp;&nbsp;&nbsp;**  **38. Table(tabulate) :** **&nbsp;**  **[`Table`](#table)**
+
 
 
 
@@ -5022,4 +5024,133 @@ plt.show()
 
 
 
+Table
+------
+```python
+# $ pip3 install tabulate
 
+table = [["Sun",696000,1989100000],["Earth",6371,5973.6],["Moon",1737,73.5],["Mars",3390,641.85]]
+print(tabulate(table))
+
+>> -----  ------  -------------
+   Sun    696000   1.9891e+09
+   Earth    6371   5973.6
+   Moon     1737   73.5
+   Mars     3390   641.85
+   -----  ------  -------------
+```
+
+```python
+print(tabulate(table, headers=["Planet","R (km)", "mass (x 10^29 kg)"]))
+
+>> Planet      R (km)    mass (x 10^29 kg)
+   --------  --------  -------------------
+   Sun         696000           1.9891e+09
+   Earth         6371        5973.6
+   Moon          1737          73.5
+   Mars          3390         641.85
+```
+
+```python
+print(tabulate([["Name","Age"],["Alice",24],["Bob",19]],headers="firstrow"))  # If headers="firstrow", then the first row of data is used:
+
+>> Name      Age
+   ------  -----
+   Alice      24
+   Bob        19
+```
+
+```python
+print(tabulate({"Name": ["Alice", "Bob"],"Age": [24, 19]}, headers="keys")) # If headers="keys", then the keys of a dictionary/dataframe, or column indices are used
+
+>>   Age  Name
+   -----  ------
+      24  Alice
+      19  Bob
+```
+
+**By default, only pandas.DataFrame tables have an additional column called row index. 
+To add a similar column to any other type of table, pass showindex="always" or showindex=True argument to tabulate(). 
+To suppress row indices for all types of data, pass showindex="never" or showindex=False. 
+To add a custom row index column, pass showindex=rowIDs, where rowIDs is some iterable:**
+```python
+print(tabulate([["F",24],["M",19]], showindex="always"))
+>> -  -  --
+   0  F  24
+   1  M  19
+   -  -  --
+```
+
+**There is more than one way to format a table in plain text. The third optional argument named tablefmt defines how the table is formatted.Supported table formats are:**
+
+* **"plain"**
+  
+* **"simple"**
+  
+* **"github"**
+  
+* **"grid"**
+  
+* **"simple_grid"**
+  
+* **"rounded_grid"**
+  
+* **"heavy_grid"**
+  
+* **"mixed_grid"**
+  
+* **"double_grid"**
+
+* **"fancy_grid"**
+  
+* **"outline"**
+  
+* **"simple_outline"**
+  
+* **"rounded_outline"**
+  
+* **"heavy_outline"**
+  
+* **"mixed_outline"**
+  
+* **"double_outline"**
+  
+* **"fancy_outline"**
+  
+* **"pipe"**
+  
+* **"orgtbl"**
+  
+* **"asciidoc"**
+  
+* **"jira"**
+  
+* **"presto"**
+  
+* **"pretty"**
+  
+* **"psql"**
+  
+* **"rst"**
+  
+* **"mediawiki"**
+  
+* **"moinmoin"**
+  
+* **"youtrack"**
+  
+* **"html"**
+  
+* **"unsafehtml"**
+  
+* **"latex"**
+  
+* **"latex_raw"**
+  
+* **"latex_booktabs"**
+  
+* **"latex_longtable"**
+  
+* **"textile"**
+  
+* **"tsv"**
