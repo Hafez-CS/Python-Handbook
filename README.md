@@ -2154,8 +2154,9 @@ def my_function(fname):
   print(fname + " Refsnes")
 
 my_function("Emil")
-my_function("Tobias")
+my_function(fname = "Tobias")
 my_function("Linus")
+
 >> "Emil Refsnes"
 >> "Tobias Refsnes"
 >> "Linus Refsnes"
@@ -2266,6 +2267,7 @@ def tri_recursion(k):
 
 print("\n\nRecursion Example Results")
 tri_recursion(6)
+
 >> "Recursion Example Results"
    1
    3
@@ -5575,5 +5577,3 @@ print(tabulate(table, headers, tablefmt="latex"))
    \hline
    \end{tabular}
 ```
-
-
