@@ -2277,6 +2277,282 @@ tri_recursion(6)
    21
 ```
 
+```python
+def shout(text): 
+    return text.upper() 
+ 
+def whisper(text): 
+    return text.lower() 
+ 
+def greet(func): 
+    # storing the function in a variable 
+    greeting = func("""Hi, I am created by a function passed as an argument.""") 
+    print (greeting) 
+ 
+greet(shout) 
+greet(whisper) 
+
+>> "HI, I AM CREATED BY A FUNCTION PASSED AS AN ARGUMENT."
+   "hi, i am created by a function passed as an argument."
+```
+
+```python
+def say_hello(name):
+    return f"Hello {name}"
+
+def be_awesome(name):
+    return f"Yo {name}, together we're the awesomest!"
+
+def greet_bob(greeter_func):
+    return greeter_func("Bob")
+
+greet_bob(say_hello)
+>> 'Hello Bob'
+
+greet_bob(be_awesome)
+>> 'Yo Bob, together were the awesomest!'
+```
+
+```python
+def parent():
+    print("Printing from parent()")
+
+    def first_child():
+        print("Printing from first_child()")
+
+    def second_child():
+        print("Printing from second_child()")
+
+    second_child()
+    first_child()
+
+parent()
+>> "Printing from parent()"
+   "Printing from second_child()"
+   "Printing from first_child()
+```
+
+### Decorator :
+
+**decorators are used in Python to modify the behavior of functions or classes. 
+They are higher-order functions that take a function or class as input and return a new function or class with modified behavior. 
+Decorators are commonly used to add new functionality to existing code without changing the underlying implementation, 
+making the code more usable and modular.**
+
+```python
+# for first , look at this and undrestand it :
+
+def decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+def say_whee():
+    print("Whee!")
+
+say_whee = decorator(say_whee)
+
+
+>> "Something is happening before the function is called."
+   "Whee!"
+   "Something is happening after the function is called."
+
+
+# now we can do this with Decorator :
+
+
+def decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@decorator
+def say_whee():
+    print("Whee!")
+
+>> "Something is happening before the function is called."
+   "Whee!"
+   "Something is happening after the function is called."
+```
+
+```python
+def make_pretty(func):
+
+    def inner():
+        print("I got decorated")
+        func()
+    return inner
+
+@make_pretty
+def ordinary():
+    print("I am ordinary")
+
+ordinary()  
+
+>> "I got decorated"
+   "I am ordinary"
+```
+
+```python
+def star(func):
+    def inner(*args, **kwargs):
+        print("*" * 30)
+        func(*args, **kwargs)
+        print("*" * 30)
+    return inner
+
+def percent(func):
+    def inner(*args, **kwargs):
+        print("%" * 30)
+        func(*args, **kwargs)
+        print("%" * 30)
+    return inner
+
+@star
+@percent
+def printer(msg):
+    print(msg)
+printer("Hello")
+
+>> '******************************"
+   "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+   "Hello"
+   "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+   "******************************"
+```
+
+### generator :
+
+**Generator in Python is an easy way to generate browsers and with this feature you can easily control one and exit it at any time. 
+In the case of ordinary functions in Python, the issue of speed and amount of memory is raised. 
+You have problems in terms of speed and memory in a Python function, 
+which have been solved to a large extent by using Generator in Python.**
+
+```python
+def simpleGeneratorFun(): 
+    yield 1            
+    yield 2            
+    yield 3            
+   
+for value in simpleGeneratorFun():  
+    print(value)
+
+>> 1
+   2
+   3
+
+
+# Or we can do this :
+
+
+def simpleGeneratorFun(): 
+    yield 1
+    yield 2
+    yield 3
+   
+x = simpleGeneratorFun() 
+print(next(x)) 
+print(next(x)) 
+print(next(x))
+
+>> 1
+   2
+   3
+```
+
+```python
+def fib(limit): 
+      
+    a, b = 0, 1
+    while a < limit: 
+        yield a 
+        a, b = b, a + b 
+  
+x = fib(5) 
+
+print(next(x))  
+print(next(x)) 
+print(next(x)) 
+print(next(x)) 
+print(next(x)) 
+
+print("\nUsing for in loop") 
+for i in fib(5):  
+    print(i)
+
+
+>> 0
+   1
+   1
+   2
+   3
+   "Using for in loop"
+   0
+   1
+   1
+   2
+   3
+```
+
+### Name & Main :
+
+**Management and control function**
+
+```python
+from time import sleep
+
+print("This is my file to demonstrate best practices.")
+
+def process_data(data):
+    print("Beginning data processing...")
+    modified_data = data + " that has been modified"
+    sleep(3)
+    print("Data processing finished.")
+    return modified_data
+
+def main():
+    data = "My data read from the Web"
+    print(data)
+    modified_data = process_data(data)
+    print(modified_data)
+
+if __name__ == "__main__":
+    main()
+
+
+>> "This is my file to demonstrate best practices."
+   "My data read from the Web"
+   "Beginning data processing..."
+   "Data processing finished."
+   "My data read from the Web that has been modified"
+
+"""  With this method, it is possible to manage which function is executed and in what model the scripts are executed  """
+
+```
+
+```python
+def echo(text: str, repetitions: int = 3) -> str:
+    """Imitate a real-world echo."""
+    echoed_text = ""
+    for i in range(repetitions, 0, -1):
+        echoed_text += f"{text[-i:]}\n"
+    return f"{echoed_text.lower()}."
+
+if __name__ == "__main__":
+    text = input("Yell something at a mountain: ")
+    print(echo(text))
+
+
+>> Yell something at a mountain: hh
+   hh
+   hh
+   h 
+   . 
+```
 
 lambda
 --------
