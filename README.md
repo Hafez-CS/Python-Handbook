@@ -3664,6 +3664,61 @@ print(x)
 >> <map object at 0x1481154c4130>
 ```
 
+```python
+def square(number):
+    return number ** 2
+
+
+numbers = [1, 2, 3, 4, 5]
+squared = map(square, numbers)
+
+list(squared)
+>> [1, 4, 9, 16, 25]
+```
+
+```python
+str_nums = ["4", "8", "6", "5", "3", "2", "8", "9", "2", "5"]
+
+int_nums = map(int, str_nums)
+print(int_nums)
+>> <map object at 0x7fb2c7e34c70>
+
+print(list(int_nums))
+>> [4, 8, 6, 5, 3, 2, 8, 9, 2, 5]
+
+print(str_nums)
+>> ["4", "8", "6", "5", "3", "2", "8", "9", "2", "5"]
+```
+
+```python
+first_it = [1, 2, 3]
+second_it = [4, 5, 6, 7]
+
+print(list(map(pow, first_it, second_it)))
+>> [1, 32, 729]
+```
+
+```python
+string_it = ["processing", "strings", "with", "map"]
+list(map(str.capitalize, string_it))
+>> ['Processing', 'Strings', 'With', 'Map']
+
+list(map(str.upper, string_it))
+>> ['PROCESSING', 'STRINGS', 'WITH', 'MAP']
+
+list(map(str.lower, string_it))
+>> ['processing', 'strings', 'with', 'map']
+```
+
+```python
+import math
+
+numbers = [1, 2, 3, 4, 5, 6, 7]
+
+print(list(map(math.factorial, numbers)))
+>> [1, 2, 6, 24, 120, 720, 5040]
+```
+
 ### max() (Returns the largest item in an iterable) :
 ```python
 x = max(5, 10)
