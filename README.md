@@ -122,6 +122,8 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;**  **38. Table(tabulate) :** **&nbsp;**  **[`Table`](#table)**
 
+**&nbsp;&nbsp;&nbsp;**  **39. OOP(Class) :** **&nbsp;**  **[`Class`](#class)**
+
 
 
 
@@ -5907,4 +5909,436 @@ print(tabulate(table, headers, tablefmt="latex"))
     bacon  &     0 \\
    \hline
    \end{tabular}
+```
+
+
+
+Class
+------
+![Monty Python](https://realpython.com/cdn-cgi/image/width=960,format=auto/https://files.realpython.com/media/Class-Concepts-Object-Oriented-Programming-in-Python_Watermarked.6cf327c51434.jpg)
+**Object-oriented programming (OOP) is a method of structuring a program by bundling related properties and behaviors into individual objects. 
+In this tutorial, you'll learn the basics of object-oriented programming in Pytho**
+
+### How Define a Class in Python ?
+```python
+class Dog:
+    pass
+```
+```python
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+""" You define the properties that all Dog objects must have in a method called .__init__(). 
+Every time you create a new Dog object, .__init__() sets the initial state of the object by assigning the values of the object's properties. 
+That is, .__init__() initializes each new instance of the class.
+You can give .__init__() any number of parameters, but the first parameter will always be a variable called self. 
+When you create a new class instance, then Python automatically passes the instance to the self parameter in .__init__() so that Python can define the new attributes on the object."""
+```
+
+### How Instantiate a Class in Python ?
+```python
+class Dog:
+     pass
+
+Dog()
+>> <__main__.Dog object at 0x106702d30>
+Dog()
+>> <__main__.Dog object at 0x0004ccc90>
+
+a = Dog()
+b = Dog()
+a == b
+>> False
+
+
+
+""" The new Dog instance is located at a different memory address. 
+That's because it's an entirely new instance and is completely unique from the first Dog object that you created."""
+```
+```python
+class Dog:
+     species = "Canis familiaris"
+     def __init__(self, name, age):
+         self.name = name
+         self.age = age
+
+miles = Dog("Miles", 4)
+buddy = Dog("Buddy", 9)
+
+
+miles.name
+>> 'Miles'
+miles.age
+>> 4
+
+buddy.name
+>> 'Buddy'
+buddy.age
+>> 9
+
+buddy.age = 10
+buddy.age
+>> 10
+
+miles.species = "Felis silvestris"
+miles.species
+>> 'Felis silvestris'
+```
+```python
+class Dog:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # Instance method
+    def description(self):
+        return f"{self.name} is {self.age} years old"
+
+    # Another instance method
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+    
+
+miles = Dog("Miles", 4)
+miles.description()
+>> 'Miles is 4 years old'
+
+miles.speak("Woof Woof")
+>> 'Miles says Woof Woof'
+
+miles.speak("Bow Wow")
+>> 'Miles says Bow Wow'
+```
+```python
+class Dog:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age, breed):
+        self.name = name
+        self.age = age
+        self.breed = breed
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+    
+
+buddy.speak("Yap")
+>> 'Buddy says Yap'
+
+jim.speak("Woof")
+>> 'Jim says Woof'
+
+jack.speak("Woof")
+>> 'Jack says Woof'
+```
+
+### How Instantiate a Class in Python ?
+```python
+""" Inheritance is the process by which one class takes on the attributes and methods of another. 
+Newly formed classes are called child classes, and the classes that you derive child classes from are called parent classes."""
+
+class Parent:
+    hair_color = "brown"
+
+class Child(Parent):
+    pass
+```
+```python
+class Dog:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+    
+class JackRussellTerrier(Dog):
+    pass
+
+class Dachshund(Dog):
+    pass
+
+class Bulldog(Dog):
+    pass
+
+miles = JackRussellTerrier("Miles", 4)
+buddy = Dachshund("Buddy", 9)
+jack = Bulldog("Jack", 3)
+jim = Bulldog("Jim", 5)
+
+
+miles.species
+>> 'Canis familiaris'
+
+buddy.name
+>> 'Buddy'
+
+print(jack)
+>> "Jack is 3 years old"
+
+jim.speak("Woof")
+>> 'Jim says Woof'
+```
+### Class Attributes :
+```python
+ class ObjectCounter:
+     num_instances = 0
+     def __init__(self):
+         ObjectCounter.num_instances += 1
+
+
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x10392d810>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x1039810d0>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x10395b750>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x103959810>
+
+ObjectCounter.num_instances
+>> 4
+
+counter = ObjectCounter()
+counter.num_instances
+>> 5
+
+
+
+"""It's important to note that you can access class attributes using either the class or one of its instances. 
+That's why you can use the counter object to retrieve the value of .num_instances. 
+However, if you need to modify a class attribute, then you must use the class itself rather than one of its instances.
+For example, if you use self to modify .num_instances, then you'll be overriding the original class attribute by creating a new instance attribute:"""
+
+
+
+ class ObjectCounter:
+     num_instances = 0
+     def __init__(self):
+         self.num_instances += 1
+
+
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x103987550>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x1039c5890>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x10396a890>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x1036fa110>
+
+ObjectCounter.num_instances
+>> 0
+```
+### Instance Attributes :
+```python
+class Car:
+    def __init__(self, make, model, year, color):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.color = color
+        self.started = False
+        self.speed = 0
+        self.max_speed = 200
+
+
+toyota_camry = Car("Toyota", "Camry", 2022, "Red")
+toyota_camry.make
+>> 'Toyota'
+toyota_camry.model
+>> 'Camry'
+toyota_camry.color
+>> 'Red'
+toyota_camry.speed
+>> 0
+
+ford_mustang = Car("Ford", "Mustang", 2022, "Black")
+ford_mustang.make
+>> 'Ford'
+ford_mustang.model
+>> 'Mustang'
+ford_mustang.year
+>> 2022
+ford_mustang.max_speed
+>> 200
+```
+### The .__dict__ Attribute :
+```python
+class SampleClass:
+    class_attr = 100
+
+    def __init__(self, instance_attr):
+        self.instance_attr = instance_attr
+
+    def method(self):
+        print(f"Class attribute: {self.class_attr}")
+        print(f"Instance attribute: {self.instance_attr}")
+
+
+
+SampleClass.class_attr
+>> 100
+
+SampleClass.__dict__
+>> mappingproxy({
+     '__module__': '__main__',
+     'class_attr': 100,
+     '__init__': <function SampleClass.__init__ at 0x1036c62a0>,
+     'method': <function SampleClass.method at 0x1036c56c0>,
+     '__dict__': <attribute '__dict__' of 'SampleClass' objects>,
+     '__weakref__': <attribute '__weakref__' of 'SampleClass' objects>,
+     '__doc__': None
+})
+
+SampleClass.__dict__["class_attr"]
+>> 100
+
+instance = SampleClass("Hello!")
+instance.instance_attr
+>> 'Hello!'
+
+instance.method()
+>> Class attribute: 100
+>> Instance attribute: Hello!
+
+instance.__dict__
+>> {'instance_attr': 'Hello!'}
+
+instance.__dict__["instance_attr"]
+>> 'Hello!'
+
+instance.__dict__["instance_attr"] = "Hello, Pythonista!"
+instance.instance_attr
+>> 'Hello, Pythonista!'
+```
+### Dynamic Class and Instance Attributes :
+```python
+class Record:
+    """Hold a record of data."""
+
+john = {
+     "name": "John Doe",
+     "position": "Python Developer",
+     "department": "Engineering",
+     "salary": 80000,
+     "hire_date": "2020-01-01",
+     "is_manager": False,
+}
+
+john_record = Record()
+for field, value in john.items():
+     setattr(john_record, field, value)
+
+
+john_record.name
+>> 'John Doe'
+
+john_record.department
+>> 'Engineering'
+
+john_record.__dict__
+>> {
+     'name': 'John Doe',
+     'position': 'Python Developer',
+     'department': 'Engineering',
+     'salary': 80000,
+     'hire_date': '2020-01-01',
+     'is_manager': False
+   }
+```
+```python
+class User:
+     pass
+
+
+# Add instance attributes dynamically
+jane = User()
+jane.name = "Jane Doe"
+jane.job = "Data Engineer"
+jane.__dict__
+>> {'name': 'Jane Doe', 'job': 'Data Engineer'}
+
+
+# Add methods dynamically
+def __init__(self, name, job):
+     self.name = name
+     self.job = job
+
+
+User.__init__ = __init__
+User.__dict__
+>> mappingproxy({
+     ...
+     '__init__': <function __init__ at 0x1036ccae0>
+   })
+
+
+linda = User("Linda Smith", "Team Lead")
+linda.__dict__
+>> {'name': 'Linda Smith', 'job': 'Team Lead'}
+```
+### Instance Methods With self :
+```python
+class Car:
+    def __init__(self, make, model, year, color):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.color = color
+        self.started = False
+        self.speed = 0
+        self.max_speed = 200
+
+    def start(self):
+        print("Starting the car...")
+        self.started = True
+
+    def stop(self):
+        print("Stopping the car...")
+        self.started = False
+
+    def accelerate(self, value):
+        if not self.started:
+            print("Car is not started!")
+            return
+        if self.speed + value <= self.max_speed:
+            self.speed += value
+        else:
+            self.speed = self.max_speed
+        print(f"Accelerating to {self.speed} km/h...")
+
+    def brake(self, value):
+        if self.speed - value >= 0:
+            self.speed -= value
+        else:
+            self.speed = 0
+        print(f"Braking to {self.speed} km/h...")   
+
+
+ford_mustang = Car("Ford", "Mustang", 2022, "Black")
+ford_mustang.start()
+>> "Starting the car..."
+ford_mustang.accelerate(100)
+>> "Accelerating to 100 km/h..."
+ford_mustang.brake(50)
+>> "assertBraking to 50 km/h...""
+ford_mustang.brake(80)
+>> "Braking to 0 km/h...""
+ford_mustang.stop()
+>> "Stopping the car...""
+ford_mustang.accelerate(100)
+>> "Car is not started!"
 ```
