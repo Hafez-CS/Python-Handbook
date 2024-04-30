@@ -6342,3 +6342,32 @@ ford_mustang.stop()
 ford_mustang.accelerate(100)
 >> "Car is not started!"
 ```
+
+### Special Methods and Protocols :
+```python
+class Car:
+    def __str__(self):
+        return f"{self.make}, {self.model}, {self.color}: ({self.year})"
+
+    def __repr__(self):
+        return (
+            f"{type(self).__name__}"
+            f'(make="{self.make}", '
+            f'model="{self.model}", '
+            f"year={self.year}, "
+            f'color="{self.color}")'
+        )
+
+
+toyota_camry = Car("Toyota", "Camry", 2022, "Red")
+
+str(toyota_camry)
+>> 'Toyota, Camry, Red: (2022)'
+print(toyota_camry)
+>> Toyota, Camry, Red: (2022)
+
+toyota_camry
+>> Car(make="Toyota", model="Camry", year=2022, color="Red")
+repr(toyota_camry)
+>> 'Car(make="Toyota", model="Camry", year=2022, color="Red")'
+```
