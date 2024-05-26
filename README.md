@@ -128,6 +128,8 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;**  **41. txt :** **&nbsp;**  **[`txt`](#txt)**
 
+**&nbsp;&nbsp;&nbsp;**  **42. OS :** **&nbsp;**  **[`OS`](#os)**
+
 
 
 
@@ -2153,6 +2155,69 @@ def my_function():
 
 my_function()
 >> "Hello from a function"
+```
+
+```python
+def myfunc():
+  x = 300
+  print(x)
+myfunc()
+>> 300
+```
+
+```python
+def myfunc():
+  x = 300
+  def myinnerfunc():
+    print(x)
+  myinnerfunc()
+
+myfunc()
+>> 300
+```
+
+```python
+x = 300
+def myfunc():
+  print(x)
+
+myfunc()
+print(x)
+>> 300
+>> 300
+```
+
+```python
+x = 300
+def myfunc():
+  x = 200
+  print(x)
+
+myfunc()
+print(x)
+>> 200
+>> 300
+```
+
+```python
+def myfunc():
+  global x
+  x = 300
+
+myfunc()
+print(x)
+>> 300
+```
+
+```python
+x = 300
+def myfunc():
+  global x
+  x = 200
+
+myfunc()
+print(x)
+>> 200
 ```
 
 ```python
@@ -6678,3 +6743,8 @@ This is Paris
 This is London 
 """
 ```
+
+
+OS
+----
+**os has many built-in , and we don't need all of them , so visit this site for all built-in OS : https://www.w3schools.com/python/module_os.asp**
