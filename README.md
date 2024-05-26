@@ -126,6 +126,8 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;**  **30. CSV :** **&nbsp;**  **[`CSV`](#csv)**
 
+**&nbsp;&nbsp;&nbsp;**  **31. txt :** **&nbsp;**  **[`txt`](#txt)**
+
 
 
 
@@ -6613,5 +6615,66 @@ Aditya,IT,2,9.3
 Sagar,SE,1,9.5
 Prateek,MCE,3,7.8
 Sahil,EP,2,9.1
+"""
+```
+
+
+txt
+----
+
+* **`"r"` Read Only.**
+* **`"r+"` Read and Write.**
+* **`"w"` Write Only.**
+* **`"w+"` Write and Read.**
+* **`"a"` Append Only.**
+* **`"a+"` Append and Read.**
+
+### reading :
+```python
+"""
+txt file :
+
+in the name of god
+hellllllloooo
+"""
+
+file1 = open("a.txt","r")
+print(file1.read())
+
+>> "in the name of god"
+   "hellllllloooo"
+```
+
+```python
+"""
+txt file :
+
+in the name of god
+hellllllloooo
+"""
+
+file1 = open("a.txt","r")
+print(file1.readline())
+
+>> "in the name of god"
+```
+
+### Writing :
+```python
+file1 = open("a.txt", "w")
+L = ["This is Delhi \n", "This is Paris \n", "This is London \n"]
+ 
+file1.write("Hello \n")
+file1.writelines(L)
+file1.close()  # to change file access modes
+
+
+"""
+txt file :
+
+Hello 
+This is Delhi 
+This is Paris 
+This is London 
 """
 ```
