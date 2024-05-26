@@ -1,44 +1,47 @@
-0) Home
-1) Variables
-1) Data Types
-1) Numbers
-1) Strings
-1) Booleans
-1) Operators
-1) Lists
-1) Tuples
-1) Sets
-1) Dictionaries
-1) if ... else
-1) while Loops
-1) for Loops
-1) Functions
-1) lambda
-1) class And Objects
-1) iterators(iter)
-1) Scope
-1) make my library
-1) Datetime(import datetime)
-1) Math
-1) JSON
-1) RegEx(import re)
-1) Try...Except
-1) Input
-1) String Formatting
-1) File Handling
-1) Built In Functions
-1) Python Error
-1) Random(import random)
-1) Enum
-1) System(import sys)
-1) OS(import OS)
-1) Path(import path)
-1) Pickle(import pickle)
-1) Collections(import collections)
-1) Operator(import operator)
-1) Progress Bar
-1) Matplotlib(chart)
-1) Table
+
+1) Home
+2) Variables
+3) Data Types
+4) Numbers
+5) Strings
+6) Booleans
+7) Operators
+8) Lists
+9) Tuples
+10) Sets
+11) Dictionaries
+12) if ... else
+13) while Loops
+14) for Loops
+15) Functions
+16) lambda
+17) iterators(iter)
+18) make my library
+19) Datetime(import datetime)
+20) Math
+21) JSON
+22) RegEx(import re)
+23) Try...Except
+24) Input
+25) String Formatting
+26) File Handling
+27) Built In Functions
+28) Python Error
+29) Random(import random)
+30) Enum
+31) System(import sys)
+32) OS(import OS)
+33) Path(import path)
+34) Pickle(import pickle)
+35) Collections(import collections)
+36) Operator(import operator)
+37) Progress Bar
+38) Matplotlib(chart)
+39) Table(import tabulate)
+40) OOP(Class)
+41) CSV
+42) txt
+
 
 ***************************************************************************************************************************************************************************
 
@@ -56,6 +59,14 @@ print("Hello, World!")
 
 # hello world
 
+
+
+# python y.py                    for run code in VScode terminal
+
+# pip install x                  for install a library
+
+# pip install --upgrade x        for upgrade a library
+
 ***************************************************************************************************************************************************************************
 
 1) Variables
@@ -68,17 +79,20 @@ print(y)
 >> 5
 >> "John"
 
+###################################################################
 
 x = 4       # x is of type int
 x = "Sally" # x is now of type str
 print(x)
 >> "Sally"
 
+###################################################################
 
 x = str(3)    # x will be '3'
 y = int(3)    # y will be 3
 z = float(3)  # z will be 3.0
 
+###################################################################
 
 x = 5
 y = "John"
@@ -87,6 +101,7 @@ print(type(y))
 >> <class 'int'>
 >> <class 'str'>
 
+###################################################################
 
 x, y, z = "Orange", "Banana", "Cherry"
 print(x)
@@ -96,6 +111,7 @@ print(z)
 >> "Banana"
 >> "Cherry"
 
+###################################################################
 
 x = y = z = "Orange"
 print(x)
@@ -105,6 +121,7 @@ print(z)
 >> "Orange"
 >> "Orange"
 
+###################################################################
 
 fruits = ["apple", "banana", "cherry"]
 x, y, z = fruits
@@ -115,11 +132,13 @@ print(z)
 >> ["apple", "banana", "cherry"]
 >> ["apple", "banana", "cherry"]
 
+###################################################################
 
 x = "Python is awesome"
 print(x)
 >> "Python is awesome"
 
+###################################################################
 
 x = "Python"
 y = "is"
@@ -127,6 +146,7 @@ z = "awesome"
 print(x, y, z)
 >> "Python" , "is" , "awesome"
 
+###################################################################
 
 x = "Python "
 y = "is "
@@ -134,6 +154,7 @@ z = "awesome"
 print(x + y + z)
 >> "Python is awesome"
 
+###################################################################
 
 x = 5
 y = 10
@@ -236,61 +257,61 @@ a = "Hello"
 print(a)
 >> "Hello"
 
-
+###################################################################
 
 a = "Hello, World!"
 print(a[1])
 >> "e"
 
-
+###################################################################
 
 b = "Hello, World!"
 print(b[2:5])
 >> "llo"
 
-
+###################################################################
 
 a = "Hello, World!"
 print(len(a))
 >> 13
 
-
+###################################################################
 
 txt = "The best things in life are free!"
 print("free" in txt)
 >> True
 
-
+###################################################################
 
 a = "Hello, World!"
 print(a.upper())
 >> "HELLO, WORLD!"
 
-
+###################################################################
 
 a = "Hello, World!"
 print(a.lower())
 >> "hello, world!"
 
-
+###################################################################
 
 a = " Hello, World! "
 print(a.strip()) # returns "Hello, World!"
 >> "Hello, World!"
 
-
+###################################################################
 
 a = "Hello, World!"
 print(a.replace("H", "J"))
 >> "Jello, World!"
 
-
+###################################################################
 
 a = "Hello, World!"
 print(a.split(",")) # returns ['Hello', ' World!']
 >> "['Hello', ' World!']"
 
-
+###################################################################
 
 a = "Hello"
 b = "World"
@@ -298,7 +319,7 @@ c = a + b
 print(c)
 >> "HelloWorld"
 
-
+###################################################################
 
 a = "Hello"
 b = "World"
@@ -306,65 +327,65 @@ c = a + " " + b
 print(c)
 >> "Hello World"
 
-
+###################################################################
 
 age = 36
 txt = "My name is John, I am " + age
 print(txt)
 >> "My name is John, I am 36"
 
-
+###################################################################
 
 age = 36
 txt = "My name is John, and I am {}"
 print(txt.format(age))
 >> "My name is John, I am 36"
 
-
+###################################################################
 
 print('G','F', sep='', end='')
 print('G')
 >> "GFG"
 
-
+###################################################################
 
 print('09','12','2016', sep='-', end='\n')
 >> "09-12-2016"
 
-
+###################################################################
 
 print('Red','Green','Blue', sep=',', end='@')
 print('geeksforgeeks')
 >> "Red,Green,Blue@geeksforgeeks"
 
-
+###################################################################
 
 print("Geeks : %2d, Portal : %5.2f" % (1, 05.333)) 
 >> "Geeks :  1, Portal : 5.33"
  
-
+###################################################################
 
 print("Total students : %3d, Boys : %2d" % (240, 120))   # print integer value
 >> "Total students : 240, Boys : 120"
  
-
+###################################################################
 
 print("%7.3o" % (25))   # print octal value
 >> "    031"
  
-
+###################################################################
 
 print("%10.3E" % (356.08977))   # print exponential value
 >> "3.561E+02"
 
-
+###################################################################
 
 tab = {'geeks': 4127, 'for': 4098, 'geek': 8637678}
 print('Geeks: {0[geeks]:d}; For: {0[for]:d}; '
     'Geeks: {0[geek]:d}'.format(tab))
 >> "Geeks: 4127; For: 4098; Geeks: 8637678"
 
-########################################
+###################################################################
 
 "    \'    "	  # Single Quote
 "    \\    "	  # Backslash	
@@ -1906,21 +1927,83 @@ def my_function():
 my_function()
 >> "Hello from a function"
 
+###################################################################
 
+def myfunc():
+  x = 300
+  print(x)
+myfunc()
+>> 300
 
+###################################################################
+
+def myfunc():
+  x = 300
+  def myinnerfunc():
+    print(x)
+  myinnerfunc()
+
+myfunc()
+>> 300
+
+###################################################################
+
+x = 300
+def myfunc():
+  print(x)
+
+myfunc()
+print(x)
+>> 300
+>> 300
+
+###################################################################
+
+x = 300
+def myfunc():
+  x = 200
+  print(x)
+
+myfunc()
+print(x)
+>> 200
+>> 300
+
+###################################################################
+
+def myfunc():
+  global x
+  x = 300
+
+myfunc()
+print(x)
+>> 300
+
+###################################################################
+
+x = 300
+def myfunc():
+  global x
+  x = 200
+
+myfunc()
+print(x)
+>> 200
+
+###################################################################
 
 def my_function(fname):
   print(fname + " Refsnes")
 
 my_function("Emil")
-my_function("Tobias")
+my_function(fname = "Tobias")
 my_function("Linus")
+
 >> "Emil Refsnes"
 >> "Tobias Refsnes"
 >> "Linus Refsnes"
 
-
-
+###################################################################
 
 def my_function(fname, lname):
   print(fname + " " + lname)
@@ -1928,8 +2011,7 @@ def my_function(fname, lname):
 my_function("Emil", "Refsnes")
 >> "Emil Refsnes"
 
-
-
+###################################################################
 
 def my_function(*kids):  #  *  it's for more than one value
   print("The youngest child is " + kids[2])
@@ -1937,8 +2019,7 @@ def my_function(*kids):  #  *  it's for more than one value
 my_function("Emil", "Tobias", "Linus")
 >> "The youngest child is Linus"
 
-
-
+###################################################################
 
 def my_function(child3, child2, child1):
   print("The youngest child is " + child3)
@@ -1946,8 +2027,7 @@ def my_function(child3, child2, child1):
 my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
 >> "The youngest child is Linus"
 
-
-
+###################################################################
 
 def my_function(**kid):  # **  it's mean we don't need call number , just call that word
   print("His last name is " + kid["lname"])
@@ -1955,8 +2035,7 @@ def my_function(**kid):  # **  it's mean we don't need call number , just call t
 my_function(fname = "Tobias", lname = "Refsnes")
 >> "His last name is Refsnes"
 
-
-
+###################################################################
 
 def my_function(country = "Norway"):
   print("I am from " + country)
@@ -1970,8 +2049,7 @@ my_function("Brazil")
 >> "I am from Norway"
 >> "I am from Brazil"
 
-
-
+###################################################################
 
 def my_function(food):
   for x in food:
@@ -1983,8 +2061,7 @@ my_function(fruits)
    "banana"
    "cherry"
 
-
-
+###################################################################
 
 def my_function(x):
   return 5 * x
@@ -1996,8 +2073,7 @@ print(my_function(9))
 >> 25
 >> 45
 
-
-
+###################################################################
 
 def my_function(x, /):
   print(x)
@@ -2005,8 +2081,7 @@ def my_function(x, /):
 my_function(3)
 >> 3
 
-
-
+###################################################################
 
 def my_function(*, x):
   print(x)
@@ -2014,8 +2089,7 @@ def my_function(*, x):
 my_function(x = 3)
 >> 3
 
-
-
+###################################################################
 
 def my_function(a, b, /, *, c, d):
   print(a + b + c + d)
@@ -2023,8 +2097,7 @@ def my_function(a, b, /, *, c, d):
 my_function(5, 6, c = 7, d = 8)
 >> 26
 
-
-
+###################################################################
 
 def tri_recursion(k):
   if(k > 0):
@@ -2036,6 +2109,7 @@ def tri_recursion(k):
 
 print("\n\nRecursion Example Results")
 tri_recursion(6)
+
 >> "Recursion Example Results"
    1
    3
@@ -2043,6 +2117,298 @@ tri_recursion(6)
    10
    15
    21
+
+###################################################################
+
+
+def shout(text): 
+    return text.upper() 
+ 
+def whisper(text): 
+    return text.lower() 
+ 
+def greet(func): 
+    # storing the function in a variable 
+    greeting = func("""Hi, I am created by a function passed as an argument.""") 
+    print (greeting) 
+ 
+greet(shout) 
+greet(whisper) 
+
+>> "HI, I AM CREATED BY A FUNCTION PASSED AS AN ARGUMENT."
+   "hi, i am created by a function passed as an argument."
+
+###################################################################
+
+def say_hello(name):
+    return f"Hello {name}"
+
+def be_awesome(name):
+    return f"Yo {name}, together we're the awesomest!"
+
+def greet_bob(greeter_func):
+    return greeter_func("Bob")
+
+greet_bob(say_hello)
+>> 'Hello Bob'
+
+greet_bob(be_awesome)
+>> 'Yo Bob, together were the awesomest!'
+
+###################################################################
+
+def parent():
+    print("Printing from parent()")
+
+    def first_child():
+        print("Printing from first_child()")
+
+    def second_child():
+        print("Printing from second_child()")
+
+    second_child()
+    first_child()
+
+parent()
+>> "Printing from parent()"
+   "Printing from second_child()"
+   "Printing from first_child()
+
+###################################################################
+
+ِDecorator :
+
+
+
+"""
+decorators are used in Python to modify the behavior of functions or classes. 
+They are higher-order functions that take a function or class as input and return a new function or class with modified behavior. 
+Decorators are commonly used to add new functionality to existing code without changing the underlying implementation, 
+making the code more usable and modular.
+
+"""
+
+
+# for first , look at this and undrestand it :
+
+def decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+def say_whee():
+    print("Whee!")
+
+say_whee = decorator(say_whee)
+
+
+>> "Something is happening before the function is called."
+   "Whee!"
+   "Something is happening after the function is called."
+
+
+# now we can do this with Decorator :
+
+
+def decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@decorator
+def say_whee():
+    print("Whee!")
+
+>> "Something is happening before the function is called."
+   "Whee!"
+   "Something is happening after the function is called."
+
+#################################
+
+def make_pretty(func):
+
+    def inner():
+        print("I got decorated")
+        func()
+    return inner
+
+@make_pretty
+def ordinary():
+    print("I am ordinary")
+
+ordinary()  
+
+>> "I got decorated"
+   "I am ordinary"
+
+#################################
+
+def star(func):
+    def inner(*args, **kwargs):
+        print("*" * 30)
+        func(*args, **kwargs)
+        print("*" * 30)
+    return inner
+
+def percent(func):
+    def inner(*args, **kwargs):
+        print("%" * 30)
+        func(*args, **kwargs)
+        print("%" * 30)
+    return inner
+
+@star
+@percent
+def printer(msg):
+    print(msg)
+printer("Hello")
+
+>> '******************************"
+   "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+   "Hello"
+   "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+   "******************************"
+
+###################################################################
+
+generator :
+
+
+
+"""
+Generator in Python is an easy way to generate browsers and with this feature you can easily control one and exit it at any time. 
+In the case of ordinary functions in Python, the issue of speed and amount of memory is raised. 
+You have problems in terms of speed and memory in a Python function, 
+which have been solved to a large extent by using Generator in Python.
+
+"""
+
+
+def simpleGeneratorFun(): 
+    yield 1            
+    yield 2            
+    yield 3            
+   
+for value in simpleGeneratorFun():  
+    print(value)
+
+>> 1
+   2
+   3
+
+
+# Or we can do this :
+
+
+def simpleGeneratorFun(): 
+    yield 1
+    yield 2
+    yield 3
+   
+x = simpleGeneratorFun() 
+print(next(x)) 
+print(next(x)) 
+print(next(x))
+
+>> 1
+   2
+   3
+
+#################################
+
+def fib(limit): 
+      
+    a, b = 0, 1
+    while a < limit: 
+        yield a 
+        a, b = b, a + b 
+  
+x = fib(5) 
+
+print(next(x))  
+print(next(x)) 
+print(next(x)) 
+print(next(x)) 
+print(next(x)) 
+
+print("\nUsing for in loop") 
+for i in fib(5):  
+    print(i)
+
+
+>> 0
+   1
+   1
+   2
+   3
+   "Using for in loop"
+   0
+   1
+   1
+   2
+   3
+
+###################################################################
+
+Name & Main :
+
+
+
+"""    Management and control function    """
+
+from time import sleep
+
+print("This is my file to demonstrate best practices.")
+
+def process_data(data):
+    print("Beginning data processing...")
+    modified_data = data + " that has been modified"
+    sleep(3)
+    print("Data processing finished.")
+    return modified_data
+
+def main():
+    data = "My data read from the Web"
+    print(data)
+    modified_data = process_data(data)
+    print(modified_data)
+
+if __name__ == "__main__":
+    main()
+
+
+>> "This is my file to demonstrate best practices."
+   "My data read from the Web"
+   "Beginning data processing..."
+   "Data processing finished."
+   "My data read from the Web that has been modified"
+
+"""  With this method, it is possible to manage which function is executed and in what model the scripts are executed  """
+
+
+#################################
+
+def echo(text: str, repetitions: int = 3) -> str:
+    """Imitate a real-world echo."""
+    echoed_text = ""
+    for i in range(repetitions, 0, -1):
+        echoed_text += f"{text[-i:]}\n"
+    return f"{echoed_text.lower()}."
+
+if __name__ == "__main__":
+    text = input("Yell something at a mountain: ")
+    print(echo(text))
+
+
+>> Yell something at a mountain: hh
+   hh
+   hh
+   h 
+   . 
 
 ***************************************************************************************************************************************************************************
 
@@ -2097,11 +2463,6 @@ print(mytripler(11))
 
 ***************************************************************************************************************************************************************************
 
-1) class And Objects
-
-
-***************************************************************************************************************************************************************************
-
 1) iterators (iter)
 
 
@@ -2141,73 +2502,6 @@ for x in mytuple:
 >> "apple"
    "banana"
    "cherry"
-
-***************************************************************************************************************************************************************************
-
-1) Scope
-
-
-
-def myfunc():
-  x = 300
-  print(x)
-myfunc()
->> 300
-
-
-
-def myfunc():
-  x = 300
-  def myinnerfunc():
-    print(x)
-  myinnerfunc()
-
-myfunc()
->> 300
-
-
-
-x = 300
-def myfunc():
-  print(x)
-
-myfunc()
-print(x)
->> 300
->> 300
-
-
-
-x = 300
-def myfunc():
-  x = 200
-  print(x)
-
-myfunc()
-print(x)
->> 200
->> 300
-
-
-
-def myfunc():
-  global x
-  x = 300
-
-myfunc()
-print(x)
->> 300
-
-
-
-x = 300
-def myfunc():
-  global x
-  x = 200
-
-myfunc()
-print(x)
->> 200
 
 ***************************************************************************************************************************************************************************
 
@@ -3086,6 +3380,61 @@ def myfunc(n):
 x = map(myfunc, ('apple', 'banana', 'cherry'))
 print(x)
 >> <map object at 0x1481154c4130>
+
+#################################
+
+def square(number):
+    return number ** 2
+
+
+numbers = [1, 2, 3, 4, 5]
+squared = map(square, numbers)
+
+list(squared)
+>> [1, 4, 9, 16, 25]
+
+#################################
+
+str_nums = ["4", "8", "6", "5", "3", "2", "8", "9", "2", "5"]
+
+int_nums = map(int, str_nums)
+print(int_nums)
+>> <map object at 0x7fb2c7e34c70>
+
+print(list(int_nums))
+>> [4, 8, 6, 5, 3, 2, 8, 9, 2, 5]
+
+print(str_nums)
+>> ["4", "8", "6", "5", "3", "2", "8", "9", "2", "5"]
+
+#################################
+
+first_it = [1, 2, 3]
+second_it = [4, 5, 6, 7]
+
+print(list(map(pow, first_it, second_it)))
+>> [1, 32, 729]
+
+#################################
+
+string_it = ["processing", "strings", "with", "map"]
+list(map(str.capitalize, string_it))
+>> ['Processing', 'Strings', 'With', 'Map']
+
+list(map(str.upper, string_it))
+>> ['PROCESSING', 'STRINGS', 'WITH', 'MAP']
+
+list(map(str.lower, string_it))
+>> ['processing', 'strings', 'with', 'map']
+
+#################################
+
+import math
+
+numbers = [1, 2, 3, 4, 5, 6, 7]
+
+print(list(map(math.factorial, numbers)))
+>> [1, 2, 6, 24, 120, 720, 5040]
 
 ###################################################################
 
@@ -4563,13 +4912,15 @@ plt.pie(y, labels = mylabels)
 plt.legend()
 plt.show() 
 """
-       
+
 ***************************************************************************************************************************************************************************
 
-1) Table
+1) Table (import tabulate)
 
 
 # $ pip3 install tabulate
+
+import tabulate
 
 table = [["Sun",696000,1989100000],["Earth",6371,5973.6],["Moon",1737,73.5],["Mars",3390,641.85]]
 print(tabulate(table))
@@ -4612,12 +4963,12 @@ print(tabulate({"Name": ["Alice", "Bob"],"Age": [24, 19]}, headers="keys")) # If
 
 ####################################################
 
-
-#By default, only pandas.DataFrame tables have an additional column called row index. 
-#To add a similar column to any other type of table, pass showindex="always" or showindex=True argument to tabulate(). 
-#To suppress row indices for all types of data, pass showindex="never" or showindex=False. 
-#To add a custom row index column, pass showindex=rowIDs, where rowIDs is some iterable:
-
+"""
+By default, only pandas.DataFrame tables have an additional column called row index. 
+To add a similar column to any other type of table, pass showindex="always" or showindex=True argument to tabulate(). 
+To suppress row indices for all types of data, pass showindex="never" or showindex=False. 
+To add a custom row index column, pass showindex=rowIDs, where rowIDs is some iterable:
+"""
 print(tabulate([["F",24],["M",19]], showindex="always"))
 >> -  -  --
    0  F  24
@@ -5097,5 +5448,817 @@ print(tabulate(table, headers, tablefmt="latex"))
    \hline
    \end{tabular}
 
+**************************************************************************************************************************************************************************
+
+40) OOP(Class)
+
+
+""" Object-oriented programming (OOP) is a method of structuring a program by bundling related properties and behaviors into individual objects. 
+In this tutorial, you'll learn the basics of object-oriented programming in Pytho"""
+
+####################################################
+
+## How Define a Class in Python ?
+
+
+class Dog:
+    pass
+
+##########################
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+""" You define the properties that all Dog objects must have in a method called .__init__(). 
+Every time you create a new Dog object, .__init__() sets the initial state of the object by assigning the values of the object's properties. 
+That is, .__init__() initializes each new instance of the class.
+You can give .__init__() any number of parameters, but the first parameter will always be a variable called self. 
+When you create a new class instance, then Python automatically passes the instance to the self parameter in .__init__() so that Python can define the new attributes on the object."""
+
+####################################################
+
+## How Instantiate a Class in Python ?
+
+
+class Dog:
+     pass
+
+Dog()
+>> <__main__.Dog object at 0x106702d30>
+Dog()
+>> <__main__.Dog object at 0x0004ccc90>
+
+a = Dog()
+b = Dog()
+a == b
+>> False
+
+
+
+""" The new Dog instance is located at a different memory address. 
+That's because it's an entirely new instance and is completely unique from the first Dog object that you created."""
+
+##########################
+
+class Dog:
+     species = "Canis familiaris"
+     def __init__(self, name, age):
+         self.name = name
+         self.age = age
+
+miles = Dog("Miles", 4)
+buddy = Dog("Buddy", 9)
+
+
+miles.name
+>> 'Miles'
+miles.age
+>> 4
+
+buddy.name
+>> 'Buddy'
+buddy.age
+>> 9
+
+buddy.age = 10
+buddy.age
+>> 10
+
+miles.species = "Felis silvestris"
+miles.species
+>> 'Felis silvestris'
+
+##########################
+
+class Dog:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # Instance method
+    def description(self):
+        return f"{self.name} is {self.age} years old"
+
+    # Another instance method
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+    
+
+miles = Dog("Miles", 4)
+miles.description()
+>> 'Miles is 4 years old'
+
+miles.speak("Woof Woof")
+>> 'Miles says Woof Woof'
+
+miles.speak("Bow Wow")
+>> 'Miles says Bow Wow'
+
+##########################
+
+class Dog:
+    # ...
+
+    def __str__(self):  # In the editor window, change the name of the Dog class’s .description() method to .__str__()
+        return f"{self.name} is {self.age} years old"   
+    
+miles = Dog("Miles", 4)
+print(miles)
+>> 'Miles is 4 years old'
+
+##########################
+
+class Dog:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age, breed):
+        self.name = name
+        self.age = age
+        self.breed = breed
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+    
+
+buddy.speak("Yap")
+>> 'Buddy says Yap'
+
+jim.speak("Woof")
+>> 'Jim says Woof'
+
+jack.speak("Woof")
+>> 'Jack says Woof'
+
+####################################################
+
+## How Inherit From Another Class in Python ?
+
+
+""" Inheritance is the process by which one class takes on the attributes and methods of another. 
+Newly formed classes are called child classes, and the classes that you derive child classes from are called parent classes."""
+
+class Parent:
+    hair_color = "brown"
+
+class Child(Parent):
+    pass
+
+##########################
+
+class Dog:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+    
+class JackRussellTerrier(Dog):
+    pass
+
+class Dachshund(Dog):
+    pass
+
+class Bulldog(Dog):
+    pass
+
+miles = JackRussellTerrier("Miles", 4)
+buddy = Dachshund("Buddy", 9)
+jack = Bulldog("Jack", 3)
+jim = Bulldog("Jim", 5)
+
+
+miles.species
+>> 'Canis familiaris'
+
+buddy.name
+>> 'Buddy'
+
+print(jack)
+>> "Jack is 3 years old"
+
+jim.speak("Woof")
+>> 'Jim says Woof'
+
+####################################################
+
+## Class Attributes
+
+
+ class ObjectCounter:
+     num_instances = 0
+     def __init__(self):
+         ObjectCounter.num_instances += 1
+
+
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x10392d810>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x1039810d0>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x10395b750>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x103959810>
+
+ObjectCounter.num_instances
+>> 4
+
+counter = ObjectCounter()
+counter.num_instances
+>> 5
+
+
+
+"""It's important to note that you can access class attributes using either the class or one of its instances. 
+That's why you can use the counter object to retrieve the value of .num_instances. 
+However, if you need to modify a class attribute, then you must use the class itself rather than one of its instances.
+For example, if you use self to modify .num_instances, then you'll be overriding the original class attribute by creating a new instance attribute:"""
+
+
+
+ class ObjectCounter:
+     num_instances = 0
+     def __init__(self):
+         self.num_instances += 1
+
+
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x103987550>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x1039c5890>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x10396a890>
+ObjectCounter()
+>> <__main__.ObjectCounter object at 0x1036fa110>
+
+ObjectCounter.num_instances
+>> 0
+
+####################################################
+
+## Instance Attributes :
+
+
+class Car:
+    def __init__(self, make, model, year, color):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.color = color
+        self.started = False
+        self.speed = 0
+        self.max_speed = 200
+
+
+toyota_camry = Car("Toyota", "Camry", 2022, "Red")
+toyota_camry.make
+>> 'Toyota'
+toyota_camry.model
+>> 'Camry'
+toyota_camry.color
+>> 'Red'
+toyota_camry.speed
+>> 0
+
+ford_mustang = Car("Ford", "Mustang", 2022, "Black")
+ford_mustang.make
+>> 'Ford'
+ford_mustang.model
+>> 'Mustang'
+ford_mustang.year
+>> 2022
+ford_mustang.max_speed
+>> 200
+
+####################################################
+
+## The .__dict__ Attribute
+
+
+class SampleClass:
+    class_attr = 100
+
+    def __init__(self, instance_attr):
+        self.instance_attr = instance_attr
+
+    def method(self):
+        print(f"Class attribute: {self.class_attr}")
+        print(f"Instance attribute: {self.instance_attr}")
+
+
+
+SampleClass.class_attr
+>> 100
+
+SampleClass.__dict__
+>> mappingproxy({
+     '__module__': '__main__',
+     'class_attr': 100,
+     '__init__': <function SampleClass.__init__ at 0x1036c62a0>,
+     'method': <function SampleClass.method at 0x1036c56c0>,
+     '__dict__': <attribute '__dict__' of 'SampleClass' objects>,
+     '__weakref__': <attribute '__weakref__' of 'SampleClass' objects>,
+     '__doc__': None
+})
+
+SampleClass.__dict__["class_attr"]
+>> 100
+
+instance = SampleClass("Hello!")
+instance.instance_attr
+>> 'Hello!'
+
+instance.method()
+>> Class attribute: 100
+>> Instance attribute: Hello!
+
+instance.__dict__
+>> {'instance_attr': 'Hello!'}
+
+instance.__dict__["instance_attr"]
+>> 'Hello!'
+
+instance.__dict__["instance_attr"] = "Hello, Pythonista!"
+instance.instance_attr
+>> 'Hello, Pythonista!'
+
+####################################################
+
+## Dynamic Class and Instance Attributes
+
+
+class Record:
+    """Hold a record of data."""
+
+john = {
+     "name": "John Doe",
+     "position": "Python Developer",
+     "department": "Engineering",
+     "salary": 80000,
+     "hire_date": "2020-01-01",
+     "is_manager": False,
+}
+
+john_record = Record()
+for field, value in john.items():
+     setattr(john_record, field, value)
+
+
+john_record.name
+>> 'John Doe'
+
+john_record.department
+>> 'Engineering'
+
+john_record.__dict__
+>> {
+     'name': 'John Doe',
+     'position': 'Python Developer',
+     'department': 'Engineering',
+     'salary': 80000,
+     'hire_date': '2020-01-01',
+     'is_manager': False
+   }
+
+##########################
+
+class User:
+     pass
+
+
+# Add instance attributes dynamically
+jane = User()
+jane.name = "Jane Doe"
+jane.job = "Data Engineer"
+jane.__dict__
+>> {'name': 'Jane Doe', 'job': 'Data Engineer'}
+
+
+# Add methods dynamically
+def __init__(self, name, job):
+     self.name = name
+     self.job = job
+
+
+User.__init__ = __init__
+User.__dict__
+>> mappingproxy({
+     ...
+     '__init__': <function __init__ at 0x1036ccae0>
+   })
+
+
+linda = User("Linda Smith", "Team Lead")
+linda.__dict__
+>> {'name': 'Linda Smith', 'job': 'Team Lead'}
+
+####################################################
+
+## Instance Methods With self
+
+
+class Car:
+    def __init__(self, make, model, year, color):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.color = color
+        self.started = False
+        self.speed = 0
+        self.max_speed = 200
+
+    def start(self):
+        print("Starting the car...")
+        self.started = True
+
+    def stop(self):
+        print("Stopping the car...")
+        self.started = False
+
+    def accelerate(self, value):
+        if not self.started:
+            print("Car is not started!")
+            return
+        if self.speed + value <= self.max_speed:
+            self.speed += value
+        else:
+            self.speed = self.max_speed
+        print(f"Accelerating to {self.speed} km/h...")
+
+    def brake(self, value):
+        if self.speed - value >= 0:
+            self.speed -= value
+        else:
+            self.speed = 0
+        print(f"Braking to {self.speed} km/h...")   
+
+
+ford_mustang = Car("Ford", "Mustang", 2022, "Black")
+ford_mustang.start()
+>> "Starting the car..."
+ford_mustang.accelerate(100)
+>> "Accelerating to 100 km/h..."
+ford_mustang.brake(50)
+>> "assertBraking to 50 km/h...""
+ford_mustang.brake(80)
+>> "Braking to 0 km/h...""
+ford_mustang.stop()
+>> "Stopping the car...""
+ford_mustang.accelerate(100)
+>> "Car is not started!"
+
+####################################################
+
+## Special Methods and Protocols :
+
+
+class Car:
+    def __str__(self):
+        return f"{self.make}, {self.model}, {self.color}: ({self.year})"
+
+    def __repr__(self):
+        return (
+            f"{type(self).__name__}"
+            f'(make="{self.make}", '
+            f'model="{self.model}", '
+            f"year={self.year}, "
+            f'color="{self.color}")'
+        )
+
+
+toyota_camry = Car("Toyota", "Camry", 2022, "Red")
+
+str(toyota_camry)
+>> 'Toyota, Camry, Red: (2022)'
+print(toyota_camry)
+>> Toyota, Camry, Red: (2022)
+
+toyota_camry
+>> Car(make="Toyota", model="Camry", year=2022, color="Red")
+repr(toyota_camry)
+>> 'Car(make="Toyota", model="Camry", year=2022, color="Red")'
+
 ***************************************************************************************************************************************************************************
 
+41) CSV :
+
+
+########################################################################################################
+
+reading :
+
+
+
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+with open("diabetes.csv", "r") as file:
+ reader = csv.reader(file)
+ for hh in reader :
+  print(hh)
+
+>> ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome']
+   ['1', '89', '66', '23', '94', '28.1', '0.167', '21', '0']  
+   ['0', '137', '40', '35', '168', '43.1', '2.288', '33', '1']
+   ['3', '78', '50', '32', '88', '31', '0.248', '26', '1']    
+   ['2', '197', '70', '45', '543', '30.5', '0.158', '53', '1']
+
+####################################################
+
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+with open("diabetes.csv", "r") as file:
+ reader = csv.reader(file)
+ for row in reader:
+  print(row[0])
+
+>> ['Pregnancies']
+   ['1']
+   ['0']
+   ['3']    
+   ['2']
+
+####################################################
+
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+with open("diabetes.csv", "r") as file:
+ reader = csv.reader(file)
+ next(reader) # next column
+ for row in reader:
+  print(row[0])
+
+>>  ['1']
+    ['0']
+    ['3']    
+    ['2']
+
+####################################################
+
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+titles = []
+with open("diabetes.csv", "r") as file:
+ reader = csv.DictReader(file)
+ for row in reader:
+       titles.append(row)
+ print(titles)
+
+>> [{'Pregnancies': '1', 'Glucose': '89', 'BloodPressure': '66', 'SkinThickness': '23', 'Insulin': '94', 'BMI': '28.1', 'DiabetesPedigreeFunction': '0.167', 'Age': '21', 'Outcome': '0'}, 
+    {'Pregnancies': '0', 'Glucose': '137', 'BloodPressure': '40', 'SkinThickness': '35', 'Insulin': '168', 'BMI': '43.1', 'DiabetesPedigreeFunction': '2.288', 'Age': '33', 'Outcome': '1'}, 
+    {'Pregnancies': '3', 'Glucose': '78', 'BloodPressure': '50', 'SkinThickness': '32', 'Insulin': '88', 'BMI': '31', 'DiabetesPedigreeFunction': '0.248', 'Age': '26', 'Outcome': '1'}, 
+    {'Pregnancies': '2', 'Glucose': '197', 'BloodPressure': '70', 'SkinThickness': '45', 'Insulin': '543', 'BMI': '30.5', 'DiabetesPedigreeFunction': '0.158', 'Age': '53', 'Outcome': '1'}]
+
+####################################################
+
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+# Open the CSV file for reading
+with open('diabetes.csv', mode='r') as file:
+    # Create a CSV reader with DictReader
+    csv_reader = csv.DictReader(file)
+ 
+    # Initialize an empty list to store the dictionaries
+    data_list = []
+ 
+    # Iterate through each row in the CSV file
+    for row in csv_reader:
+        # Append each row (as a dictionary) to the list
+        data_list.append(row)
+ 
+# Print the list of dictionaries
+for data in data_list:
+    print(data)
+
+>> {'Pregnancies': '1', 'Glucose': '89', 'BloodPressure': '66', 'SkinThickness': '23', 'Insulin': '94', 'BMI': '28.1', 'DiabetesPedigreeFunction': '0.167', 'Age': '21', 'Outcome': '0'}
+   {'Pregnancies': '0', 'Glucose': '137', 'BloodPressure': '40', 'SkinThickness': '35', 'Insulin': '168', 'BMI': '43.1', 'DiabetesPedigreeFunction': '2.288', 'Age': '33', 'Outcome': '1'}
+   {'Pregnancies': '3', 'Glucose': '78', 'BloodPressure': '50', 'SkinThickness': '32', 'Insulin': '88', 'BMI': '31', 'DiabetesPedigreeFunction': '0.248', 'Age': '26', 'Outcome': '1'}
+   {'Pregnancies': '2', 'Glucose': '197', 'BloodPressure': '70', 'SkinThickness': '45', 'Insulin': '543', 'BMI': '30.5', 'DiabetesPedigreeFunction': '0.158', 'Age': '53', 'Outcome': '1'}
+
+########################################################################################################
+
+Writing :
+
+
+
+import csv
+with open('gg.csv', mode='w') as gg:
+    gg = csv.writer(gg)
+    gg.writerow(['John Smith', 'Accounting', 'November'])
+    gg.writerow(['Erica Meyers', 'IT', 'March'])
+
+
+"""
+CSV file :
+
+John Smith,Accounting,November
+Erica Meyers,IT,March
+"""
+####################################################
+
+import csv
+# field names
+fields = ['Name', 'Branch', 'Year', 'CGPA']
+# data rows of csv file
+rows = [['Nikhil', 'COE', '2', '9.0'],
+        ['Sanchit', 'COE', '2', '9.1'],
+        ['Aditya', 'IT', '2', '9.3'],
+        ['Sagar', 'SE', '1', '9.5'],
+        ['Prateek', 'MCE', '3', '7.8'],
+        ['Sahil', 'EP', '2', '9.1']]
+# name of csv file
+filename = "university_records.csv"
+# writing to csv file
+with open(filename, 'w') as ff:
+    # creating a csv writer object
+    ff = csv.writer(ff)
+    # writing the fields
+    ff.writerow(fields)
+    # writing the data rows
+    ff.writerows(rows)
+
+
+"""
+CSV file :
+
+Name,Branch,Year,CGPA
+Nikhil,COE,2,9.0
+Sanchit,COE,2,9.1
+Aditya,IT,2,9.3
+Sagar,SE,1,9.5
+Prateek,MCE,3,7.8
+Sahil,EP,2,9.1
+"""
+####################################################
+
+import csv
+ 
+# my data rows as dictionary objects
+mydict = [{'branch': 'COE', 'cgpa': '9.0',
+           'name': 'Nikhil', 'year': '2'},
+          {'branch': 'COE', 'cgpa': '9.1',
+           'name': 'Sanchit', 'year': '2'},
+          {'branch': 'IT', 'cgpa': '9.3',
+           'name': 'Aditya', 'year': '2'},
+          {'branch': 'SE', 'cgpa': '9.5',
+           'name': 'Sagar', 'year': '1'},
+          {'branch': 'MCE', 'cgpa': '7.8',
+           'name': 'Prateek', 'year': '3'},
+          {'branch': 'EP', 'cgpa': '9.1',
+           'name': 'Sahil', 'year': '2'}]
+ 
+# field names
+fields = ['name', 'branch', 'year', 'cgpa']
+ 
+# name of csv file
+filename = "university_records.csv"
+ 
+# writing to csv file
+with open(filename, 'w') as csvfile:
+    # creating a csv dict writer object
+    writer = csv.DictWriter(csvfile, fieldnames=fields)
+ 
+    # writing headers (field names)
+    writer.writeheader()
+ 
+    # writing data rows
+    writer.writerows(mydict)
+
+
+"""
+CSV file :
+
+name,branch,year,cgpa
+Nikhil,COE,2,9.0
+Sanchit,COE,2,9.1
+Aditya,IT,2,9.3
+Sagar,SE,1,9.5
+Prateek,MCE,3,7.8
+Sahil,EP,2,9.1
+"""
+***************************************************************************************************************************************************************************
+
+42) txt :
+
+"""
+Read Only ("r")
+Read and Write ("r+")
+Write Only ("w")
+Write and Read ("w+")
+Append Only ("a")
+Append and Read ("a+")
+
+"""
+
+########################################################################################################
+
+reading :
+
+
+
+"""
+txt file :
+
+in the name of god
+hellllllloooo
+"""
+
+file1 = open("a.txt","r")
+print(file1.read())
+
+>> "in the name of god"
+   "hellllllloooo"
+
+####################################################
+
+"""
+txt file :
+
+in the name of god
+hellllllloooo
+"""
+
+file1 = open("a.txt","r")
+print(file1.readline())
+
+>> "in the name of god"
+
+########################################################################################################
+
+Writing :
+
+
+
+file1 = open("a.txt", "w")
+L = ["This is Delhi \n", "This is Paris \n", "This is London \n"]
+ 
+file1.write("Hello \n")
+file1.writelines(L)
+file1.close()  # to change file access modes
+
+
+"""
+txt file :
+
+Hello 
+This is Delhi 
+This is Paris 
+This is London 
+"""
+***************************************************************************************************************************************************************************
