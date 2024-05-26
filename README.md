@@ -124,6 +124,8 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;**  **39. OOP(Class) :** **&nbsp;**  **[`Class`](#class)**
 
+**&nbsp;&nbsp;&nbsp;**  **30. CSV :** **&nbsp;**  **[`CSV`](#csv)**
+
 
 
 
@@ -6370,4 +6372,246 @@ toyota_camry
 >> Car(make="Toyota", model="Camry", year=2022, color="Red")
 repr(toyota_camry)
 >> 'Car(make="Toyota", model="Camry", year=2022, color="Red")'
+```
+
+
+
+CSV
+----
+![Monty Python](https://realpython.com/cdn-cgi/image/width=960,format=auto/https://files.realpython.com/media/Python-Text-Parsing_Watermarked.5ac48b25acf2.jpg)
+### reading :
+```python
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+with open("diabetes.csv", "r") as file:
+ reader = csv.reader(file)
+ for hh in reader :
+  print(hh)
+
+>> ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome']
+   ['1', '89', '66', '23', '94', '28.1', '0.167', '21', '0']  
+   ['0', '137', '40', '35', '168', '43.1', '2.288', '33', '1']
+   ['3', '78', '50', '32', '88', '31', '0.248', '26', '1']    
+   ['2', '197', '70', '45', '543', '30.5', '0.158', '53', '1']
+
+```
+
+```python
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+with open("diabetes.csv", "r") as file:
+ reader = csv.reader(file)
+ for row in reader:
+  print(row[0])
+
+>> ['Pregnancies']
+   ['1']
+   ['0']
+   ['3']    
+   ['2']
+
+```
+
+```python
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+with open("diabetes.csv", "r") as file:
+ reader = csv.reader(file)
+ next(reader) # next column
+ for row in reader:
+  print(row[0])
+
+>>  ['1']
+    ['0']
+    ['3']    
+    ['2']
+
+```
+
+```python
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+titles = []
+with open("diabetes.csv", "r") as file:
+ reader = csv.DictReader(file)
+ for row in reader:
+       titles.append(row)
+ print(titles)
+
+>> [{'Pregnancies': '1', 'Glucose': '89', 'BloodPressure': '66', 'SkinThickness': '23', 'Insulin': '94', 'BMI': '28.1', 'DiabetesPedigreeFunction': '0.167', 'Age': '21', 'Outcome': '0'}, 
+    {'Pregnancies': '0', 'Glucose': '137', 'BloodPressure': '40', 'SkinThickness': '35', 'Insulin': '168', 'BMI': '43.1', 'DiabetesPedigreeFunction': '2.288', 'Age': '33', 'Outcome': '1'}, 
+    {'Pregnancies': '3', 'Glucose': '78', 'BloodPressure': '50', 'SkinThickness': '32', 'Insulin': '88', 'BMI': '31', 'DiabetesPedigreeFunction': '0.248', 'Age': '26', 'Outcome': '1'}, 
+    {'Pregnancies': '2', 'Glucose': '197', 'BloodPressure': '70', 'SkinThickness': '45', 'Insulin': '543', 'BMI': '30.5', 'DiabetesPedigreeFunction': '0.158', 'Age': '53', 'Outcome': '1'}]
+```
+
+```python
+"""
+CSV file :
+
+Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age,Outcome
+1,89,66,23,94,28.1,0.167,21,0
+0,137,40,35,168,43.1,2.288,33,1
+3,78,50,32,88,31,0.248,26,1
+2,197,70,45,543,30.5,0.158,53,1
+"""
+
+import csv
+# Open the CSV file for reading
+with open('diabetes.csv', mode='r') as file:
+    # Create a CSV reader with DictReader
+    csv_reader = csv.DictReader(file)
+ 
+    # Initialize an empty list to store the dictionaries
+    data_list = []
+ 
+    # Iterate through each row in the CSV file
+    for row in csv_reader:
+        # Append each row (as a dictionary) to the list
+        data_list.append(row)
+ 
+# Print the list of dictionaries
+for data in data_list:
+    print(data)
+
+>> {'Pregnancies': '1', 'Glucose': '89', 'BloodPressure': '66', 'SkinThickness': '23', 'Insulin': '94', 'BMI': '28.1', 'DiabetesPedigreeFunction': '0.167', 'Age': '21', 'Outcome': '0'}
+   {'Pregnancies': '0', 'Glucose': '137', 'BloodPressure': '40', 'SkinThickness': '35', 'Insulin': '168', 'BMI': '43.1', 'DiabetesPedigreeFunction': '2.288', 'Age': '33', 'Outcome': '1'}
+   {'Pregnancies': '3', 'Glucose': '78', 'BloodPressure': '50', 'SkinThickness': '32', 'Insulin': '88', 'BMI': '31', 'DiabetesPedigreeFunction': '0.248', 'Age': '26', 'Outcome': '1'}
+   {'Pregnancies': '2', 'Glucose': '197', 'BloodPressure': '70', 'SkinThickness': '45', 'Insulin': '543', 'BMI': '30.5', 'DiabetesPedigreeFunction': '0.158', 'Age': '53', 'Outcome': '1'}
+```
+
+### Writing :
+```python
+import csv
+with open('gg.csv', mode='w') as gg:
+    gg = csv.writer(gg)
+    gg.writerow(['John Smith', 'Accounting', 'November'])
+    gg.writerow(['Erica Meyers', 'IT', 'March'])
+
+
+"""
+CSV file :
+
+John Smith,Accounting,November
+Erica Meyers,IT,March
+"""
+```
+
+```python
+import csv
+# field names
+fields = ['Name', 'Branch', 'Year', 'CGPA']
+# data rows of csv file
+rows = [['Nikhil', 'COE', '2', '9.0'],
+        ['Sanchit', 'COE', '2', '9.1'],
+        ['Aditya', 'IT', '2', '9.3'],
+        ['Sagar', 'SE', '1', '9.5'],
+        ['Prateek', 'MCE', '3', '7.8'],
+        ['Sahil', 'EP', '2', '9.1']]
+# name of csv file
+filename = "university_records.csv"
+# writing to csv file
+with open(filename, 'w') as ff:
+    # creating a csv writer object
+    ff = csv.writer(ff)
+    # writing the fields
+    ff.writerow(fields)
+    # writing the data rows
+    ff.writerows(rows)
+
+
+"""
+CSV file :
+
+Name,Branch,Year,CGPA
+Nikhil,COE,2,9.0
+Sanchit,COE,2,9.1
+Aditya,IT,2,9.3
+Sagar,SE,1,9.5
+Prateek,MCE,3,7.8
+Sahil,EP,2,9.1
+"""
+```
+
+```python
+import csv
+ 
+# my data rows as dictionary objects
+mydict = [{'branch': 'COE', 'cgpa': '9.0',
+           'name': 'Nikhil', 'year': '2'},
+          {'branch': 'COE', 'cgpa': '9.1',
+           'name': 'Sanchit', 'year': '2'},
+          {'branch': 'IT', 'cgpa': '9.3',
+           'name': 'Aditya', 'year': '2'},
+          {'branch': 'SE', 'cgpa': '9.5',
+           'name': 'Sagar', 'year': '1'},
+          {'branch': 'MCE', 'cgpa': '7.8',
+           'name': 'Prateek', 'year': '3'},
+          {'branch': 'EP', 'cgpa': '9.1',
+           'name': 'Sahil', 'year': '2'}]
+ 
+# field names
+fields = ['name', 'branch', 'year', 'cgpa']
+ 
+# name of csv file
+filename = "university_records.csv"
+ 
+# writing to csv file
+with open(filename, 'w') as csvfile:
+    # creating a csv dict writer object
+    writer = csv.DictWriter(csvfile, fieldnames=fields)
+ 
+    # writing headers (field names)
+    writer.writeheader()
+ 
+    # writing data rows
+    writer.writerows(mydict)
+
+
+"""
+CSV file :
+
+name,branch,year,cgpa
+Nikhil,COE,2,9.0
+Sanchit,COE,2,9.1
+Aditya,IT,2,9.3
+Sagar,SE,1,9.5
+Prateek,MCE,3,7.8
+Sahil,EP,2,9.1
+"""
 ```
