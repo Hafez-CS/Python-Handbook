@@ -130,7 +130,7 @@ Contents
 
 **&nbsp;&nbsp;&nbsp;**  **42. OS :** **&nbsp;**  **[`OS`](#os)**
 
-
+**&nbsp;&nbsp;&nbsp;**  **43. MySQL :** **&nbsp;**  **[`MySQL`](#mysql)**
 
 
 
@@ -6748,3 +6748,396 @@ This is London
 OS
 ----
 **os has many built-in , and we don't need all of them , so visit this site for all built-in OS : https://www.w3schools.com/python/module_os.asp**
+
+
+MySQL
+----
+![Monty Python](https://realpython.com/cdn-cgi/image/width=960,format=auto/https://files.realpython.com/media/MySQL-and-Python_Watermarked.4353d1d57493.jpg)
+* **for the first download MySQL and run it.**
+* **or use phpmyadmin and run it - you open phpmyadmin in the web and write code or use options in the web.**
+* **pip install mysql-connector-python**
+```python
+import mysql.connector
+
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="yourusername", # user="root",
+  password="yourpassword" # password=""
+)
+
+print(mydb)
+
+>> <mysql.connector.connection_cext.CMySQLConnection object at 0x000001CEE2E55D00>
+```
+
+**Creat database :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password=""
+)
+
+mycursor = mydb.cursor() # need for start
+
+mycursor.execute("CREATE DATABASE mydatabase")
+```
+
+**all database :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password=""
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SHOW DATABASES")
+
+for x in mycursor:
+  print(x)
+```
+
+**Creat table :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("CREATE TABLE customers (name VARCHAR(255), address VARCHAR(255))")
+```
+
+**show all tables :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SHOW TABLES")
+
+for x in mycursor:
+  print(x)
+```
+
+**Primary key :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("CREATE TABLE family (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), address VARCHAR(255))")
+
+# When creating a table, you should also create a column with a unique key for each record.
+# This can be done by defining a PRIMARY KEY.
+# We use the statement "INT AUTO_INCREMENT PRIMARY KEY" which will insert a unique number for each record. Starting at 1, and increased by one for each record.
+```
+
+**ALTER TABLE :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("ALTER TABLE customers ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY")
+# If the table already exists, use the ALTER TABLE keyword:
+```
+
+**insert data :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+val = ("John", "Highway 21")
+mycursor.execute(sql, val)
+
+mydb.commit() # It is required to make the changes, otherwise no changes are made to the table.
+
+
+####################################################
+
+
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+val = [
+  ('Peter', 'Lowstreet 4'),
+  ('Amy', 'Apple st 652'),
+  ('Hannah', 'Mountain 21'),
+  ('Michael', 'Valley 345'),
+  ('Sandy', 'Ocean blvd 2'),
+  ('Betty', 'Green Grass 1'),
+  ('Richard', 'Sky st 331'),
+  ('Susan', 'One way 98'),
+  ('Vicky', 'Yellow Garden 2'),
+  ('Ben', 'Park Lane 38'),
+  ('William', 'Central st 954'),
+  ('Chuck', 'Main Road 989'),
+  ('Viola', 'Sideway 1633')
+]
+
+mycursor.executemany(sql, val)
+
+mydb.commit()
+```
+
+**select all data in table :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM customers")
+
+# myresult = mycursor.fetchall() -> method, which fetches all rows from the last executed statement.
+
+for x in mycursor:
+  print(x)
+```
+
+**fetchone method in selecting :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM customers")
+
+myresult = mycursor.fetchone() #  fetchone method will return the first row of the result
+
+print(myresult)
+```
+
+**Where :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "SELECT * FROM customers WHERE address ='Park Lane 38'"
+
+mycursor.execute(sql)
+
+# myresult = mycursor.fetchall()
+
+for x in mycursor:
+  print(x)
+```
+
+**Like :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "SELECT * FROM customers WHERE address LIKE '%way%'" # %  to represent wildcard characters
+
+mycursor.execute(sql)
+
+# myresult = mycursor.fetchall()
+
+for x in mycursor:
+  print(x)
+
+####################################################
+
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "SELECT * FROM customers WHERE address = %s"
+adr = ("Yellow Garden 2", )
+
+mycursor.execute(sql, adr)
+
+myresult = mycursor.fetchall()
+
+for x in myresult:
+  print(x)
+```
+
+**order by :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "SELECT * FROM customers ORDER BY name" # Use the ORDER BY statement to sort the result in ascending or descending order.
+
+mycursor.execute(sql)
+
+for x in mycursor:
+  print(x)
+
+####################################################
+
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "SELECT * FROM customers ORDER BY name DESC" # Use the DESC keyword to sort the result in a descending order.
+
+mycursor.execute(sql)
+
+for x in mycursor:
+  print(x)
+```
+
+**update :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "UPDATE customers SET address = 'Canyon 123' WHERE address = 'Valley 345'"
+
+mycursor.execute(sql)
+
+mydb.commit() # It is required to make the changes, otherwise no changes are made to the table.
+```
+
+**limit :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM customers LIMIT 5") # You can limit the number of records returned from the query, by using the "LIMIT" statement:
+
+for x in mycursor:
+  print(x)
+
+####################################################
+
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="mydatabase"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM customers LIMIT 5 OFFSET 2") # If you want to return five records, starting from the third record, you can use the "OFFSET" keyword:
+
+myresult = mycursor.fetchall()
+
+for x in myresult:
+  print(x)
+```
