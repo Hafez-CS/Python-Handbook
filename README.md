@@ -6756,6 +6756,8 @@ MySQL
 * **for the first download MySQL and run it.**
 * **or use phpmyadmin and run it - you open phpmyadmin in the web and write code or use options in the web.**
 * **pip install mysql-connector-python**
+
+### database 1
 ```python
 import mysql.connector
 
@@ -6894,11 +6896,9 @@ val = ("John", "Highway 21")
 mycursor.execute(sql, val)
 
 mydb.commit() # It is required to make the changes, otherwise no changes are made to the table.
+```
 
-
-####################################################
-
-
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -7017,9 +7017,9 @@ mycursor.execute(sql)
 
 for x in mycursor:
   print(x)
+```
 
-####################################################
-
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -7061,9 +7061,9 @@ mycursor.execute(sql)
 
 for x in mycursor:
   print(x)
+```
 
-####################################################
-
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -7120,9 +7120,9 @@ mycursor.execute("SELECT * FROM customers LIMIT 5") # You can limit the number o
 
 for x in mycursor:
   print(x)
+```
 
-####################################################
-
+```python
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -7140,4 +7140,421 @@ myresult = mycursor.fetchall()
 
 for x in myresult:
   print(x)
+```
+
+### database 2
+```python
+""""
+
+  ('Alfreds Futterkiste',	'Maria Anders',	'Obere Str. 57',	'Berlin',	'12209',	'Germany'),
+  ('Ana Trujillo Emparedados y helados',	'Ana Trujillo',	'Avda. de la Constitución 2222',	'México D.F.',	'05021', 'Mexico'),
+  ('Antonio Moreno Taquería',	'Antonio Moreno',	'Mataderos 2312',	'México D.F.',	'05023', 'Mexico'),
+  ('Around the Horn',	'Thomas Hardy',	'120 Hanover Sq.',	'London',	'WA1 1DP',	'UK'),
+  ('Berglunds snabbköp',	'Christina Berglund',	'Berguvsvägen 8',	'Luleå',	'S-958 22',	'Sweden'),
+
+"""
+```
+
+**SELECT :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT CustomerName, City FROM Customers;")
+
+for x in mycursor:
+  print(x)
+
+>> ('Alfreds Futterkiste', 'Berlin')
+   ('Ana Trujillo Emparedados y helados', 'México D.F.')
+   ('Antonio Moreno Taquería', 'México D.F.')
+   ('Around the Horn', 'London')
+   ('Berglunds snabbköp', 'Luleå')
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers;")
+
+for x in mycursor:
+  print(x)
+
+>> (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany')
+   (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+   (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden')
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT Country FROM Customers;")
+
+for x in mycursor:
+  print(x)
+
+>> ('Germany',)
+   ('Mexico',)
+   ('Mexico',)
+   ('UK',)
+   ('Sweden',)
+```
+
+**SELECT DISTINCT :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT DISTINCT Country FROM Customers;") # statement is used to return only distinct (different) values.
+
+for x in mycursor:
+  print(x)
+
+>> ('Germany',)
+   ('Mexico',)
+   ('UK',)
+   ('Sweden',)
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT COUNT(DISTINCT Country) FROM Customers;")
+
+for x in mycursor:
+  print(x)
+
+>> (4,)
+```
+
+**WHERE :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE Country='Mexico';")
+
+for x in mycursor:
+  print(x)
+
+>> (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE CustomerID=1;")
+
+for x in mycursor:
+  print(x)
+
+>> (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany')
+```
+
+**ORDER BY :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers ORDER BY CustomerName ASC;")
+
+for x in mycursor:
+  print(x)
+
+>> (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany')
+   (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+   (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden')
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers ORDER BY CustomerName DESC;")
+
+for x in mycursor:
+  print(x)
+
+>> (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany')
+```
+
+**AND :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%';")
+
+for x in mycursor:
+  print(x)
+
+>> ""
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE Country = 'Germany' AND City = 'Berlin' AND PostalCode > 12000;")
+
+for x in mycursor:
+  print(x)
+
+>> (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany')
+```
+
+**OR :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE Country = 'Germany' OR Country = 'Spain';")
+
+for x in mycursor:
+  print(x)
+
+>> (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany')
+```
+
+**NOT :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE NOT Country = 'Spain';")
+
+for x in mycursor:
+  print(x)
+
+>> (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany')
+   (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+   (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden')
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE CustomerName NOT LIKE 'A%';")
+
+for x in mycursor:
+  print(x)
+
+>> (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden')
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE CustomerID NOT BETWEEN 10 AND 60;")
+
+for x in mycursor:
+  print(x)
+
+>> (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany')
+   (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+   (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden')
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE City NOT IN ('Paris', 'London');")
+
+for x in mycursor:
+  print(x)
+
+>> (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany')
+   (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden')
+```
+
+**INSERT :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country) VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');")
+
+for x in mycursor:
+  print(x)
+```
+
+**NULL :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country) VALUES ('riaz', 'fifi', NULL , 'Liverpool', 'L1 0AA', 'UK');")
+
+mycursor.execute("SELECT CustomerName, ContactName, Address FROM Customers WHERE Address IS NULL;")
+
+for x in mycursor:
+  print(x)
+
+>> ('riaz', 'fifi', None)
 ```
