@@ -6756,6 +6756,8 @@ MySQL
 * **for the first download MySQL and run it.**
 * **or use phpmyadmin and run it - you open phpmyadmin in the web and write code or use options in the web.**
 * **pip install mysql-connector-python**
+* **https://www.w3schools.com/sql/default.asp**
+* **https://www.w3schools.com/mysql/default.asp**
 
 ### database 1
 ```python
@@ -7557,4 +7559,211 @@ for x in mycursor:
   print(x)
 
 >> ('riaz', 'fifi', None)
+```
+
+**UPDATE :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("UPDATE Customers SET ContactName = 'Alfred Schmidt', City= 'Frankfurt' WHERE CustomerID = 1;")
+
+mycursor.execute("SELECT * FROM Customers;")
+for x in mycursor:
+  print(x)
+
+>> (1, 'Alfreds Futterkiste', 'Alfred Schmidt', 'Obere Str. 57', 'Frankfurt', '12209', 'Germany')
+   (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+   (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden')
+   (6, 'Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway')
+   (7, 'riaz', 'fifi', None, 'Liverpool', 'L1 0AA', 'UK')
+```
+
+**DELETE :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';")
+
+mycursor.execute("SELECT * FROM Customers;")
+for x in mycursor:
+  print(x)
+
+>> (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+   (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden')
+   (6, 'Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway')
+   (7, 'riaz', 'fifi', None, 'Liverpool', 'L1 0AA', 'UK')
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("DELETE FROM Customers;") # Delete All Records
+
+mycursor.execute("SELECT * FROM Customers;")
+for x in mycursor:
+  print(x)
+
+>> None
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("DROP TABLE Customers;") # Delete a Table
+
+mycursor.execute("SELECT * FROM Customers;")
+for x in mycursor:
+  print(x)
+
+>> None
+```
+
+**LIMIT :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers LIMIT 3;")
+
+for x in mycursor:
+  print(x)
+
+>> (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+```
+
+**MIN , MAX :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT MIN(CustomerID) FROM Customers;")
+
+for x in mycursor:
+  print(x)
+
+>> (2,)
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT MAX(CustomerID) FROM Customers;")
+
+for x in mycursor:
+  print(x)
+
+>> (7,)
+```
+
+**LIKE :**
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE CustomerName LIKE 'a%';")
+
+for x in mycursor:
+  print(x)
+
+>> (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+```
+
+```python
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="jj"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM Customers WHERE CustomerName LIKE 'a%' OR CustomerName LIKE 'b%';")
+
+for x in mycursor:
+  print(x)
+
+>> (2, 'Ana Trujillo Emparedados y helados', 'Ana Trujillo', 'Avda. de la Constitución 2222', 'México D.F.', '05021', 'Mexico')
+   (3, 'Antonio Moreno Taquería', 'Antonio Moreno', 'Mataderos 2312', 'México D.F.', '05023', 'Mexico')
+   (4, 'Around the Horn', 'Thomas Hardy', '120 Hanover Sq.', 'London', 'WA1 1DP', 'UK')
+   (5, 'Berglunds snabbköp', 'Christina Berglund', 'Berguvsvägen 8', 'Luleå', 'S-958 22', 'Sweden') 
 ```
