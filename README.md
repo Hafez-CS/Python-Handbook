@@ -3484,6 +3484,66 @@ import os
 os.rmdir("myfolder")
 ```
 
+### Reading an Entire File :
+```python
+with open('New Text Document.txt') as file_object:
+ contents = file_object.read()
+ print(contents) 
+```
+
+### File Paths :
+```python
+file_path = 'C:/Users/NAJAFI/Desktop/New Text Document.txt'
+with open(file_path) as file_object:
+    print(file_object)
+
+>> <_io.TextIOWrapper name='C:/Users/NAJAFI/Desktop/New Text Document.txt' mode='r' encoding='cp1252'>
+```
+
+### Reading Line by Line :
+```python
+file_path = 'C:/Users/NAJAFI/Desktop/New Text Document.txt'
+with open(file_path) as file_object:
+ for line in file_object:
+  print(line)
+    
+>> "hello world"
+```
+
+### Writing to an Empty File :
+```python
+file_path = 'C:/Users/NAJAFI/Desktop/New Text Document.txt'
+
+with open(file_path, 'w') as file_object:
+ file_object.write("I love programming.") # for first it clean the file and write
+
+with open(file_path) as file_object:
+ for line in file_object:
+  print(line)
+    
+>> "I love programming."
+```
+
+### Appending to a File :
+```python
+file_path = 'C:/Users/NAJAFI/Desktop/New Text Document.txt'
+
+with open(file_path, 'a') as file_object:
+ file_object.write("\n")
+ file_object.write("I also love finding meaning in large datasets.\n")
+ file_object.write("I love creating apps that can run in a browser.\n")
+
+with open(file_path) as file_object:
+ for line in file_object:
+  print(line)
+    
+>> "I love programming."
+   
+   "I also love finding meaning in large datasets."
+
+   "I love creating apps that can run in a browser."
+```
+
 
 Built-In-Functions
 ------
@@ -5260,6 +5320,15 @@ plt.show()
 
 ```python
 import matplotlib.pyplot as plt
+x_values = list(range(1000))
+y_values = [x**2 for x in x_values]
+plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues,edgecolor='none', s=40)
+```
+![Figure_26](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/d867d2a8-3989-4fcf-98a2-ece698e8d172)
+
+
+```python
+import matplotlib.pyplot as plt
 import numpy as np
 
 x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
@@ -5268,7 +5337,7 @@ y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
 plt.scatter(x, y)
 plt.show()
 ```
-![Figure_25](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/1ff56130-6906-4586-93cc-168f723fff57)
+![Figure_26](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/1ff56130-6906-4586-93cc-168f723fff57)
 
 
 ```python
@@ -5287,7 +5356,7 @@ plt.scatter(x, y)
 
 plt.show()
 ```
-![Figure_26](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/1b6c636f-4d16-4239-99c6-55572115f887)
+![Figure_27](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/1b6c636f-4d16-4239-99c6-55572115f887)
 
 
 ```python
@@ -5304,7 +5373,7 @@ plt.colorbar()
 
 plt.show()
 ```
-![Figure_27](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/c222abd2-0fd9-4b6d-bf16-bba7da477f86)
+![Figure_28](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/c222abd2-0fd9-4b6d-bf16-bba7da477f86)
 
 
 ```python
@@ -5319,7 +5388,7 @@ plt.scatter(x, y, s=sizes)
 
 plt.show()
 ```
-![Figure_28](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/62163c92-81c5-4d0e-bf44-335bce0038e4)
+![Figure_29](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/62163c92-81c5-4d0e-bf44-335bce0038e4)
 
 
 ```python
@@ -5332,7 +5401,7 @@ y = np.array([3, 8, 1, 10])
 plt.bar(x,y)
 plt.show()
 ```
-![Figure_29](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/2cd065c0-e2e2-41c2-b069-6370943ac22e)
+![Figure_30](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/2cd065c0-e2e2-41c2-b069-6370943ac22e)
 
 
 ```python
@@ -5345,7 +5414,7 @@ y = np.array([3, 8, 1, 10])
 plt.barh(x, y)
 plt.show()
 ```
-![Figure_30](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/d4265bd8-9662-4aa6-924d-4d77da935715)
+![Figure_31](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/d4265bd8-9662-4aa6-924d-4d77da935715)
 
 
 ```python
@@ -5358,7 +5427,7 @@ y = np.array([3, 8, 1, 10])
 plt.bar(x, y, color = "red")
 plt.show()
 ```
-![Figure_31](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/bc74c131-c11a-4b43-9899-f37673c8545f)
+![Figure_32](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/bc74c131-c11a-4b43-9899-f37673c8545f)
 
 
 ```python
@@ -5371,7 +5440,7 @@ y = np.array([3, 8, 1, 10])
 plt.bar(x, y, width = 0.1)
 plt.show()
 ```
-![Figure_32](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/04f6784f-f769-482d-a265-7f2d11380021)
+![Figure_33](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/04f6784f-f769-482d-a265-7f2d11380021)
 
 
 ```python
@@ -5383,7 +5452,7 @@ y = np.array([35, 25, 25, 15])
 plt.pie(y)
 plt.show() 
 ```
-![Figure_33](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/9e13f6b2-da5f-46e4-b6e1-0aea013d813e)
+![Figure_34](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/9e13f6b2-da5f-46e4-b6e1-0aea013d813e)
 
 
 ```python
@@ -5396,7 +5465,7 @@ mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
 plt.pie(y, labels = mylabels)
 plt.show() 
 ```
-![Figure_34](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/a889ef59-7709-433f-8e70-9e0a261a5571)
+![Figure_35](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/a889ef59-7709-433f-8e70-9e0a261a5571)
 
 
 ```python
@@ -5410,7 +5479,7 @@ myexplode = [0.2, 0, 0, 0]
 plt.pie(y, labels = mylabels, explode = myexplode)
 plt.show()
 ```
-![Figure_35](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/95fbcc26-1844-4c23-bdd9-72d95e02c027)
+![Figure_36](https://github.com/Hafez-CS/Python-Handbook/assets/151014739/95fbcc26-1844-4c23-bdd9-72d95e02c027)
 
 
 ```python
