@@ -1,4 +1,3 @@
-
 1) Home
 2) Variables
 3) Data Types
@@ -2121,7 +2120,6 @@ tri_recursion(6)
 
 ###################################################################
 
-
 def shout(text): 
     return text.upper() 
  
@@ -3150,6 +3148,71 @@ else:
 
 import os
 os.rmdir("myfolder")
+
+#####################################################################################################
+
+## Reading an Entire File : 
+
+with open('New Text Document.txt') as file_object:
+ contents = file_object.read()
+ print(contents) 
+
+#####################################################################################################
+
+## File Paths : 
+
+file_path = 'C:/Users/NAJAFI/Desktop/New Text Document.txt'
+with open(file_path) as file_object:
+    print(file_object)
+
+>> <_io.TextIOWrapper name='C:/Users/NAJAFI/Desktop/New Text Document.txt' mode='r' encoding='cp1252'>
+
+#####################################################################################################
+
+## Reading Line by Line : 
+
+file_path = 'C:/Users/NAJAFI/Desktop/New Text Document.txt'
+with open(file_path) as file_object:
+ for line in file_object:
+  print(line)
+    
+>> "hello world"
+
+#####################################################################################################
+
+## Writing to an Empty File : 
+
+file_path = 'C:/Users/NAJAFI/Desktop/New Text Document.txt'
+
+with open(file_path, 'w') as file_object:
+ file_object.write("I love programming.") # for first it clean the file and write
+
+with open(file_path) as file_object:
+ for line in file_object:
+  print(line)
+    
+>> "I love programming."
+
+#####################################################################################################
+
+## Appending to a File : 
+
+file_path = 'C:/Users/NAJAFI/Desktop/New Text Document.txt'
+
+with open(file_path, 'a') as file_object:
+ file_object.write("\n")
+ file_object.write("I also love finding meaning in large datasets.\n")
+ file_object.write("I love creating apps that can run in a browser.\n")
+
+with open(file_path) as file_object:
+ for line in file_object:
+  print(line)
+    
+>> "I love programming."
+   
+   "I also love finding meaning in large datasets."
+
+   "I love creating apps that can run in a browser."
 
 ***************************************************************************************************************************************************************************
 
@@ -4767,6 +4830,13 @@ plt.subplot(2, 3, 6)
 plt.plot(x,y)
 
 plt.show()
+"""
+####################################################
+"""
+import matplotlib.pyplot as plt
+x_values = list(range(1000))
+y_values = [x**2 for x in x_values]
+plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues,edgecolor='none', s=40)
 """
 ####################################################
 """
